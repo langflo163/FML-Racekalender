@@ -268,6 +268,18 @@
      "k": "pay"
     }
    ]
+  },
+  {
+   "id": "etrc",
+   "name": "Truck-EM",
+   "color": "#3d6b8f",
+   "tv": [
+    {
+     "n": "YouTube FIA ETRC",
+     "k": "free",
+     "x": "alle Rennen + Qualifying live, u. a. deutscher Kommentar (Stand 2026)"
+    }
+   ]
   }
  ],
  "events": [
