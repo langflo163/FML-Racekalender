@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#111418"/><rect y="400" width="512" height="30" fill="#e10600"/><rect x="128" y="96" width="20" height="284" rx="10" fill="#eef0f3"/><g fill="#eef0f3"><rect x="148" y="104" width="60" height="60"/><rect x="268" y="104" width="60" height="60"/><rect x="208" y="164" width="60" height="60"/><rect x="328" y="164" width="60" height="60"/><rect x="148" y="224" width="60" height="60"/><rect x="268" y="224" width="60" height="60"/></g><rect x="148" y="104" width="240" height="180" fill="none" stroke="#eef0f3" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120">
+<rect width="120" height="120" rx="26.4" fill="#d71920"/>
+<g fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+<rect x="22" y="30" width="76" height="68" rx="9"/><path d="M22 48h76M42 22v14M78 22v14"/></g>
+<g fill="#fff"><rect x="36" y="58" width="12" height="12"/><rect x="60" y="58" width="12" height="12"/>
+<rect x="48" y="70" width="12" height="12"/><rect x="72" y="70" width="12" height="12"/></g>
+<rect x="36" y="58" width="48" height="24" fill="none" stroke="#fff" stroke-width="3"/></svg>
