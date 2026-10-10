@@ -31,7 +31,7 @@
     { "id": "h24",  "name": "24H Series",      "color": "#c2185b", "tv": [
         { "n": "YouTube 24H Series", "k": "free", "x": "Kommentarsprache nicht bestätigt" } ] },
     { "id": "indy", "name": "IndyCar",         "color": "#0057b8", "tv": [
-        { "n": "Motorvision+", "k": "pay", "x": "alle Rennen, dt. Kommentar (Stand 2026)" },
+        { "n": "Motorvision+", "k": "mine", "x": "alle Rennen, dt. Kommentar (Stand 2026)" },
         { "n": "Sky", "k": "pay" } ] },
     { "id": "nas",  "name": "NASCAR Cup",      "color": "#ffcc00", "tv": [
         { "n": "Sportdigital1+", "k": "mine", "x": "alle Rennen live, dt. Kommentar, Rechte bis 2027" } ] }
