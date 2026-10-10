@@ -197,17 +197,75 @@
     {
      "n": "DF1 (Free-TV)",
      "k": "free",
-     "x": "12 ausgewählte Rennen, Stand 2026"
+     "x": "12 ausgewählte Rennen + Qualifying, Stand 2026"
     },
     {
-     "n": "ServusTV",
+     "n": "ServusTV / ServusTV On",
      "k": "mine",
-     "x": "einige Rennen gratis (Österreich), Stand 2026"
+     "x": "live, Stand 2026"
     },
     {
      "n": "Sky / WOW",
      "k": "pay",
      "x": "alle Rennen"
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "name": "Moto2",
+   "color": "#4a90a4",
+   "tv": [
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "Qualifying + Rennen live, Stand 2026"
+    },
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live, Stand 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "name": "Moto3",
+   "color": "#7aa84a",
+   "tv": [
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "Qualifying + Rennen live, Stand 2026"
+    },
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live, Stand 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "id": "sbk",
+   "name": "Superbike-WM",
+   "color": "#a0522d",
+   "tv": [
+    {
+     "n": "ServusTV On",
+     "k": "mine",
+     "x": "Exklusivrechte DACH, Stream; linear nur Österreich (Stand 2026)"
+    },
+    {
+     "n": "WorldSBK VideoPass",
+     "k": "pay"
     }
    ]
   }
@@ -1799,6 +1857,596 @@
    "from": "2027-11-26",
    "to": "2027-11-28",
    "note": "vorläufiger Kalender · Saisonfinale"
+  },
+  {
+   "s": "m2",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "from": "2026-10-23",
+   "to": "2026-10-25",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m2",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "from": "2026-10-30",
+   "to": "2026-11-01",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m2",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "from": "2026-11-06",
+   "to": "2026-11-08",
+   "note": "Rennen So · Absage gemeldet, nicht offiziell bestätigt"
+  },
+  {
+   "s": "m2",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "from": "2026-11-20",
+   "to": "2026-11-22",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m2",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "from": "2026-11-27",
+   "to": "2026-11-29",
+   "note": "Rennen So · Saisonfinale"
+  },
+  {
+   "s": "m2",
+   "name": "Thailand",
+   "track": "Buriram",
+   "country": "Thailand",
+   "from": "2027-03-05",
+   "to": "2027-03-07",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "from": "2027-03-12",
+   "to": "2027-03-14",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Brasilien",
+   "track": "Goiânia",
+   "country": "Brasilien",
+   "from": "2027-04-02",
+   "to": "2027-04-04",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Argentinien",
+   "track": "Buenos Aires",
+   "country": "Argentinien",
+   "from": "2027-04-09",
+   "to": "2027-04-11",
+   "note": "vorläufiger Kalender · Vertrag noch offen"
+  },
+  {
+   "s": "m2",
+   "name": "GP USA",
+   "track": "Circuit of the Americas",
+   "country": "USA",
+   "from": "2027-04-23",
+   "to": "2027-04-25",
+   "note": "vorläufiger Kalender · Homologation offen"
+  },
+  {
+   "s": "m2",
+   "name": "GP Spanien",
+   "track": "Jerez",
+   "country": "Spanien",
+   "from": "2027-05-07",
+   "to": "2027-05-09",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Frankreich",
+   "track": "Le Mans",
+   "country": "Frankreich",
+   "from": "2027-05-14",
+   "to": "2027-05-16",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Italien",
+   "track": "Mugello",
+   "country": "Italien",
+   "from": "2027-05-28",
+   "to": "2027-05-30",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Katalonien",
+   "track": "Barcelona",
+   "country": "Spanien",
+   "from": "2027-06-11",
+   "to": "2027-06-13",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "Dutch TT",
+   "track": "Assen",
+   "country": "Niederlande",
+   "from": "2027-06-25",
+   "to": "2027-06-27",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Deutschland",
+   "track": "Sachsenring",
+   "country": "Deutschland",
+   "from": "2027-07-09",
+   "to": "2027-07-11",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Tschechien",
+   "track": "Brno",
+   "country": "Tschechien",
+   "from": "2027-07-16",
+   "to": "2027-07-18",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Großbritannien",
+   "track": "Silverstone",
+   "country": "Großbritannien",
+   "from": "2027-08-13",
+   "to": "2027-08-15",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Österreich",
+   "track": "Red Bull Ring",
+   "country": "Österreich",
+   "from": "2027-08-27",
+   "to": "2027-08-29",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP San Marino",
+   "track": "Misano",
+   "country": "Italien",
+   "from": "2027-09-10",
+   "to": "2027-09-12",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Aragón",
+   "track": "MotorLand Aragón",
+   "country": "Spanien",
+   "from": "2027-09-17",
+   "to": "2027-09-19",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "from": "2027-10-01",
+   "to": "2027-10-03",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Japan",
+   "track": "Motegi",
+   "country": "Japan",
+   "from": "2027-10-15",
+   "to": "2027-10-17",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "from": "2027-10-22",
+   "to": "2027-10-24",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Indonesien",
+   "track": "Mandalika",
+   "country": "Indonesien",
+   "from": "2027-10-29",
+   "to": "2027-10-31",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m2",
+   "name": "GP Australien",
+   "track": "Adelaide",
+   "country": "Australien",
+   "from": "2027-11-12",
+   "to": "2027-11-14",
+   "note": "vorläufiger Kalender · Vertrag noch offen"
+  },
+  {
+   "s": "m2",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "from": "2027-11-26",
+   "to": "2027-11-28",
+   "note": "vorläufiger Kalender · Saisonfinale"
+  },
+  {
+   "s": "m3",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "from": "2026-10-23",
+   "to": "2026-10-25",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m3",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "from": "2026-10-30",
+   "to": "2026-11-01",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m3",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "from": "2026-11-06",
+   "to": "2026-11-08",
+   "note": "Rennen So · Absage gemeldet, nicht offiziell bestätigt"
+  },
+  {
+   "s": "m3",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "from": "2026-11-20",
+   "to": "2026-11-22",
+   "note": "Rennen So"
+  },
+  {
+   "s": "m3",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "from": "2026-11-27",
+   "to": "2026-11-29",
+   "note": "Rennen So · Saisonfinale"
+  },
+  {
+   "s": "m3",
+   "name": "Thailand",
+   "track": "Buriram",
+   "country": "Thailand",
+   "from": "2027-03-05",
+   "to": "2027-03-07",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "from": "2027-03-12",
+   "to": "2027-03-14",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Brasilien",
+   "track": "Goiânia",
+   "country": "Brasilien",
+   "from": "2027-04-02",
+   "to": "2027-04-04",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Argentinien",
+   "track": "Buenos Aires",
+   "country": "Argentinien",
+   "from": "2027-04-09",
+   "to": "2027-04-11",
+   "note": "vorläufiger Kalender · Vertrag noch offen"
+  },
+  {
+   "s": "m3",
+   "name": "GP USA",
+   "track": "Circuit of the Americas",
+   "country": "USA",
+   "from": "2027-04-23",
+   "to": "2027-04-25",
+   "note": "vorläufiger Kalender · Homologation offen"
+  },
+  {
+   "s": "m3",
+   "name": "GP Spanien",
+   "track": "Jerez",
+   "country": "Spanien",
+   "from": "2027-05-07",
+   "to": "2027-05-09",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Frankreich",
+   "track": "Le Mans",
+   "country": "Frankreich",
+   "from": "2027-05-14",
+   "to": "2027-05-16",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Italien",
+   "track": "Mugello",
+   "country": "Italien",
+   "from": "2027-05-28",
+   "to": "2027-05-30",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Katalonien",
+   "track": "Barcelona",
+   "country": "Spanien",
+   "from": "2027-06-11",
+   "to": "2027-06-13",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "Dutch TT",
+   "track": "Assen",
+   "country": "Niederlande",
+   "from": "2027-06-25",
+   "to": "2027-06-27",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Deutschland",
+   "track": "Sachsenring",
+   "country": "Deutschland",
+   "from": "2027-07-09",
+   "to": "2027-07-11",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Tschechien",
+   "track": "Brno",
+   "country": "Tschechien",
+   "from": "2027-07-16",
+   "to": "2027-07-18",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Großbritannien",
+   "track": "Silverstone",
+   "country": "Großbritannien",
+   "from": "2027-08-13",
+   "to": "2027-08-15",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Österreich",
+   "track": "Red Bull Ring",
+   "country": "Österreich",
+   "from": "2027-08-27",
+   "to": "2027-08-29",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP San Marino",
+   "track": "Misano",
+   "country": "Italien",
+   "from": "2027-09-10",
+   "to": "2027-09-12",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Aragón",
+   "track": "MotorLand Aragón",
+   "country": "Spanien",
+   "from": "2027-09-17",
+   "to": "2027-09-19",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "from": "2027-10-01",
+   "to": "2027-10-03",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Japan",
+   "track": "Motegi",
+   "country": "Japan",
+   "from": "2027-10-15",
+   "to": "2027-10-17",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "from": "2027-10-22",
+   "to": "2027-10-24",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Indonesien",
+   "track": "Mandalika",
+   "country": "Indonesien",
+   "from": "2027-10-29",
+   "to": "2027-10-31",
+   "note": "vorläufiger Kalender"
+  },
+  {
+   "s": "m3",
+   "name": "GP Australien",
+   "track": "Adelaide",
+   "country": "Australien",
+   "from": "2027-11-12",
+   "to": "2027-11-14",
+   "note": "vorläufiger Kalender · Vertrag noch offen"
+  },
+  {
+   "s": "m3",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "from": "2027-11-26",
+   "to": "2027-11-28",
+   "note": "vorläufiger Kalender · Saisonfinale"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Spanien",
+   "country": "Spanien",
+   "from": "2026-10-16",
+   "to": "2026-10-18",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · Saisonfinale"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Phillip Island",
+   "country": "Australien",
+   "from": "2027-02-19",
+   "to": "2027-02-21",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Portimão",
+   "country": "Portugal",
+   "from": "2027-03-19",
+   "to": "2027-03-21",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Valencia",
+   "country": "Spanien",
+   "from": "2027-04-02",
+   "to": "2027-04-04",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Assen",
+   "country": "Niederlande",
+   "from": "2027-04-16",
+   "to": "2027-04-18",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Aragón",
+   "country": "Spanien",
+   "from": "2027-05-21",
+   "to": "2027-05-23",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Most",
+   "country": "Tschechien",
+   "from": "2027-06-04",
+   "to": "2027-06-06",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Misano",
+   "country": "Italien",
+   "from": "2027-06-18",
+   "to": "2027-06-20",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Donington Park",
+   "country": "Großbritannien",
+   "from": "2027-07-09",
+   "to": "2027-07-11",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Magny-Cours",
+   "country": "Frankreich",
+   "from": "2027-09-03",
+   "to": "2027-09-05",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Cremona",
+   "country": "Italien",
+   "from": "2027-09-24",
+   "to": "2027-09-26",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Estoril",
+   "country": "Portugal",
+   "from": "2027-10-15",
+   "to": "2027-10-17",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig"
+  },
+  {
+   "s": "sbk",
+   "name": "WorldSBK Shanghai",
+   "country": "China",
+   "from": "2027-10-29",
+   "to": "2027-10-31",
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig · Saisonfinale"
   }
  ]
 }

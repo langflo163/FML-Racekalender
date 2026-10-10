@@ -162,7 +162,7 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 
 let DATA=null, SER={}, EVENTS=[];
 let hidden=new Set(store.get('rk_hidden',[]));
-let showSess=store.get('rk_sess',true);
+let showSess=true;
 let off=new Set(store.get('rk_off',[]));
 let view='next', calMonth=null, selDay=null;
 
@@ -219,7 +219,6 @@ function renderChips(){
   const all=hidden.size===0;
   let h=`<button class="chip all ${all?'':'off'}" data-s="*">Alle</button>`;
   DATA.series.filter(s=>!off.has(s.id)).forEach(s=>{h+=`<button class="chip ${hidden.has(s.id)?'off':''}" data-s="${s.id}"><span class="dot" style="background:${s.color}"></span>${esc(s.name)}</button>`});
-  h+=`<button class="chip ${showSess?'':'off'}" data-s="#">Quali &amp; Sprint</button>`;
   const el=document.getElementById('chips'); el.innerHTML=h;
   el.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
     const id=b.dataset.s;
