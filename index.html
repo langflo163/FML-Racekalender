@@ -79,6 +79,8 @@ main{max-width:1100px;margin:0 auto;padding:12px 16px calc(env(safe-area-inset-b
 .tag.free{background:var(--free-bg);color:var(--free)}
 .tag.pay{background:var(--pay-bg);color:var(--pay);font-weight:500}
 .tag.open{border:1px dashed var(--open);color:var(--open);font-weight:500}
+.kind{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:0 5px;margin-left:4px;vertical-align:2px}
+.kind.sp{border-color:var(--accent);color:var(--accent)}
 .note{font-size:12px;color:var(--muted);margin-top:4px}
 .empty{color:var(--muted);text-align:center;padding:30px 0}
 /* Kalender */
@@ -160,6 +162,7 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 
 let DATA=null, SER={}, EVENTS=[];
 let hidden=new Set(store.get('rk_hidden',[]));
+let showSess=store.get('rk_sess',true);
 let view='next', calMonth=null, selDay=null;
 
 function prep(d){
@@ -174,7 +177,7 @@ function prep(d){
     return x;
   }).sort((a,b)=>a.sort-b.sort);
 }
-const visible=()=>EVENTS.filter(e=>!hidden.has(e.s));
+const visible=()=>EVENTS.filter(e=>!hidden.has(e.s)&&(showSess||!e.type));
 const upcoming=()=>{const now=Date.now();return visible().filter(e=>e.end.getTime()>now)};
 
 function tvTags(e){
@@ -188,6 +191,12 @@ function whenText(e){
   if(e.k1!==e.k2) return `<div class="time tba">${dm(e.k1)} – ${dm(e.k2)} · Uhrzeit folgt</div>`;
   return `<div class="time tba">Uhrzeit folgt</div>`;
 }
+function badge(e){
+  if(e.type==='quali')return ' <span class="kind">Qualifying</span>';
+  if(e.type==='sprint')return ' <span class="kind sp">Sprint</span>';
+  if(e.type==='sq')return ' <span class="kind">Sprint-Quali</span>';
+  return '';
+}
 function dm(k){const d=noonUTC(k);return d.getUTCDate()+'.'+(d.getUTCMonth()+1)+'.'}
 function evCard(e){
   const s=SER[e.s]; const d=noonUTC(e.k1);
@@ -197,7 +206,7 @@ function evCard(e){
     <div class="when"><div class="w">${WD[d.getUTCDay()]}</div><div class="d">${d.getUTCDate()}.</div><div class="w">${MN[d.getUTCMonth()].slice(0,3)}</div></div>
     <div class="body">
       <div class="ser">${esc(s.name)}</div>
-      <div class="name">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}</div>
+      <div class="name">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}${badge(e)}</div>
       ${place?`<div class="meta">${place}</div>`:''}
       ${whenText(e)}
       <div class="tv">${tvTags(e)}</div>
@@ -209,9 +218,11 @@ function renderChips(){
   const all=hidden.size===0;
   let h=`<button class="chip all ${all?'':'off'}" data-s="*">Alle</button>`;
   DATA.series.forEach(s=>{h+=`<button class="chip ${hidden.has(s.id)?'off':''}" data-s="${s.id}"><span class="dot" style="background:${s.color}"></span>${esc(s.name)}</button>`});
+  h+=`<button class="chip ${showSess?'':'off'}" data-s="#">Quali &amp; Sprint</button>`;
   const el=document.getElementById('chips'); el.innerHTML=h;
   el.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
     const id=b.dataset.s;
+    if(id==='#'){showSess=!showSess;store.set('rk_sess',showSess);renderAll();return}
     if(id==='*'){hidden=hidden.size?new Set():new Set(DATA.series.map(s=>s.id))}
     else if(hidden.has(id))hidden.delete(id); else hidden.add(id);
     store.set('rk_hidden',[...hidden]); renderAll();
@@ -226,7 +237,7 @@ function renderNext(){
   const target=nx.t?nx.t:noonUTC(nx.k1);
   let h=`<div class="hero" style="--c:${s.color}">
     <div class="lbl">Als Nächstes · ${esc(s.name)}</div>
-    <div class="ttl">${nx.hl?'<span class="star">★</span> ':''}${esc(nx.name)}</div>
+    <div class="ttl">${nx.hl?'<span class="star">★</span> ':''}${esc(nx.name)}${badge(nx)}</div>
     <div class="meta">${[nx.track,nx.country].filter(Boolean).map(esc).join(' · ')}</div>
     <div class="time">${nx.t?fLong.format(nx.t)+', '+fTime.format(nx.t)+' Uhr':(nx.k1!==nx.k2?dm(nx.k1)+' – '+dm(nx.k2)+noonUTC(nx.k2).getUTCFullYear()+' · Uhrzeit folgt':fLong.format(noonUTC(nx.k1))+' · Uhrzeit folgt')}</div>
     <div class="cd" id="cd"></div>
