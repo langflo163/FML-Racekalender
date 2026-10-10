@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FML Rennkalender</title>
+<meta name="description" content="Motorsport-Termine mit deutscher Zeit und deutscher Übertragung">
+<meta name="theme-color" content="#111418">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rennkalender">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<style>
+:root{
+  --bg:#f4f5f7; --card:#ffffff; --text:#14171c; --muted:#646b76; --line:#e2e5ea;
+  --accent:#e10600; --mine:#127a3d; --mine-bg:#e3f4ea; --free:#1d5fbf; --free-bg:#e5eefb;
+  --pay:#6b7280; --pay-bg:#eef0f3; --open:#a05a00; --hl:#ffb400;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1114; --card:#181b20; --text:#eef0f3; --muted:#9aa2ad; --line:#2a2f37;
+    --mine:#5fd38f; --mine-bg:#173326; --free:#7fb0ff; --free-bg:#1a2740;
+    --pay:#a3a9b3; --pay-bg:#23272e; --open:#f0a54a;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1114; --card:#181b20; --text:#eef0f3; --muted:#9aa2ad; --line:#2a2f37;
+  --mine:#5fd38f; --mine-bg:#173326; --free:#7fb0ff; --free-bg:#1a2740;
+  --pay:#a3a9b3; --pay-bg:#23272e; --open:#f0a54a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);
+  font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%}
+header{position:sticky;top:0;z-index:5;background:var(--bg);
+  padding:calc(env(safe-area-inset-top) + 10px) 16px 0;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto}
+.flag{width:28px;height:28px;flex:none}
+h1{font-size:19px;margin:0;font-weight:750;letter-spacing:-.2px}
+.tabs{display:flex;gap:4px;max-width:1100px;margin:10px auto 0}
+.tabs button{flex:1;border:0;background:none;color:var(--muted);font:inherit;font-weight:600;
+  padding:9px 0 11px;border-bottom:3px solid transparent;cursor:pointer}
+.tabs button.on{color:var(--text);border-color:var(--accent)}
+main{max-width:1100px;margin:0 auto;padding:12px 16px calc(env(safe-area-inset-bottom) + 30px)}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);
+  color:var(--text);border-radius:999px;padding:6px 11px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
+.chip .dot{width:9px;height:9px;border-radius:50%}
+.chip.off{opacity:.38}
+.chip.all{font-weight:600}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+.hero .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
+.hero .ttl{font-size:21px;font-weight:750;margin:4px 0 2px}
+.cd{display:flex;gap:10px;margin:12px 0 8px}
+.cd div{background:var(--bg);border-radius:10px;padding:8px 0;text-align:center;flex:1;max-width:90px}
+.cd b{display:block;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.1}
+.cd span{font-size:11px;color:var(--muted)}
+.month{font-size:13px;font-weight:750;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin:18px 2px 8px}
+.ev{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin-bottom:8px}
+.ev .bar{width:4px;border-radius:4px;background:var(--c);flex:none}
+.ev .when{width:62px;flex:none;text-align:center}
+.ev .when .d{font-size:20px;font-weight:750;line-height:1.1}
+.ev .when .w{font-size:11px;color:var(--muted);text-transform:uppercase}
+.ev .body{flex:1;min-width:0}
+.ser{font-size:12px;font-weight:700;color:var(--c2,var(--muted))}
+.name{font-weight:650}
+.star{color:var(--hl)}
+.meta{font-size:13px;color:var(--muted)}
+.time{font-size:13px;font-weight:650;margin-top:2px}
+.time.tba{color:var(--muted);font-weight:500;font-style:italic}
+.tv{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tag{font-size:11.5px;border-radius:6px;padding:2px 7px;font-weight:600}
+.tag.mine{background:var(--mine-bg);color:var(--mine)}
+.tag.free{background:var(--free-bg);color:var(--free)}
+.tag.pay{background:var(--pay-bg);color:var(--pay);font-weight:500}
+.tag.open{border:1px dashed var(--open);color:var(--open);font-weight:500}
+.note{font-size:12px;color:var(--muted);margin-top:4px}
+.empty{color:var(--muted);text-align:center;padding:30px 0}
+/* Kalender */
+.calnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.calnav button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:10px;
+  width:40px;height:36px;font-size:18px;cursor:pointer}
+.calnav h2{font-size:17px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.grid .h{font-size:11px;color:var(--muted);text-align:center;padding:4px 0;font-weight:700}
+.day{background:var(--card);border:1px solid var(--line);border-radius:8px;min-height:54px;padding:3px;cursor:pointer;
+  display:flex;flex-direction:column;gap:2px;overflow:hidden}
+.day.out{opacity:.35}
+.day.today{border-color:var(--accent);border-width:2px}
+.day.sel{outline:2px solid var(--text);outline-offset:-2px}
+.day .n{font-size:12px;font-weight:650}
+.dots{display:flex;flex-wrap:wrap;gap:2px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--c)}
+.lab{display:none;font-size:10.5px;line-height:1.2;border-left:3px solid var(--c);padding-left:3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (min-width:760px){
+  .day{min-height:96px}.dots{display:none}.lab{display:block}
+}
+.daylist{margin-top:14px}
+/* Serien */
+.sc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;border-left:6px solid var(--c)}
+.sc h3{margin:0 0 4px;font-size:16px}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
+footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px}
+@media (min-width:760px){ .list2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <svg class="flag" viewBox="0 0 28 28" aria-hidden="true">
+      <rect x="3" y="3" width="2.4" height="23" rx="1.2" fill="currentColor"/>
+      <g transform="translate(5.4 4)">
+        <rect width="19" height="13" rx="1.5" fill="#fff" stroke="currentColor" stroke-width="1"/>
+        <g fill="#14171c"><rect x="0" y="0" width="4.75" height="4.33"/><rect x="9.5" y="0" width="4.75" height="4.33"/>
+        <rect x="4.75" y="4.33" width="4.75" height="4.33"/><rect x="14.25" y="4.33" width="4.75" height="4.33"/>
+        <rect x="0" y="8.66" width="4.75" height="4.34"/><rect x="9.5" y="8.66" width="4.75" height="4.34"/></g>
+      </g>
+    </svg>
+    <h1>Rennkalender</h1>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button data-v="next" class="on">Nächste</button>
+    <button data-v="cal">Kalender</button>
+    <button data-v="series">Serien</button>
+  </nav>
+</header>
+<main>
+  <div class="chips" id="chips"></div>
+  <section id="v-next"></section>
+  <section id="v-cal" hidden></section>
+  <section id="v-series" hidden></section>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+(function(){
+const TZ='Europe/Berlin';
+const fmt=(o)=>new Intl.DateTimeFormat('de-DE',Object.assign({timeZone:TZ},o));
+const fDayKey=fmt({year:'numeric',month:'2-digit',day:'2-digit'});
+const fTime=fmt({hour:'2-digit',minute:'2-digit'});
+const fWeek=fmt({weekday:'short'});
+const fLong=fmt({weekday:'long',day:'numeric',month:'long',year:'numeric'});
+const fMonth=fmt({month:'long',year:'numeric'});
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
+             set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+// "YYYY-MM-DD" key in Berlin time
+function keyOf(date){const p=fDayKey.formatToParts(date);const g=t=>p.find(x=>x.type===t).value;return g('year')+'-'+g('month')+'-'+g('day')}
+function noonUTC(k){return new Date(k+'T12:00:00Z')}
+function addDays(k,n){const d=noonUTC(k);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
+const WD=['So','Mo','Di','Mi','Do','Fr','Sa'];
+const MN=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+let DATA=null, SER={}, EVENTS=[];
+let hidden=new Set(store.get('rk_hidden',[]));
+let view='next', calMonth=null, selDay=null;
+
+function prep(d){
+  DATA=d; SER={}; d.series.forEach(s=>SER[s.id]=s);
+  EVENTS=d.events.filter(e=>SER[e.s]).map(e=>{
+    const x=Object.assign({},e);
+    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;x.end=new Date(x.t.getTime()+4*3600e3)}
+    else if(e.date){x.k1=e.date;x.k2=e.date}
+    else {x.k1=e.from;x.k2=e.to||e.from}
+    if(!x.end){x.end=noonUTC(addDays(x.k2,1))}
+    x.sort=x.t?x.t.getTime():noonUTC(x.k1).getTime()-6*3600e3;
+    return x;
+  }).sort((a,b)=>a.sort-b.sort);
+}
+const visible=()=>EVENTS.filter(e=>!hidden.has(e.s));
+const upcoming=()=>{const now=Date.now();return visible().filter(e=>e.end.getTime()>now)};
+
+function tvTags(e){
+  const list=e.tv||SER[e.s].tv||[];
+  const order={mine:0,free:1,pay:2,open:3};
+  return list.slice().sort((a,b)=>order[a.k]-order[b.k]).map(t=>
+    `<span class="tag ${esc(t.k)}" title="${esc(t.x||'')}">${esc(t.n)}</span>`).join('');
+}
+function whenText(e){
+  if(e.t) return `<div class="time">${fTime.format(e.t)} Uhr</div>`;
+  if(e.k1!==e.k2) return `<div class="time tba">${dm(e.k1)} – ${dm(e.k2)} · Uhrzeit folgt</div>`;
+  return `<div class="time tba">Uhrzeit folgt</div>`;
+}
+function dm(k){const d=noonUTC(k);return d.getUTCDate()+'.'+(d.getUTCMonth()+1)+'.'}
+function evCard(e){
+  const s=SER[e.s]; const d=noonUTC(e.k1);
+  const place=[e.track,e.country].filter(Boolean).map(esc).join(' · ');
+  return `<div class="ev" style="--c:${s.color}">
+    <div class="bar"></div>
+    <div class="when"><div class="w">${WD[d.getUTCDay()]}</div><div class="d">${d.getUTCDate()}.</div><div class="w">${MN[d.getUTCMonth()].slice(0,3)}</div></div>
+    <div class="body">
+      <div class="ser">${esc(s.name)}</div>
+      <div class="name">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}</div>
+      ${place?`<div class="meta">${place}</div>`:''}
+      ${whenText(e)}
+      <div class="tv">${tvTags(e)}</div>
+      ${e.note?`<div class="note">${esc(e.note)}</div>`:''}
+    </div></div>`;
+}
+
+function renderChips(){
+  const all=hidden.size===0;
+  let h=`<button class="chip all ${all?'':'off'}" data-s="*">Alle</button>`;
+  DATA.series.forEach(s=>{h+=`<button class="chip ${hidden.has(s.id)?'off':''}" data-s="${s.id}"><span class="dot" style="background:${s.color}"></span>${esc(s.name)}</button>`});
+  const el=document.getElementById('chips'); el.innerHTML=h;
+  el.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
+    const id=b.dataset.s;
+    if(id==='*'){hidden=hidden.size?new Set():new Set(DATA.series.map(s=>s.id))}
+    else if(hidden.has(id))hidden.delete(id); else hidden.add(id);
+    store.set('rk_hidden',[...hidden]); renderAll();
+  });
+}
+
+let timer=null;
+function renderNext(){
+  const el=document.getElementById('v-next'); const up=upcoming();
+  if(!up.length){el.innerHTML='<div class="empty">Keine kommenden Termine für die gewählten Serien.</div>';return}
+  const nx=up[0]; const s=SER[nx.s];
+  const target=nx.t?nx.t:noonUTC(nx.k1);
+  let h=`<div class="hero" style="--c:${s.color}">
+    <div class="lbl">Als Nächstes · ${esc(s.name)}</div>
+    <div class="ttl">${nx.hl?'<span class="star">★</span> ':''}${esc(nx.name)}</div>
+    <div class="meta">${[nx.track,nx.country].filter(Boolean).map(esc).join(' · ')}</div>
+    <div class="time">${nx.t?fLong.format(nx.t)+', '+fTime.format(nx.t)+' Uhr':(nx.k1!==nx.k2?dm(nx.k1)+' – '+dm(nx.k2)+noonUTC(nx.k2).getUTCFullYear()+' · Uhrzeit folgt':fLong.format(noonUTC(nx.k1))+' · Uhrzeit folgt')}</div>
+    <div class="cd" id="cd"></div>
+    <div class="tv">${tvTags(nx)}</div></div>`;
+  let cur='', grp='';
+  up.forEach(e=>{const d=noonUTC(e.k1);const m=MN[d.getUTCMonth()]+' '+d.getUTCFullYear();
+    if(m!==cur){if(cur)grp+='</div>';grp+=`<div class="month">${m}</div><div class="list2">`;cur=m}
+    grp+=evCard(e)});
+  el.innerHTML=h+grp+'</div>';
+  const tick=()=>{const c=document.getElementById('cd'); if(!c)return;
+    let ms=target.getTime()-Date.now();
+    if(ms<=0){c.innerHTML=nx.t?'<div><b>LIVE</b><span>läuft</span></div>':'<div><b>Heute</b><span>&nbsp;</span></div>';return}
+    const D=Math.floor(ms/864e5),H=Math.floor(ms%864e5/36e5),M=Math.floor(ms%36e5/6e4),S=Math.floor(ms%6e4/1e3);
+    c.innerHTML=`<div><b>${D}</b><span>Tage</span></div><div><b>${H}</b><span>Std</span></div><div><b>${M}</b><span>Min</span></div>`+(nx.t?`<div><b>${S}</b><span>Sek</span></div>`:'');};
+  clearInterval(timer); tick(); timer=setInterval(tick,1000);
+}
+
+function renderCal(){
+  const el=document.getElementById('v-cal'); const today=keyOf(new Date());
+  if(!calMonth)calMonth=today.slice(0,7);
+  const [y,m]=calMonth.split('-').map(Number);
+  const first=new Date(Date.UTC(y,m-1,1,12)); const startOff=(first.getUTCDay()+6)%7;
+  const gridStart=addDays(first.toISOString().slice(0,10),-startOff);
+  const byDay={}; visible().forEach(e=>{let k=e.k1;for(let i=0;i<10;i++){(byDay[k]=byDay[k]||[]).push(e);if(k===e.k2)break;k=addDays(k,1)}});
+  let h=`<div class="calnav"><button id="pm" aria-label="Vormonat">‹</button><h2>${MN[m-1]} ${y}</h2><button id="nm" aria-label="Nächster Monat">›</button></div><div class="grid">`;
+  ['Mo','Di','Mi','Do','Fr','Sa','So'].forEach(w=>h+=`<div class="h">${w}</div>`);
+  for(let i=0;i<42;i++){const k=addDays(gridStart,i);const evs=byDay[k]||[];
+    const out=k.slice(0,7)!==calMonth;
+    h+=`<div class="day ${out?'out':''} ${k===today?'today':''} ${k===selDay?'sel':''}" data-k="${k}"><div class="n">${Number(k.slice(8))}</div>
+      <div class="dots">${evs.slice(0,8).map(e=>`<i style="--c:${SER[e.s].color}"></i>`).join('')}</div>
+      ${evs.slice(0,4).map(e=>`<div class="lab" style="--c:${SER[e.s].color}">${e.hl?'★ ':''}${esc(e.name)}</div>`).join('')}
+      ${evs.length>4?`<div class="lab" style="--c:transparent">+${evs.length-4} weitere</div>`:''}</div>`;}
+  h+='</div><div class="daylist" id="daylist"></div>';
+  el.innerHTML=h;
+  el.querySelector('#pm').onclick=()=>{calMonth=shiftMonth(calMonth,-1);renderCal()};
+  el.querySelector('#nm').onclick=()=>{calMonth=shiftMonth(calMonth,1);renderCal()};
+  el.querySelectorAll('.day').forEach(d=>d.onclick=()=>{selDay=d.dataset.k;renderCal()});
+  const dl=el.querySelector('#daylist');
+  if(selDay){const evs=byDay[selDay]||[];const d=noonUTC(selDay);
+    dl.innerHTML=`<div class="month">${fLong.format(d)}</div>`+(evs.length?`<div class="list2">${evs.map(evCard).join('')}</div>`:'<div class="empty">Keine Rennen an diesem Tag.</div>');}
+  else{const evs=visible().filter(e=>e.k2.slice(0,7)>=calMonth&&e.k1.slice(0,7)<=calMonth);
+    dl.innerHTML=`<div class="month">Alle Termine im ${MN[m-1]}</div>`+(evs.length?`<div class="list2">${evs.map(evCard).join('')}</div>`:'<div class="empty">Keine Rennen in diesem Monat.</div>');}
+}
+function shiftMonth(ym,n){let [y,m]=ym.split('-').map(Number);m+=n;while(m<1){m+=12;y--}while(m>12){m-=12;y++}return y+'-'+String(m).padStart(2,'0')}
+
+function renderSeries(){
+  const el=document.getElementById('v-series'); const now=Date.now();
+  let h=`<div class="legend"><span class="tag mine">deine Sender</span><span class="tag free">kostenlos</span><span class="tag pay">Abo</span><span class="tag open">noch offen</span></div>`;
+  DATA.series.forEach(s=>{const evs=EVENTS.filter(e=>e.s===s.id&&e.end.getTime()>now);
+    const tv=(s.tv||[]).map(t=>`<div class="note"><span class="tag ${esc(t.k)}">${esc(t.n)}</span> ${esc(t.x||'')}</div>`).join('');
+    h+=`<div class="sc" style="--c:${s.color}"><h3>${esc(s.name)}</h3>
+      <div class="meta">${evs.length?evs.length+' kommende Termine · nächster: '+esc(evs[0].name)+' ('+dm(evs[0].k1)+')':'Keine Termine bekannt – Kalender noch nicht veröffentlicht'}</div>${tv}</div>`});
+  el.innerHTML=h;
+}
+
+function renderAll(){
+  renderChips();
+  if(view==='next')renderNext(); if(view==='cal')renderCal(); if(view==='series')renderSeries();
+  const u=DATA.updated?noonUTC(DATA.updated):null;
+  document.getElementById('foot').innerHTML=`Alle Zeiten in deutscher Zeit · Stand der Daten: ${u?u.getUTCDate()+'.'+(u.getUTCMonth()+1)+'.'+u.getUTCFullYear():'–'}<br>Angaben ohne Gewähr – Zeiten und Sender können sich kurzfristig ändern.`;
+}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  view=b.dataset.v; document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  ['next','cal','series'].forEach(v=>document.getElementById('v-'+v).hidden=v!==view);
+  renderAll(); window.scrollTo(0,0);
+});
+
+fetch('data/races.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{prep(d);renderAll()})
+  .catch(()=>{document.getElementById('v-next').innerHTML='<div class="empty">Termine konnten nicht geladen werden.</div>'});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+})();
+</script>
+</body>
+</html>
