@@ -287,6 +287,24 @@
      "x": "alle Rennen + Qualifying live, u. a. deutscher Kommentar (Stand 2026)"
     }
    ]
+  },
+  {
+   "id": "enas",
+   "name": "eNASCAR",
+   "color": "#b8860b",
+   "tv": [
+    {
+     "n": "YouTube iRacing",
+     "k": "free",
+     "x": "live, Kommentar Englisch (kein dt. Kommentar gefunden)",
+     "url": "https://www.youtube.com/@iRacing"
+    },
+    {
+     "n": "eNASCAR.com/live",
+     "k": "free",
+     "url": "https://www.enascar.com/live"
+    }
+   ]
   }
  ],
  "events": [
@@ -3154,6 +3172,14 @@
    "country": "Japan",
    "from": "2027-09-03",
    "to": "2027-09-05"
+  },
+  {
+   "s": "enas",
+   "name": "eNASCAR Coca-Cola iRacing – Finale",
+   "track": "Homestead-Miami (virtuell)",
+   "country": "Online",
+   "start": "2026-10-13T20:00:00-04:00",
+   "note": "Saisonfinale 2026 · Vorbericht 30 Min. vorher"
   }
  ]
 }

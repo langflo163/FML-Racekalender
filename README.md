@@ -4,7 +4,7 @@ Motorsport-Termine mit Startzeit in deutscher Zeit und deutschsprachiger Übertr
 Läuft als Web-App auf iPhone, iPad, Android und PC (offlinefähig, zum Home-Bildschirm hinzufügbar).
 
 **Serien:** Formel 1, Formel E, DTM, NLS, 24h Nürburgring, WEC, ELMS, IMSA, GT World Challenge Europe,
-Intercontinental GT Challenge, 24H Series, IndyCar, NASCAR Cup, MotoGP, Moto2, Moto3, Superbike-WM, Truck-EM
+Intercontinental GT Challenge, 24H Series, IndyCar, NASCAR Cup, MotoGP, Moto2, Moto3, Superbike-WM, Truck-EM, eNASCAR
 
 ## Aufbau
 - `index.html` – die komplette App (Serien lassen sich unter „Serien“ pro Gerät ausschalten)
