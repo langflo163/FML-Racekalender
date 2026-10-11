@@ -50,6 +50,8 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
 
 ## Stand 11.10.2026
 
-- App fertig und live; F1-Tabelle eingetragen (vor GP Singapur), restliche Tabellen füllt der Montags-Lauf.
+- App fertig und live. Sonderlauf 11.10. abends: Meisterschaftstabellen für 15 Serien eingetragen.
+  Noch ohne Tabelle: NLS, Intercontinental GT, 24H Series (24h Nürburgring = Einzelevent, keine Tabelle);
+  IMSA nur GTP-Klasse mit Punkten, Truck-EM nur Top 6 (komplette Liste nicht gefunden).
 - Offen: Startzeiten 2027 (kommen per Update), NLS 2027 + Truck-EM 2027 Kalender noch nicht veröffentlicht,
   Sender bei IMSA/NLS noch „noch zu prüfen“, MotoGP Katar 2026 Absage nur gemeldet, Motorvision+ ohne geprüften Link.
