@@ -1,7 +1,7 @@
 {
  "f1": {
   "title": "Fahrer-WM 2026",
-  "asof": "11.10.2026, vor dem Rennen in Singapur",
+  "asof": "nach GP Singapur (11.10.2026)",
   "tables": [
    {
     "name": null,
@@ -10,55 +10,55 @@
       1,
       "Kimi Antonelli",
       "Mercedes",
-      "325"
+      "340"
      ],
      [
       2,
       "George Russell",
       "Mercedes",
-      "236"
+      "238"
      ],
      [
       3,
       "Lewis Hamilton",
       "Ferrari",
-      "221"
+      "229"
      ],
      [
       4,
-      "Charles Leclerc",
-      "Ferrari",
-      "197"
+      "Max Verstappen",
+      "Red Bull Racing",
+      "221"
      ],
      [
       5,
-      "Max Verstappen",
-      "Red Bull Racing",
-      "196"
+      "Charles Leclerc",
+      "Ferrari",
+      "215"
      ],
      [
       6,
       "Lando Norris",
       "McLaren",
-      "189"
+      "201"
      ],
      [
       7,
       "Oscar Piastri",
       "McLaren",
-      "128"
+      "138"
      ],
      [
       8,
       "Isack Hadjar",
       "Red Bull Racing",
-      "96"
+      "97"
      ],
      [
       9,
       "Liam Lawson",
       "Racing Bulls",
-      "69"
+      "75"
      ],
      [
       10,
@@ -86,15 +86,15 @@
      ],
      [
       14,
-      "Gabriel Bortoleto",
+      "Nico Hülkenberg",
       "Audi",
-      "10"
+      "13"
      ],
      [
       15,
-      "Nico Hulkenberg",
+      "Gabriel Bortoleto",
       "Audi",
-      "9"
+      "10"
      ],
      [
       16,
@@ -123,7 +123,7 @@
      [
       20,
       "Yuki Tsunoda",
-      "Racing Bulls",
+      "Racing Bulls (laut formula1.com, als Ersatzfahrer)",
       "1"
      ],
      [
@@ -140,9 +140,1896 @@
      ],
      [
       23,
-      "Sergio Perez",
+      "Sergio Pérez",
       "Cadillac",
       "0"
+     ]
+    ]
+   }
+  ]
+ },
+ "fe": {
+  "title": "Fahrer-WM 2025/26 (Endstand)",
+  "asof": "nach London E-Prix (16.08.2026) · Saison 2026/27 startet 18.12. in Jeddah",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Pascal Wehrlein",
+      "Porsche",
+      "169"
+     ],
+     [
+      2,
+      "Jake Dennis",
+      "Andretti",
+      "164"
+     ],
+     [
+      3,
+      "Mitch Evans",
+      "Jaguar",
+      "160"
+     ],
+     [
+      4,
+      "Oliver Rowland",
+      "Nissan",
+      "137"
+     ],
+     [
+      5,
+      "Edoardo Mortara",
+      "Mahindra",
+      "137"
+     ],
+     [
+      6,
+      "António Félix da Costa",
+      "Jaguar",
+      "128"
+     ],
+     [
+      7,
+      "Nyck de Vries",
+      "Mahindra",
+      "115"
+     ],
+     [
+      8,
+      "Nick Cassidy",
+      "Citroën",
+      "114"
+     ],
+     [
+      9,
+      "Nico Müller",
+      "Porsche",
+      "102"
+     ],
+     [
+      10,
+      "Sébastien Buemi",
+      "Envision",
+      "97"
+     ],
+     [
+      11,
+      "Taylor Barnard",
+      "DS Penske",
+      "68"
+     ],
+     [
+      12,
+      "Jean-Éric Vergne",
+      "Citroën",
+      "68"
+     ],
+     [
+      13,
+      "Pepe Martí",
+      "Cupra Kiro",
+      "66"
+     ],
+     [
+      14,
+      "Felipe Drugovich",
+      "Andretti",
+      "65"
+     ],
+     [
+      15,
+      "Dan Ticktum",
+      "Cupra Kiro",
+      "62"
+     ],
+     [
+      16,
+      "Joel Eriksson",
+      "Envision",
+      "55"
+     ],
+     [
+      17,
+      "Lucas di Grassi",
+      "Lola Yamaha ABT",
+      "32"
+     ],
+     [
+      18,
+      "Maximilian Günther",
+      "DS Penske",
+      "23"
+     ],
+     [
+      19,
+      "Norman Nato",
+      "Nissan",
+      "20"
+     ],
+     [
+      20,
+      "Zane Maloney",
+      "Lola Yamaha ABT",
+      "3"
+     ]
+    ]
+   }
+  ]
+ },
+ "dtm": {
+  "title": "DTM 2026 (Endstand)",
+  "asof": "nach Hockenheim Rennen 2 (11.10.2026) · Auer: ORF nennt 182",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Thomas Preining",
+      "Manthey EMA",
+      "225"
+     ],
+     [
+      2,
+      "Maro Engel",
+      "Winward Racing",
+      "213"
+     ],
+     [
+      3,
+      "Marco Wittmann",
+      "Schubert Motorsport",
+      "198"
+     ],
+     [
+      4,
+      "Lucas Auer",
+      "Mercedes-AMG Team Landgraf",
+      "183"
+     ],
+     [
+      5,
+      "Matteo Cairoli",
+      "Emil Frey Racing",
+      "160"
+     ],
+     [
+      6,
+      "Nicki Thiim",
+      "Comtoyou Racing",
+      "149"
+     ],
+     [
+      7,
+      "Ben Dörr",
+      "Dörr Motorsport",
+      "139"
+     ],
+     [
+      8,
+      "Arjun Maini",
+      "HRT Ford Performance",
+      "133"
+     ],
+     [
+      9,
+      "Ricardo Feller",
+      "Manthey EMA",
+      "121"
+     ],
+     [
+      10,
+      "Jules Gounon",
+      "Winward Racing",
+      "111"
+     ],
+     [
+      11,
+      "Thierry Vermeulen",
+      "Emil Frey Racing",
+      "107"
+     ],
+     [
+      12,
+      "Luca Engstler",
+      "Abt Sportsline",
+      "99"
+     ],
+     [
+      13,
+      "Mirko Bortolotti",
+      "GRT Grasser Racing Team",
+      "97"
+     ],
+     [
+      14,
+      "Kelvin van der Linde",
+      "Schubert Motorsport",
+      "96"
+     ],
+     [
+      15,
+      "Finn Wiebelhaus",
+      "HRT Ford Performance",
+      "78"
+     ],
+     [
+      16,
+      "Bastian Buus",
+      "Land Motorsport",
+      "66"
+     ],
+     [
+      17,
+      "Marco Mapelli",
+      "Abt Sportsline",
+      "57"
+     ],
+     [
+      18,
+      "Tom Kalender",
+      "Mercedes-AMG Team Landgraf",
+      "49"
+     ],
+     [
+      19,
+      "Timo Glock",
+      "Dörr Motorsport",
+      "30"
+     ],
+     [
+      20,
+      "Maximilian Paul",
+      "GRT Grasser Racing Team",
+      "14"
+     ],
+     [
+      21,
+      "Nicolas Baert",
+      "Comtoyou Racing",
+      "8"
+     ],
+     [
+      22,
+      "Christian Engelhart",
+      "GRT Grasser Racing Team",
+      "2"
+     ]
+    ]
+   }
+  ]
+ },
+ "wec": {
+  "title": "Fahrer-WM 2026",
+  "asof": "nach 6h Fuji (27.09.2026)",
+  "tables": [
+   {
+    "name": "Hypercar",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Sébastien Buemi / Brendon Hartley / Ryo Hirakawa",
+      "Toyota #8",
+      "89"
+     ],
+     [
+      2,
+      "Mike Conway / Kamui Kobayashi / Nyck de Vries",
+      "Toyota #7",
+      "79"
+     ],
+     [
+      3,
+      "Robin Frijns / René Rast",
+      "BMW #20",
+      "75"
+     ],
+     [
+      4,
+      "Kevin Magnussen / Raffaele Marciello",
+      "BMW #15",
+      "69"
+     ],
+     [
+      5,
+      "Sheldon van der Linde",
+      "BMW #20",
+      "65"
+     ]
+    ]
+   },
+   {
+    "name": "LMGT3",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Jonny Edgar",
+      "TF Sport #33",
+      "86"
+     ],
+     [
+      2,
+      "Nicky Catsburg",
+      "TF Sport #33",
+      "82"
+     ],
+     [
+      3,
+      "Ben Keating",
+      "TF Sport #33",
+      "64"
+     ],
+     [
+      4,
+      "Ian James / Mattia Drudi / Zacharie Robichon",
+      "Heart of Racing #27",
+      "62"
+     ],
+     [
+      5,
+      "Charlie Eastwood / Peter Dempsey / Salih Yoluç",
+      "Racing Team Turkey by TF #34",
+      "58"
+     ]
+    ]
+   }
+  ]
+ },
+ "elms": {
+  "title": "ELMS 2026 (Endstand)",
+  "asof": "nach 4h Portimão (10.10.2026)",
+  "tables": [
+   {
+    "name": "LMP2",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Hanley / Saucy / Peebles",
+      "United Autosports #22",
+      "111"
+     ],
+     [
+      2,
+      "Masson / Rousset / Gray",
+      "Forestier Racing by Panis #29",
+      "84"
+     ],
+     [
+      3,
+      "Chadwick / Hörr / Rinicella",
+      "IDEC Sport #18",
+      "70"
+     ],
+     [
+      4,
+      "Hughes / Kaiser",
+      "Algarve Pro Racing #25",
+      "62"
+     ],
+     [
+      5,
+      "Smiechowski / Dillmann",
+      "Inter Europol #43",
+      "59"
+     ]
+    ]
+   },
+   {
+    "name": "LMP2 Pro/Am",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Trulli / Jakobsen / Jensen",
+      "Algarve Pro Racing #20",
+      "86"
+     ],
+     [
+      2,
+      "Meguetounif / Huffaker / Thomas",
+      "TDS Racing #14",
+      "77"
+     ],
+     [
+      3,
+      "Fuoco / Perrodo / Vaxivière",
+      "AF Corse #83",
+      "67"
+     ],
+     [
+      4,
+      "Pin / Roda / Verschoor",
+      "Duqueine #30",
+      "67"
+     ],
+     [
+      5,
+      "Bölükbaşı / Møller / Fluxá",
+      "Vector Sport #7",
+      "65"
+     ]
+    ]
+   },
+   {
+    "name": "LMP3",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Jacoby / Lanchère",
+      "CLX #17",
+      "110"
+     ],
+     [
+      2,
+      "Iglesias",
+      "CLX #17",
+      "96"
+     ],
+     [
+      3,
+      "Rodella / Cautela / Gaarde Pedersen",
+      "Rinaldi #5",
+      "77"
+     ],
+     [
+      4,
+      "Michal / Schwarze / Provost",
+      "R-ace GP #85",
+      "76"
+     ],
+     [
+      5,
+      "Dedecker / Bell / van der Snel",
+      "EuroInternational #11",
+      "63"
+     ]
+    ]
+   },
+   {
+    "name": "LMGT3",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Udell / McDonald / Eastwood",
+      "TF Sport #33",
+      "88"
+     ],
+     [
+      2,
+      "Kurzejewski / Lietz / Sargent",
+      "Proton #75",
+      "86"
+     ],
+     [
+      3,
+      "Al-Khelaifi / Hanses",
+      "Team Qatar by Iron Lynx #62",
+      "78"
+     ],
+     [
+      4,
+      "van Eijndhoven",
+      "Proton #77",
+      "72"
+     ],
+     [
+      5,
+      "Berry",
+      "Proton #77",
+      "58"
+     ]
+    ]
+   }
+  ]
+ },
+ "imsa": {
+  "title": "IMSA 2026 (Endstand, vorläufig)",
+  "asof": "nach Petit Le Mans (03.10.2026) · Meister LMP2: Kurtz/Quinn (APR #04), GTD Pro: De Phillippi/Verhagen (Paul Miller #1), GTD: Ward/Ellis (Winward #57) – Punkte dieser Klassen nicht abrufbar",
+  "tables": [
+   {
+    "name": "GTP",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Jack Aitken",
+      "Cadillac Whelen #31",
+      "3020"
+     ],
+     [
+      2,
+      "Laurin Heinrich",
+      "",
+      "2859"
+     ],
+     [
+      3,
+      "Renger van der Zande / Nick Yelloly",
+      "",
+      "2723"
+     ],
+     [
+      4,
+      "Kévin Estre",
+      "",
+      "2709"
+     ],
+     [
+      5,
+      "Earl Bamber",
+      "",
+      "2672"
+     ]
+    ]
+   }
+  ]
+ },
+ "gtwc": {
+  "title": "Gesamtwertung 2026 (Sprint + Endurance)",
+  "asof": "nach Runde 9 Barcelona (04.10.2026) · Endurance-Titel Auer/Engel/Stolz bereits entschieden",
+  "tables": [
+   {
+    "name": "Gesamt (Pro)",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Lucas Auer / Maro Engel",
+      "Mercedes-AMG Team Mann-Filter",
+      "131,5"
+     ],
+     [
+      2,
+      "Ricardo Feller / Bastian Buus",
+      "Lionspeed GP",
+      "102"
+     ],
+     [
+      3,
+      "Kelvin van der Linde / Charles Weerts",
+      "Team WRT",
+      "97"
+     ],
+     [
+      4,
+      "Luca Stolz",
+      "Mercedes-AMG Team Mann-Filter",
+      "86"
+     ],
+     [
+      5,
+      "Daniel Juncadella",
+      "Mercedes-AMG Team Verstappen Racing",
+      "80"
+     ]
+    ]
+   },
+   {
+    "name": "Gold Cup",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Tom Fleming / Louis Prette",
+      "Garage 59",
+      "169,5"
+     ],
+     [
+      2,
+      "Simon Gachet",
+      "CSA Racing",
+      "136"
+     ],
+     [
+      3,
+      "Arthur Rougier / James Kell",
+      "CSA Racing",
+      "129,5"
+     ],
+     [
+      4,
+      "Dylan Pereira",
+      "",
+      "120,5"
+     ],
+     [
+      5,
+      "Alex Aka",
+      "",
+      "119,5"
+     ]
+    ]
+   },
+   {
+    "name": "Silver Cup",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Ignacio Montenegro / Matisse Lismont",
+      "Team WRT",
+      "210"
+     ],
+     [
+      2,
+      "Guilherme Oliveira / Mikey Porter",
+      "",
+      "108,5"
+     ],
+     [
+      3,
+      "Oliver Söderström",
+      "",
+      "105"
+     ],
+     [
+      4,
+      "Gilles Stadsbader / Jef Machiels",
+      "AF Corse",
+      "104,5"
+     ],
+     [
+      5,
+      "Aurélien Panis / Anthony Bartone",
+      "",
+      "101,5"
+     ]
+    ]
+   },
+   {
+    "name": "Bronze Cup",
+    "top": 5,
+    "rows": [
+     [
+      1,
+      "Dennis Marschall",
+      "Kessel Racing",
+      "161,5"
+     ],
+     [
+      2,
+      "Marvin Dienst / Rinat Salikhov",
+      "Winward Racing",
+      "141"
+     ],
+     [
+      3,
+      "Darren Leung",
+      "Paradine Competition",
+      "136"
+     ],
+     [
+      4,
+      "Eddie Cheever",
+      "",
+      "135"
+     ],
+     [
+      5,
+      "Charles Dawson / Kiern Jewiss",
+      "",
+      "126,5"
+     ]
+    ]
+   }
+  ]
+ },
+ "indy": {
+  "title": "IndyCar 2026 (Endstand)",
+  "asof": "nach GP Monterey, Laguna Seca (06.09.2026)",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Alex Palou",
+      "Chip Ganassi Racing",
+      "631"
+     ],
+     [
+      2,
+      "Kyle Kirkwood",
+      "Andretti Global",
+      "545"
+     ],
+     [
+      3,
+      "Christian Lundgaard",
+      "Arrow McLaren",
+      "535"
+     ],
+     [
+      4,
+      "Pato O'Ward",
+      "Arrow McLaren",
+      "522"
+     ],
+     [
+      5,
+      "David Malukas",
+      "Team Penske",
+      "514"
+     ],
+     [
+      6,
+      "Scott McLaughlin",
+      "Team Penske",
+      "482"
+     ],
+     [
+      7,
+      "Marcus Ericsson",
+      "Andretti Global",
+      "429"
+     ],
+     [
+      8,
+      "Josef Newgarden",
+      "Team Penske",
+      "423"
+     ],
+     [
+      9,
+      "Felix Rosenqvist",
+      "Meyer Shank Racing",
+      "412"
+     ],
+     [
+      10,
+      "Rinus VeeKay",
+      "Juncos Hollinger Racing",
+      "378"
+     ],
+     [
+      11,
+      "Will Power",
+      "Andretti Global",
+      "368"
+     ],
+     [
+      12,
+      "Scott Dixon",
+      "Chip Ganassi Racing",
+      "331"
+     ],
+     [
+      13,
+      "Kyffin Simpson",
+      "Chip Ganassi Racing",
+      "327"
+     ],
+     [
+      14,
+      "Marcus Armstrong",
+      "Meyer Shank Racing",
+      "320"
+     ],
+     [
+      15,
+      "Alexander Rossi",
+      "Ed Carpenter Racing",
+      "307"
+     ],
+     [
+      16,
+      "Graham Rahal",
+      "Rahal Letterman Lanigan",
+      "302"
+     ],
+     [
+      17,
+      "Santino Ferrucci",
+      "A.J. Foyt Racing",
+      "280"
+     ],
+     [
+      18,
+      "Louis Foster",
+      "Rahal Letterman Lanigan",
+      "267"
+     ],
+     [
+      19,
+      "Romain Grosjean",
+      "Dale Coyne Racing",
+      "259"
+     ],
+     [
+      20,
+      "Nolan Siegel",
+      "Arrow McLaren",
+      "259"
+     ],
+     [
+      21,
+      "Christian Rasmussen",
+      "Ed Carpenter Racing",
+      "245"
+     ],
+     [
+      22,
+      "Dennis Hauger",
+      "Dale Coyne Racing",
+      "228"
+     ],
+     [
+      23,
+      "Mick Schumacher",
+      "Rahal Letterman Lanigan",
+      "213"
+     ],
+     [
+      24,
+      "Caio Collet",
+      "A.J. Foyt Racing",
+      "203"
+     ],
+     [
+      25,
+      "Sting Ray Robb",
+      "Juncos Hollinger Racing",
+      "182"
+     ],
+     [
+      26,
+      "Conor Daly",
+      "Dreyer & Reinbold",
+      "24"
+     ],
+     [
+      27,
+      "Takuma Sato",
+      "Rahal Letterman Lanigan",
+      "20"
+     ],
+     [
+      28,
+      "Jack Harvey",
+      "Dreyer & Reinbold",
+      "8"
+     ],
+     [
+      29,
+      "Jacob Abel",
+      "Abel Motorsports",
+      "6"
+     ],
+     [
+      30,
+      "Hélio Castroneves",
+      "Meyer Shank Racing",
+      "5"
+     ],
+     [
+      30,
+      "Ed Carpenter",
+      "Ed Carpenter Racing",
+      "5"
+     ],
+     [
+      30,
+      "Ryan Hunter-Reay",
+      "Arrow McLaren",
+      "5"
+     ],
+     [
+      30,
+      "Katherine Legge",
+      "HMD mit A.J. Foyt",
+      "5"
+     ]
+    ]
+   }
+  ]
+ },
+ "nas": {
+  "title": "Cup Series 2026 – The Chase",
+  "asof": "nach Rennen 31, Las Vegas (04.10.2026) · Plätze 1–16 im Chase",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Kyle Larson",
+      "Hendrick Motorsports",
+      "2318"
+     ],
+     [
+      2,
+      "Denny Hamlin",
+      "Joe Gibbs Racing",
+      "2278"
+     ],
+     [
+      3,
+      "Christopher Bell",
+      "Joe Gibbs Racing",
+      "2263"
+     ],
+     [
+      4,
+      "Joey Logano",
+      "Team Penske",
+      "2247"
+     ],
+     [
+      5,
+      "Ryan Blaney",
+      "Team Penske",
+      "2238"
+     ],
+     [
+      6,
+      "Chase Briscoe",
+      "Joe Gibbs Racing",
+      "2234"
+     ],
+     [
+      7,
+      "Tyler Reddick",
+      "23XI Racing",
+      "2212"
+     ],
+     [
+      8,
+      "Ty Gibbs",
+      "Joe Gibbs Racing",
+      "2208"
+     ],
+     [
+      9,
+      "Austin Cindric",
+      "Team Penske",
+      "2190"
+     ],
+     [
+      10,
+      "Bubba Wallace",
+      "23XI Racing",
+      "2181"
+     ],
+     [
+      11,
+      "Carson Hocevar",
+      "Spire Motorsports",
+      "2160"
+     ],
+     [
+      12,
+      "William Byron",
+      "Hendrick Motorsports",
+      "2158"
+     ],
+     [
+      13,
+      "Chase Elliott",
+      "Hendrick Motorsports",
+      "2155"
+     ],
+     [
+      14,
+      "Daniel Suárez",
+      "Spire Motorsports",
+      "2123"
+     ],
+     [
+      15,
+      "Chris Buescher",
+      "RFK Racing",
+      "2122"
+     ],
+     [
+      16,
+      "Ryan Preece",
+      "RFK Racing",
+      "2118"
+     ],
+     [
+      17,
+      "Shane van Gisbergen",
+      "",
+      "688"
+     ],
+     [
+      18,
+      "Brad Keselowski",
+      "",
+      "654"
+     ],
+     [
+      19,
+      "Ross Chastain",
+      "",
+      "621"
+     ],
+     [
+      20,
+      "Michael McDowell",
+      "",
+      "597"
+     ],
+     [
+      21,
+      "Erik Jones",
+      "",
+      "582"
+     ],
+     [
+      22,
+      "AJ Allmendinger",
+      "",
+      "551"
+     ],
+     [
+      23,
+      "Todd Gilliland",
+      "",
+      "542"
+     ],
+     [
+      24,
+      "Austin Dillon",
+      "",
+      "528"
+     ],
+     [
+      25,
+      "Josh Berry",
+      "",
+      "514"
+     ],
+     [
+      26,
+      "Alex Bowman",
+      "",
+      "503"
+     ],
+     [
+      27,
+      "John Hunter Nemechek",
+      "",
+      "497"
+     ],
+     [
+      28,
+      "Zane Smith",
+      "",
+      "484"
+     ],
+     [
+      29,
+      "Ricky Stenhouse Jr.",
+      "",
+      "460"
+     ],
+     [
+      30,
+      "Riley Herbst",
+      "",
+      "447"
+     ],
+     [
+      31,
+      "Noah Gragson",
+      "",
+      "394"
+     ],
+     [
+      32,
+      "Cole Custer",
+      "",
+      "387"
+     ],
+     [
+      33,
+      "Ty Dillon",
+      "",
+      "339"
+     ],
+     [
+      34,
+      "Connor Zilisch",
+      "",
+      "327"
+     ],
+     [
+      35,
+      "Cody Ware",
+      "",
+      "229"
+     ]
+    ]
+   }
+  ]
+ },
+ "mgp": {
+  "title": "MotoGP-WM 2026",
+  "asof": "nach GP Indonesien (11.10.2026)",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Jorge Martín",
+      "Aprilia Racing",
+      "355"
+     ],
+     [
+      2,
+      "Marc Márquez",
+      "Ducati Lenovo",
+      "353"
+     ],
+     [
+      3,
+      "Marco Bezzecchi",
+      "Aprilia Racing",
+      "309"
+     ],
+     [
+      4,
+      "Ai Ogura",
+      "Trackhouse Aprilia",
+      "259"
+     ],
+     [
+      5,
+      "Pedro Acosta",
+      "Red Bull KTM",
+      "258"
+     ],
+     [
+      6,
+      "Fabio Di Giannantonio",
+      "VR46 Ducati",
+      "245"
+     ],
+     [
+      7,
+      "Raúl Fernández",
+      "Trackhouse Aprilia",
+      "236"
+     ],
+     [
+      8,
+      "Álex Márquez",
+      "Gresini Ducati",
+      "172"
+     ],
+     [
+      9,
+      "Francesco Bagnaia",
+      "Ducati Lenovo",
+      "166"
+     ],
+     [
+      10,
+      "Fermín Aldeguer",
+      "Gresini Ducati",
+      "125"
+     ],
+     [
+      11,
+      "Enea Bastianini",
+      "KTM Tech3",
+      "122"
+     ],
+     [
+      12,
+      "Luca Marini",
+      "Honda HRC",
+      "108"
+     ],
+     [
+      13,
+      "Brad Binder",
+      "Red Bull KTM",
+      "104"
+     ],
+     [
+      14,
+      "Fabio Quartararo",
+      "Yamaha",
+      "74"
+     ],
+     [
+      15,
+      "Diogo Moreira",
+      "LCR Honda",
+      "74"
+     ],
+     [
+      16,
+      "Franco Morbidelli",
+      "VR46 Ducati",
+      "59"
+     ],
+     [
+      17,
+      "Johann Zarco",
+      "LCR Honda",
+      "51"
+     ],
+     [
+      18,
+      "Joan Mir",
+      "Honda HRC",
+      "33"
+     ],
+     [
+      19,
+      "Jack Miller",
+      "Pramac Yamaha",
+      "28"
+     ],
+     [
+      20,
+      "Álex Rins",
+      "Yamaha",
+      "25"
+     ],
+     [
+      21,
+      "Toprak Razgatlıoğlu",
+      "Pramac Yamaha",
+      "18"
+     ],
+     [
+      22,
+      "Maverick Viñales",
+      "KTM Tech3",
+      "12"
+     ],
+     [
+      23,
+      "Iker Lecuona",
+      "Gresini Ducati",
+      "9"
+     ],
+     [
+      24,
+      "Augusto Fernández",
+      "Yamaha",
+      "6"
+     ],
+     [
+      25,
+      "Pol Espargaró",
+      "KTM Tech3",
+      "5"
+     ],
+     [
+      26,
+      "Somkiat Chantra",
+      "Honda HRC",
+      "3"
+     ],
+     [
+      27,
+      "Takaaki Nakagami",
+      "Honda HRC",
+      "3"
+     ]
+    ]
+   }
+  ]
+ },
+ "m2": {
+  "title": "Moto2-WM 2026",
+  "asof": "nach GP Indonesien (11.10.2026)",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Manuel González",
+      "Intact GP",
+      "265,5"
+     ],
+     [
+      2,
+      "Izan Guevara",
+      "BLU CRU Pramac Yamaha",
+      "260"
+     ],
+     [
+      3,
+      "Iván Ortolá",
+      "QJMOTOR",
+      "191,5"
+     ],
+     [
+      4,
+      "Daniel Holgado",
+      "CFMOTO Aspar",
+      "170"
+     ],
+     [
+      5,
+      "David Alonso",
+      "CFMOTO Aspar",
+      "166"
+     ],
+     [
+      6,
+      "Senna Agius",
+      "Intact GP",
+      "165"
+     ],
+     [
+      7,
+      "Filip Salač",
+      "American Racing",
+      "153"
+     ],
+     [
+      8,
+      "Celestino Vietti",
+      "SpeedRS",
+      "133"
+     ],
+     [
+      9,
+      "Alonso López",
+      "Italjet Gresini",
+      "125,5"
+     ],
+     [
+      10,
+      "Daniel Muñoz",
+      "Italtrans",
+      "83"
+     ],
+     [
+      11,
+      "Tony Arbolino",
+      "Fantic",
+      "82,5"
+     ],
+     [
+      12,
+      "Collin Veijer",
+      "KTM Ajo",
+      "80,5"
+     ],
+     [
+      13,
+      "Álex Escrig",
+      "KLINT",
+      "63"
+     ],
+     [
+      14,
+      "Barry Baltus",
+      "Fantic",
+      "60"
+     ],
+     [
+      15,
+      "Deniz Öncü",
+      "Marc VDS",
+      "47,5"
+     ],
+     [
+      16,
+      "Joe Roberts",
+      "American Racing",
+      "44"
+     ],
+     [
+      17,
+      "José Antonio Rueda",
+      "KTM Ajo",
+      "43"
+     ],
+     [
+      18,
+      "Adrián Huertas",
+      "Italtrans",
+      "42"
+     ],
+     [
+      19,
+      "Luca Lunetta",
+      "SpeedRS",
+      "27"
+     ],
+     [
+      20,
+      "Ayumu Sasaki",
+      "RW Racing",
+      "24"
+     ],
+     [
+      21,
+      "Alberto Ferrández",
+      "Pramac Yamaha",
+      "17,5"
+     ],
+     [
+      22,
+      "Arón Canet",
+      "Marc VDS",
+      "17,5"
+     ],
+     [
+      23,
+      "Taiyo Furusato",
+      "Honda Team Asia",
+      "17"
+     ],
+     [
+      24,
+      "Zonta van den Goorbergh",
+      "RW Racing",
+      "14"
+     ],
+     [
+      25,
+      "Sergio García",
+      "Italjet Gresini",
+      "11"
+     ],
+     [
+      26,
+      "Ángel Piqueras",
+      "QJMOTOR",
+      "4"
+     ],
+     [
+      27,
+      "Mario Aji",
+      "Honda Team Asia",
+      "3"
+     ]
+    ]
+   }
+  ]
+ },
+ "m3": {
+  "title": "Moto3-WM 2026",
+  "asof": "nach GP Indonesien (11.10.2026) · Quiles Weltmeister",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Máximo Quiles",
+      "CFMOTO Aspar",
+      "351"
+     ],
+     [
+      2,
+      "David Almansa",
+      "Intact GP",
+      "219"
+     ],
+     [
+      3,
+      "Brian Uriarte",
+      "KTM Ajo",
+      "203"
+     ],
+     [
+      4,
+      "Álvaro Carpe",
+      "KTM Ajo",
+      "191"
+     ],
+     [
+      5,
+      "Marco Morelli",
+      "CFMOTO Aspar",
+      "146"
+     ],
+     [
+      6,
+      "Valentín Perrone",
+      "KTM Tech3",
+      "123"
+     ],
+     [
+      7,
+      "Veda Pratama",
+      "Honda Team Asia",
+      "115"
+     ],
+     [
+      8,
+      "Matteo Bertelle",
+      "LEVEL UP-MTA",
+      "109"
+     ],
+     [
+      9,
+      "Hakim Danish",
+      "MT Helmets-MSI",
+      "107"
+     ],
+     [
+      10,
+      "Rico Salmela",
+      "KTM Tech3",
+      "92"
+     ],
+     [
+      11,
+      "Adrián Cruces",
+      "CIP Green Power",
+      "83"
+     ],
+     [
+      12,
+      "Guido Pini",
+      "Leopard",
+      "78"
+     ],
+     [
+      13,
+      "Joel Esteban",
+      "LEVEL UP-MTA",
+      "73"
+     ],
+     [
+      14,
+      "Adrián Fernández",
+      "Leopard",
+      "71"
+     ],
+     [
+      15,
+      "Casey O'Gorman",
+      "SIC58",
+      "70"
+     ],
+     [
+      16,
+      "Joel Kelso",
+      "GRYD",
+      "67"
+     ],
+     [
+      17,
+      "Eddie O'Shea",
+      "GRYD",
+      "65"
+     ],
+     [
+      18,
+      "David Muñoz",
+      "Intact GP",
+      "61"
+     ],
+     [
+      19,
+      "Jesús Ríos",
+      "Snipers",
+      "50"
+     ],
+     [
+      20,
+      "Ryusei Yamanaka",
+      "MT Helmets-MSI",
+      "44"
+     ],
+     [
+      21,
+      "Scott Ogden",
+      "CIP Green Power",
+      "36"
+     ],
+     [
+      22,
+      "David González",
+      "",
+      "7"
+     ],
+     [
+      23,
+      "Marcos Uriarte",
+      "",
+      "6"
+     ],
+     [
+      24,
+      "Cormac Buchanan",
+      "",
+      "5"
+     ],
+     [
+      25,
+      "Leo Rammerstorfer",
+      "SIC58",
+      "4"
+     ],
+     [
+      26,
+      "Zen Mitani",
+      "Honda Team Asia",
+      "2"
+     ],
+     [
+      27,
+      "Ruché Moodley",
+      "CODE Motorsports",
+      "1"
+     ],
+     [
+      28,
+      "Kiattisak Singhapong",
+      "Snipers",
+      "1"
+     ]
+    ]
+   }
+  ]
+ },
+ "sbk": {
+  "title": "Superbike-WM 2026",
+  "asof": "nach Estoril (11.10.2026) · Bulega Weltmeister",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Nicolò Bulega",
+      "Aruba.it Racing Ducati",
+      "664"
+     ],
+     [
+      2,
+      "Iker Lecuona",
+      "Aruba.it Racing Ducati",
+      "518"
+     ],
+     [
+      3,
+      "Yari Montella",
+      "Barni Spark Racing",
+      "290"
+     ],
+     [
+      4,
+      "Alex Lowes",
+      "Bimota by Kawasaki Racing Team",
+      "237"
+     ],
+     [
+      5,
+      "Sam Lowes",
+      "Marc VDS Racing Team",
+      "225"
+     ],
+     [
+      6,
+      "Lorenzo Baldassarri",
+      "Team Go Eleven",
+      "214"
+     ],
+     [
+      7,
+      "Axel Bassani",
+      "Bimota by Kawasaki Racing Team",
+      "208"
+     ],
+     [
+      8,
+      "Alberto Surra",
+      "Motocorsa Racing",
+      "179"
+     ],
+     [
+      9,
+      "Garrett Gerloff",
+      "Kawasaki WorldSBK Team",
+      "160"
+     ],
+     [
+      10,
+      "Álvaro Bautista",
+      "Barni Spark Racing",
+      "137"
+     ],
+     [
+      11,
+      "Miguel Oliveira",
+      "ROKiT BMW Motorrad",
+      "136"
+     ],
+     [
+      12,
+      "Andrea Locatelli",
+      "Pata Maxus Yamaha",
+      "118"
+     ],
+     [
+      13,
+      "Xavi Vierge",
+      "Pata Maxus Yamaha",
+      "108"
+     ],
+     [
+      14,
+      "Tarran Mackenzie",
+      "MGM Optical Express Racing",
+      "81"
+     ],
+     [
+      15,
+      "Tommy Bridewell",
+      "Superbike Advocates Racing",
+      "71"
+     ],
+     [
+      16,
+      "Remy Gardner",
+      "GYTR GRT Yamaha",
+      "62"
+     ],
+     [
+      17,
+      "Danilo Petrucci",
+      "ROKiT BMW Motorrad",
+      "61"
+     ],
+     [
+      18,
+      "Stefano Manzi",
+      "GYTR GRT Yamaha",
+      "46"
+     ],
+     [
+      19,
+      "Jake Dixon",
+      "Honda HRC",
+      "35"
+     ],
+     [
+      20,
+      "Michael van der Mark",
+      "ROKiT BMW Motorrad",
+      "23"
+     ],
+     [
+      21,
+      "Somkiat Chantra",
+      "Honda HRC",
+      "21"
+     ],
+     [
+      22,
+      "Tetsuta Nagashima",
+      "Honda HRC",
+      "7"
+     ],
+     [
+      23,
+      "Jonathan Rea",
+      "Honda HRC",
+      "6"
+     ],
+     [
+      24,
+      "Bahattin Sofuoglu",
+      "Motoxracing Yamaha",
+      "4"
+     ],
+     [
+      25,
+      "Mattia Rato",
+      "Motoxracing Yamaha",
+      "3"
+     ],
+     [
+      26,
+      "Loris Baz",
+      "MGM Optical Express Racing",
+      "3"
+     ],
+     [
+      27,
+      "Ryan Vickers",
+      "Honda HRC",
+      "1"
+     ],
+     [
+      28,
+      "Twan Smits",
+      "Team Apreco",
+      "0"
+     ],
+     [
+      29,
+      "Yuki Kunii",
+      "Honda HRC",
+      "0"
+     ],
+     [
+      30,
+      "Hannes Soomer",
+      "ROKiT BMW Motorrad",
+      "0"
+     ]
+    ]
+   }
+  ]
+ },
+ "etrc": {
+  "title": "Truck-EM 2026 (Endstand, Top 6)",
+  "asof": "nach Jarama (04.10.2026) · komplette Liste nicht veröffentlicht gefunden",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Norbert Kiss",
+      "Révész Racing",
+      "383"
+     ],
+     [
+      2,
+      "Jochen Hahn",
+      "",
+      "244"
+     ],
+     [
+      3,
+      "Sascha Lenz",
+      "",
+      "244"
+     ],
+     [
+      4,
+      "Antonio Albacete",
+      "",
+      "222"
+     ],
+     [
+      5,
+      "José Eduardo Rodrigues",
+      "",
+      "153"
+     ],
+     [
+      6,
+      "Steffi Halm",
+      "",
+      "148"
      ]
     ]
    }

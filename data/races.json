@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10",
+ "updated": "2026-10-11",
  "series": [
   {
    "id": "f1",
@@ -30,12 +30,12 @@
     {
      "n": "Disney+",
      "k": "pay",
-     "x": "ab Saison 2026/27"
+     "x": "ab Saison 2026/27 weltweit; Deutschland/dt. Kommentar nicht bestätigt"
     },
     {
      "n": "DF1 (Free-TV)",
      "k": "free",
-     "x": "Verlängerung noch offen"
+     "x": "Saison 2025/26; Verlängerung noch offen"
     }
    ]
   },
@@ -60,8 +60,9 @@
    "color": "#2e9e4f",
    "tv": [
     {
-     "n": "noch zu prüfen",
-     "k": "open"
+     "n": "YouTube NLS-Livestream",
+     "k": "free",
+     "x": "🇩🇪-Stream von nürburgring.tv, dt. Kommentar nicht ausdrücklich bestätigt"
     }
    ]
   },
@@ -108,6 +109,11 @@
    "color": "#b04ad8",
    "tv": [
     {
+     "n": "Sportdigital1+",
+     "k": "mine",
+     "x": "live in DE laut ELMS, Kommentarsprache nicht bestätigt"
+    },
+    {
      "n": "YouTube ELMS",
      "k": "free",
      "x": "Kommentarsprache nicht bestätigt"
@@ -120,8 +126,9 @@
    "color": "#f28c00",
    "tv": [
     {
-     "n": "noch zu prüfen",
-     "k": "open"
+     "n": "Motorvision TV",
+     "k": "mine",
+     "x": "alle Rennen live, dt. Kommentar (Stand 2026)"
     }
    ]
   },
@@ -169,7 +176,7 @@
     {
      "n": "Motorvision+",
      "k": "mine",
-     "x": "alle Rennen, dt. Kommentar (Stand 2026)"
+     "x": "alle Rennen, dt. Kommentar (Stand 2026; 2027 nicht bestätigt)"
     },
     {
      "n": "Sky",
@@ -309,7 +316,7 @@
    "start": "2026-10-25T15:00:00-05:00",
    "tv": [
     {
-     "n": "ORF",
+     "n": "ServusTV",
      "k": "mine"
     },
     {
@@ -753,8 +760,8 @@
    "track": "Nürburgring",
    "country": "Deutschland",
    "from": "2027-04-02",
-   "to": "2027-04-03",
-   "note": "vorläufig · neue ADAC 24h Nürburgring Serie"
+   "to": "2027-04-04",
+   "note": "Test/Prolog"
   },
   {
    "s": "n24",
@@ -774,40 +781,22 @@
    "hl": true
   },
   {
-   "s": "n24",
-   "name": "ADAC Eifelrennen",
-   "track": "Nürburgring",
-   "country": "Deutschland",
-   "from": "2027-07-30",
-   "to": "2027-08-01",
-   "note": "vorläufig"
-  },
-  {
-   "s": "n24",
-   "name": "ADAC 1000-km-Rennen",
-   "track": "Nürburgring",
-   "country": "Deutschland",
-   "from": "2027-09-10",
-   "to": "2027-09-12",
-   "note": "vorläufig · Finale"
-  },
-  {
    "s": "wec",
    "name": "6h Barcelona",
    "track": "Barcelona-Catalunya",
    "country": "Spanien",
-   "from": "2026-10-16",
-   "to": "2026-10-18",
-   "note": "Ersatz für Katar"
+   "note": "Ersatz für Katar · Zeitplan laut Veranstalter vorläufig",
+   "start": "2026-10-18T12:00:00+02:00",
+   "dur": 6
   },
   {
    "s": "wec",
    "name": "6h Monza",
    "track": "Monza",
    "country": "Italien",
-   "from": "2026-11-06",
-   "to": "2026-11-08",
-   "note": "Saisonfinale · Ersatz für Bahrain"
+   "note": "Saisonfinale · Ersatz für Bahrain",
+   "start": "2026-11-08T11:00:00+01:00",
+   "dur": 6
   },
   {
    "s": "wec",
@@ -883,9 +872,8 @@
    "name": "4h Portimão",
    "track": "Algarve",
    "country": "Portugal",
-   "from": "2026-10-16",
-   "to": "2026-10-18",
-   "note": "Saisonfinale"
+   "note": "Saisonfinale · bereits gefahren (Termin war 10.10.)",
+   "date": "2026-10-10"
   },
   {
    "s": "elms",
@@ -914,7 +902,8 @@
    "name": "4h Spa",
    "track": "Spa-Francorchamps",
    "country": "Belgien",
-   "date": "2027-08-22"
+   "from": "2027-08-20",
+   "to": "2027-08-22"
   },
   {
    "s": "elms",
@@ -928,8 +917,9 @@
    "name": "4h Portimão",
    "track": "Algarve",
    "country": "Portugal",
-   "date": "2027-10-02",
-   "note": "Finale – Termin evtl. verschoben, wird geprüft"
+   "note": "Finale · Rennen Sa 16.10. (um zwei Wochen verschoben)",
+   "from": "2027-10-14",
+   "to": "2027-10-16"
   },
   {
    "s": "imsa",
@@ -1019,9 +1009,9 @@
    "name": "Endurance Portimão",
    "track": "Algarve",
    "country": "Portugal",
-   "from": "2026-10-16",
-   "to": "2026-10-18",
-   "note": "Saisonfinale"
+   "note": "Saisonfinale · 3 Stunden · auf Samstagabend verlegt (WEC-Überschneidung)",
+   "start": "2026-10-17T17:00:00+01:00",
+   "dur": 3
   },
   {
    "s": "gtwc",
@@ -1204,18 +1194,20 @@
    "s": "indy",
    "name": "World Wide Technology Raceway",
    "country": "USA",
-   "date": "2027-06-13"
+   "date": "2027-06-13",
+   "note": "laut Strecke, von IndyCar noch nicht bestätigt"
   },
   {
    "s": "indy",
    "name": "Road America",
    "country": "USA",
-   "date": "2027-06-27"
+   "date": "2027-06-27",
+   "note": "laut Strecke, von IndyCar noch nicht bestätigt"
   },
   {
    "s": "nas",
    "name": "Bank of America 400",
-   "track": "Charlotte",
+   "track": "Charlotte (Oval)",
    "country": "USA",
    "start": "2026-10-11T15:00:00-04:00"
   },
@@ -1246,7 +1238,7 @@
    "track": "Homestead-Miami",
    "country": "USA",
    "start": "2026-11-08T15:00:00-05:00",
-   "note": "Titelentscheidung"
+   "note": "Titelentscheidung · Rennname laut Wikipedia „Straight Talk Wireless 400“"
   },
   {
    "s": "nas",
@@ -1330,7 +1322,8 @@
    "s": "nas",
    "name": "Dover",
    "country": "USA",
-   "date": "2027-05-16"
+   "date": "2027-05-16",
+   "note": "laut Jayski kein Punkterennen"
   },
   {
    "s": "nas",
@@ -1502,7 +1495,7 @@
    "start": "2026-10-24T16:00:00-05:00",
    "tv": [
     {
-     "n": "ORF",
+     "n": "ServusTV",
      "k": "mine",
      "x": "Sender des Rennwochenendes"
     },
@@ -1632,45 +1625,107 @@
    "name": "GP Australien",
    "track": "Phillip Island",
    "country": "Australien",
-   "from": "2026-10-23",
-   "to": "2026-10-25",
-   "note": "Sprint Sa · Rennen So · laut Quelle im Free-TV (DF1)"
+   "start": "2026-10-25T14:00:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "mgp",
    "name": "GP Malaysia",
    "track": "Sepang",
    "country": "Malaysia",
-   "from": "2026-10-30",
-   "to": "2026-11-01",
-   "note": "Sprint Sa · Rennen So"
+   "start": "2026-11-01T15:00:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "mgp",
    "name": "GP Katar",
    "track": "Lusail",
    "country": "Katar",
-   "from": "2026-11-06",
-   "to": "2026-11-08",
-   "note": "Sprint Sa · Rennen So · Absage gemeldet, nicht offiziell bestätigt"
+   "note": "Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "start": "2026-11-08T20:00:00+03:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "mgp",
    "name": "GP Portugal",
    "track": "Portimão",
    "country": "Portugal",
-   "from": "2026-11-20",
-   "to": "2026-11-22",
-   "note": "Sprint Sa · Rennen So · laut Quelle im Free-TV (DF1)"
+   "start": "2026-11-22T13:00:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "mgp",
    "name": "GP Valencia",
    "track": "Ricardo Tormo",
    "country": "Spanien",
-   "from": "2026-11-27",
-   "to": "2026-11-29",
-   "note": "Sprint Sa · Rennen So · Saisonfinale · laut Quelle im Free-TV (DF1)"
+   "note": "Saisonfinale",
+   "start": "2026-11-29T14:00:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "mgp",
@@ -1875,18 +1930,43 @@
    "name": "GP Australien",
    "track": "Phillip Island",
    "country": "Australien",
-   "from": "2026-10-23",
-   "to": "2026-10-25",
-   "note": "Rennen So"
+   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-10-25T12:15:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m2",
    "name": "GP Malaysia",
    "track": "Sepang",
    "country": "Malaysia",
-   "from": "2026-10-30",
-   "to": "2026-11-01",
-   "note": "Rennen So"
+   "note": "Startzeit unklar (12:15 oder 13:15 Ortszeit)",
+   "date": "2026-11-01",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m2",
@@ -1895,25 +1975,66 @@
    "country": "Katar",
    "from": "2026-11-06",
    "to": "2026-11-08",
-   "note": "Rennen So · Absage gemeldet, nicht offiziell bestätigt"
+   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m2",
    "name": "GP Portugal",
    "track": "Portimão",
    "country": "Portugal",
-   "from": "2026-11-20",
-   "to": "2026-11-22",
-   "note": "Rennen So"
+   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-11-22T11:15:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m2",
    "name": "GP Valencia",
    "track": "Ricardo Tormo",
    "country": "Spanien",
-   "from": "2026-11-27",
-   "to": "2026-11-29",
-   "note": "Rennen So · Saisonfinale"
+   "note": "Saisonfinale · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-11-29T12:15:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m2",
@@ -2118,18 +2239,43 @@
    "name": "GP Australien",
    "track": "Phillip Island",
    "country": "Australien",
-   "from": "2026-10-23",
-   "to": "2026-10-25",
-   "note": "Rennen So"
+   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-10-25T11:00:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m3",
    "name": "GP Malaysia",
    "track": "Sepang",
    "country": "Malaysia",
-   "from": "2026-10-30",
-   "to": "2026-11-01",
-   "note": "Rennen So"
+   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-11-01T11:00:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m3",
@@ -2138,25 +2284,66 @@
    "country": "Katar",
    "from": "2026-11-06",
    "to": "2026-11-08",
-   "note": "Rennen So · Absage gemeldet, nicht offiziell bestätigt"
+   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m3",
    "name": "GP Portugal",
    "track": "Portimão",
    "country": "Portugal",
-   "from": "2026-11-20",
-   "to": "2026-11-22",
-   "note": "Rennen So"
+   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-11-22T14:30:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m3",
    "name": "GP Valencia",
    "track": "Ricardo Tormo",
    "country": "Spanien",
-   "from": "2026-11-27",
-   "to": "2026-11-29",
-   "note": "Rennen So · Saisonfinale"
+   "note": "Saisonfinale · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "start": "2026-11-29T11:00:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ]
   },
   {
    "s": "m3",
@@ -2358,11 +2545,11 @@
   },
   {
    "s": "sbk",
-   "name": "WorldSBK Spanien",
+   "name": "WorldSBK Jerez – Rennen 1",
    "country": "Spanien",
-   "from": "2026-10-16",
-   "to": "2026-10-18",
-   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · Saisonfinale"
+   "note": "Saisonfinale · Bulega bereits Weltmeister",
+   "track": "Jerez",
+   "start": "2026-10-17T15:30:00+02:00"
   },
   {
    "s": "sbk",
@@ -2459,6 +2646,514 @@
    "from": "2027-10-29",
    "to": "2027-10-31",
    "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig · Saisonfinale"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "type": "quali",
+   "start": "2026-10-24T10:50:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1, Q2 ca. 25 Min. später · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "type": "sprint",
+   "start": "2026-10-24T15:00:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "s": "m2",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "type": "quali",
+   "start": "2026-10-24T13:40:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "m3",
+   "name": "GP Australien",
+   "track": "Phillip Island",
+   "country": "Australien",
+   "type": "quali",
+   "start": "2026-10-24T12:45:00+11:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "type": "quali",
+   "start": "2026-10-31T10:50:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1, Q2 ca. 25 Min. später · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "type": "sprint",
+   "start": "2026-10-31T15:00:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "s": "m2",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "type": "quali",
+   "start": "2026-10-31T13:40:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "m3",
+   "name": "GP Malaysia",
+   "track": "Sepang",
+   "country": "Malaysia",
+   "type": "quali",
+   "start": "2026-10-31T12:45:00+08:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "type": "sprint",
+   "start": "2026-11-07T20:00:00+03:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Durchführung unsicher (Iran-Krieg), keine offizielle Absage"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "type": "sprint",
+   "start": "2026-11-21T15:00:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "s": "m2",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "type": "quali",
+   "start": "2026-11-21T13:40:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "m3",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "type": "quali",
+   "start": "2026-11-21T12:45:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "type": "quali",
+   "start": "2026-11-28T10:50:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1, Q2 ca. 25 Min. später · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "type": "sprint",
+   "start": "2026-11-28T15:00:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ]
+  },
+  {
+   "s": "m2",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "type": "quali",
+   "start": "2026-11-28T13:40:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "m3",
+   "name": "GP Valencia",
+   "track": "Ricardo Tormo",
+   "country": "Spanien",
+   "type": "quali",
+   "start": "2026-11-28T12:45:00+01:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt"
+  },
+  {
+   "s": "sbk",
+   "track": "Jerez",
+   "country": "Spanien",
+   "name": "WorldSBK Jerez",
+   "type": "quali",
+   "start": "2026-10-17T11:15:00+02:00",
+   "note": "Superpole"
+  },
+  {
+   "s": "sbk",
+   "track": "Jerez",
+   "country": "Spanien",
+   "name": "WorldSBK Jerez – Superpole-Rennen",
+   "type": "sprint",
+   "start": "2026-10-18T11:10:00+02:00"
+  },
+  {
+   "s": "sbk",
+   "track": "Jerez",
+   "country": "Spanien",
+   "name": "WorldSBK Jerez – Rennen 2",
+   "start": "2026-10-18T15:30:00+02:00",
+   "note": "Saisonfinale"
+  },
+  {
+   "s": "wec",
+   "type": "quali",
+   "name": "6h Barcelona",
+   "track": "Barcelona-Catalunya",
+   "country": "Spanien",
+   "start": "2026-10-17T16:00:00+02:00",
+   "note": "Hypercar-Hyperpole (Qualifying 15:40) · LMGT3: Qualifying 11:50, Hyperpole 12:10 · Live bei HBO Max"
+  },
+  {
+   "s": "wec",
+   "type": "quali",
+   "name": "6h Monza",
+   "track": "Monza",
+   "country": "Italien",
+   "start": "2026-11-07T15:20:00+01:00",
+   "note": "Hypercar-Hyperpole (Qualifying 15:00) · LMGT3: Qualifying 14:20, Hyperpole 14:40"
+  },
+  {
+   "s": "gtwc",
+   "type": "quali",
+   "name": "Endurance Portimão",
+   "track": "Algarve",
+   "country": "Portugal",
+   "start": "2026-10-16T17:55:00+01:00"
+  },
+  {
+   "s": "nls",
+   "name": "NLS1",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-03-20"
+  },
+  {
+   "s": "nls",
+   "name": "NLS2",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-04-17"
+  },
+  {
+   "s": "nls",
+   "name": "NLS3",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-07-03"
+  },
+  {
+   "s": "nls",
+   "name": "NLS4",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-08-07",
+   "note": "6 Stunden"
+  },
+  {
+   "s": "nls",
+   "name": "NLS5",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-09-11",
+   "note": "Doppelveranstaltung"
+  },
+  {
+   "s": "nls",
+   "name": "NLS6",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-09-12",
+   "note": "Doppelveranstaltung"
+  },
+  {
+   "s": "nls",
+   "name": "NLS7",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-09-25"
+  },
+  {
+   "s": "nls",
+   "name": "NLS8",
+   "track": "Nordschleife",
+   "country": "Deutschland",
+   "date": "2027-10-09",
+   "note": "Saisonfinale"
+  },
+  {
+   "s": "etrc",
+   "name": "Truck-Grand-Prix Nürburgring",
+   "track": "Nürburgring",
+   "country": "Deutschland",
+   "from": "2027-07-09",
+   "to": "2027-07-11",
+   "note": "ETRC-Kalender 2027 noch nicht veröffentlicht; nur dieser Termin bekannt"
+  },
+  {
+   "s": "igtc",
+   "name": "Texas 8h",
+   "track": "Circuit of the Americas",
+   "country": "USA",
+   "from": "2027-05-07",
+   "to": "2027-05-09",
+   "note": "ersetzt Indianapolis · genaues Datum unsicher (7./8. oder 8./9.5.)"
+  },
+  {
+   "s": "igtc",
+   "name": "Suzuka 1000km",
+   "track": "Suzuka",
+   "country": "Japan",
+   "from": "2027-09-03",
+   "to": "2027-09-05"
   }
  ]
 }
