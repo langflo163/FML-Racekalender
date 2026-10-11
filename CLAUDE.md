@@ -43,8 +43,8 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 
 | Aufgabe | Wann | Was |
 |---|---|---|
-| „Rennkalender aktualisieren“ | Montag 8:47 | Tabellen der Wochenend-Serien + neue/geänderte Saisonkalender + Startzeiten/Sessions/Sender der nächsten 4 Wochen |
-| „Rennkalender Tages-Check“ | Di–So 8:47 | Nur Tabellen der Serien, die gestern gefahren sind; ohne Rennen gestern sofort Ende ohne Websuche |
+| „Rennkalender aktualisieren“ | Montag 5:48 | Tabellen der Wochenend-Serien + neue/geänderte Saisonkalender + Startzeiten/Sessions/Sender der nächsten 4 Wochen |
+| „Rennkalender Tages-Check“ | Di–So 5:50 | Nur Tabellen der Serien, die gestern gefahren sind; ohne Rennen gestern sofort Ende ohne Websuche |
 
 Sparsam ausgelegt (Flo-Wunsch 11.10.): kein kompletter Neu-Abgleich aller Serien mehr. Kurzfristige Zeitänderungen innerhalb der Woche
 werden erst am nächsten Montag erkannt.
