@@ -294,14 +294,21 @@
    "color": "#b8860b",
    "tv": [
     {
+     "n": "YouTube BS+COMPETITION",
+     "k": "free",
+     "x": "live mit deutschem Kommentar",
+     "url": "https://www.youtube.com/@BSCOMPETITION"
+    },
+    {
      "n": "YouTube iRacing",
      "k": "free",
-     "x": "live, Kommentar Englisch (kein dt. Kommentar gefunden)",
+     "x": "Originalübertragung, Kommentar Englisch",
      "url": "https://www.youtube.com/@iRacing"
     },
     {
      "n": "eNASCAR.com/live",
      "k": "free",
+     "x": "Kommentar Englisch",
      "url": "https://www.enascar.com/live"
     }
    ]
