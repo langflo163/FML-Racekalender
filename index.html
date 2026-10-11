@@ -170,7 +170,7 @@ function prep(d){
   DATA=d; SER={}; d.series.forEach(s=>SER[s.id]=s);
   EVENTS=d.events.filter(e=>SER[e.s]).map(e=>{
     const x=Object.assign({},e);
-    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;x.end=new Date(x.t.getTime()+4*3600e3)}
+    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||({quali:1,sq:1,sprint:1}[e.type])||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
     else if(e.date){x.k1=e.date;x.k2=e.date}
     else {x.k1=e.from;x.k2=e.to||e.from}
     if(!x.end){x.end=noonUTC(addDays(x.k2,1))}
