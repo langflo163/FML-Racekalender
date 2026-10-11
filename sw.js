@@ -1,5 +1,5 @@
 // Offline-Cache: App-Hülle zuerst aus dem Cache, Termine zuerst aus dem Netz
-const CACHE = 'rk-v8';
+const CACHE = 'rk-v9';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png', 'data/races.json', 'data/standings.json'];
 
 self.addEventListener('install', e => {

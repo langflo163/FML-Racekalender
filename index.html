@@ -393,6 +393,18 @@ function openDetail(i){
   document.getElementById('sheet').classList.add('open'); document.body.style.overflow='hidden';
   pn.querySelector('.x').onclick=closeDetail;
 }
+function openInfo(){
+  const pn=document.getElementById('pn');
+  pn.innerHTML=`<div class="sbar"><div class="grab"></div><button class="x" aria-label="Schließen">✕</button></div>
+  <div class="dh" style="--c:#d71920"><div class="ttl">Datenschutz</div></div>
+  <p>Diese private, nicht-kommerzielle App erhebt keine personenbezogenen Daten und setzt keine Cookies.</p>
+  <p><b>Zugriffszählung:</b> Für eine anonyme Statistik der Aufrufe wird <a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a> genutzt – ohne Cookies und ohne Speicherung von IP-Adressen. Erfasst werden nur aufgerufene Seite/Ansicht, Browser-Typ, Bildschirmgröße und grob das Land.</p>
+  <p><b>Einstellungen</b> (z. B. ausgeblendete Serien) werden nur lokal auf deinem Gerät gespeichert.</p>
+  <p><b>Hosting:</b> GitHub Pages (GitHub Inc.). Beim Abruf der Seite verarbeitet GitHub technisch bedingt Verbindungsdaten wie die IP-Adresse.</p>
+  <p><b>Externe Links</b> zu Sendern und Streams führen zu Angeboten Dritter, für die deren Datenschutzbestimmungen gelten.</p>`;
+  document.getElementById('sheet').classList.add('open'); document.body.style.overflow='hidden';
+  pn.querySelector('.x').onclick=closeDetail;
+}
 function closeDetail(){document.getElementById('sheet').classList.remove('open');document.body.style.overflow=''}
 document.querySelector('#sheet .bg').onclick=closeDetail;
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape')closeDetail()});
@@ -438,10 +450,12 @@ function renderAll(){
   renderChips();
   if(view==='next')renderNext(); if(view==='cal')renderCal(); if(view==='wk')renderWk(); if(view==='series')renderSeries();
   const u=DATA.updated?noonUTC(DATA.updated):null;
-  document.getElementById('foot').innerHTML=`Alle Zeiten in deutscher Zeit · Stand der Daten: ${u?u.getUTCDate()+'.'+(u.getUTCMonth()+1)+'.'+u.getUTCFullYear():'–'}<br>Angaben ohne Gewähr – Zeiten und Sender können sich kurzfristig ändern.`;
+  document.getElementById('foot').innerHTML=`Alle Zeiten in deutscher Zeit · Stand der Daten: ${u?u.getUTCDate()+'.'+(u.getUTCMonth()+1)+'.'+u.getUTCFullYear():'–'}<br>Angaben ohne Gewähr – Zeiten und Sender können sich kurzfristig ändern.<br><a href="#" id="dsl" style="color:inherit">Datenschutz</a>`;
+  document.getElementById('dsl').onclick=ev=>{ev.preventDefault();openInfo()};
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
-  view=b.dataset.v; document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  view=b.dataset.v; try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:'tab-'+view,title:'Tab '+view,event:true})}catch(e){}
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
   ['next','wk','cal','series'].forEach(v=>document.getElementById('v-'+v).hidden=v!==view);
   renderAll(); window.scrollTo(0,0);
 });
@@ -451,5 +465,6 @@ fetch('data/races.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{prep(d);r
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
 })();
 </script>
+<script data-goatcounter="https://fml-rennkalender.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

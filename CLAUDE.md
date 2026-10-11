@@ -15,7 +15,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Keine Logos/fremden Bilder** von Serien, Sendern oder Strecken (rechtlich). Nur Namen, Termine, eigene Farben.
   Eigenes FML-Branding ist erlaubt: rote F-M-L-Kacheln (aus FML-ScreenView) im Header, App-Icon = roter Kalender mit „FML“ + Zielflaggen-Streifen.
 - Optik: flach, Rot/Weiß/Schwarz (#d71920), Hell/Dunkel-Modus, keine Verläufe.
-- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v8`), sonst sehen Geräte die alte Version.
+- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v9`), sonst sehen Geräte die alte Version.
 - Vor dem Push lokal testen (Playwright/Chromium im Container, `python3 -m http.server`).
 
 ## Inhalt / Entscheidungen
@@ -38,6 +38,11 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Dauer** eines Termins mit Uhrzeit: Quali/Sprint 1 h, Rennen 2,5 h, sonst `dur` (z. B. 24). Danach verschwindet er aus „Nächste“.
 - Von Flo **abgelehnt** (nicht bauen): Kalender-Abo .ics (vorerst), Termine merken/Stern, Ergebnisse vergangener Rennen,
   Sender-Filter, Suche, Streckeninfo, Push direkt aus der App.
+
+## Statistik
+
+- GoatCounter (cookielos, keine IPs), Account `fml-rennkalender` → Statistik unter https://fml-rennkalender.goatcounter.com (Login nur Flo).
+  Zählt Seitenaufrufe + Tab-Wechsel als Events. Datenschutzhinweis per Link im Footer (`openInfo()` in `index.html`).
 
 ## Automatische Updates (geplante Aufgaben in Claude, ohne Rückfragen, mit Push)
 
