@@ -43,8 +43,11 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 
 | Aufgabe | Wann | Was |
 |---|---|---|
-| „Rennkalender aktualisieren“ | Montag 8:47 | Komplett-Lauf: alle Serien, Termine, Sessions, Sender, alle Meisterschaftstabellen |
-| „Rennkalender Tages-Check“ | Di–So 8:47 | Klein: nur nächste 7 Tage + Tabellen der Serien, die seit gestern gefahren sind |
+| „Rennkalender aktualisieren“ | Montag 8:47 | Tabellen der Wochenend-Serien + neue/geänderte Saisonkalender + Startzeiten/Sessions/Sender der nächsten 4 Wochen |
+| „Rennkalender Tages-Check“ | Di–So 8:47 | Nur Tabellen der Serien, die gestern gefahren sind; ohne Rennen gestern sofort Ende ohne Websuche |
+
+Sparsam ausgelegt (Flo-Wunsch 11.10.): kein kompletter Neu-Abgleich aller Serien mehr. Kurzfristige Zeitänderungen innerhalb der Woche
+werden erst am nächsten Montag erkannt.
 
 Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/Regeln die Prompts beider Aufgaben mit anpassen.
 
