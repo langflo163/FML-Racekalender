@@ -117,6 +117,43 @@ main{max-width:1100px;margin:0 auto;padding:12px 16px calc(env(safe-area-inset-b
 .sw input:checked+span::before{transform:translateX(18px)}
 .legend{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
 footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px}
+.ev,.hero{cursor:pointer}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;margin-bottom:12px}
+.seg button{flex:1;border:0;background:none;color:var(--muted);font:inherit;font-weight:650;padding:7px 0;border-radius:8px;cursor:pointer}
+.seg button.on{background:#d71920;color:#fff}
+.tl{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.tlr{display:flex;gap:10px;padding:10px 12px;border-top:1px solid var(--line);cursor:pointer}
+.tlr:first-child{border-top:0}
+.tlr .tm{width:58px;flex:none;font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+.tlr .tm small{display:block;font-weight:500;color:var(--muted);font-size:11.5px}
+.tlr .cb{width:4px;border-radius:4px;background:var(--c);flex:none}
+.tlr .bd{flex:1;min-width:0}
+.tlr.past{opacity:.45}
+.tlr.live .tm{color:#d71920}
+.ov{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#d71920;border-radius:5px;padding:0 6px;margin-top:4px}
+#sheet{position:fixed;inset:0;z-index:50;display:none}
+#sheet.open{display:block}
+#sheet .bg{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+#sheet .pn{position:absolute;left:0;right:0;bottom:0;max-height:88vh;overflow-y:auto;background:var(--bg);
+  border-radius:18px 18px 0 0;padding:8px 16px calc(env(safe-area-inset-bottom) + 24px);max-width:760px;margin:0 auto}
+@media (min-width:760px){#sheet .pn{top:5vh;bottom:auto;border-radius:18px}}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 10px}
+.sbar{position:sticky;top:-8px;z-index:2;background:var(--bg);display:flex;align-items:center;justify-content:flex-end;padding:8px 0 4px;margin-top:-8px}
+.sbar .grab{position:absolute;left:50%;transform:translateX(-50%);top:10px;margin:0}
+.x{border:0;background:var(--card);color:var(--text);width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;border:1px solid var(--line)}
+.dh{border-left:6px solid var(--c);padding-left:12px;margin:6px 0 14px}
+.dh .ttl{font-size:21px;font-weight:750;margin:2px 0}
+.sec{font-size:12px;text-transform:uppercase;letter-spacing:.6px;font-weight:750;color:var(--muted);margin:18px 0 8px}
+.lnk{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:6px;color:var(--text);text-decoration:none}
+.lnk .go{margin-left:auto;font-weight:700;color:#d71920;white-space:nowrap}
+.lnk .sub{font-size:12px;color:var(--muted)}
+.st{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13.5px;margin-bottom:10px}
+.st td{padding:5px 8px;border-top:1px solid var(--line)}
+.st tr:first-child td{border-top:0}
+.st td.p{width:30px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.st td.pt{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.st td.tm2{color:var(--muted);font-size:12px}
+.cls{font-weight:700;font-size:13px;margin:10px 0 4px}
 @media (min-width:760px){ .list2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px} }
 </style>
 </head>
@@ -128,6 +165,7 @@ footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px}
   </div>
   <nav class="tabs" role="tablist">
     <button data-v="next" class="on">Nächste</button>
+    <button data-v="wk">Wochenende</button>
     <button data-v="cal">Kalender</button>
     <button data-v="series">Serien</button>
   </nav>
@@ -135,10 +173,12 @@ footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px}
 <main>
   <div class="chips" id="chips"></div>
   <section id="v-next"></section>
+  <section id="v-wk" hidden></section>
   <section id="v-cal" hidden></section>
   <section id="v-series" hidden></section>
   <footer id="foot"></footer>
 </main>
+<div id="sheet"><div class="bg"></div><div class="pn" id="pn"></div></div>
 
 <script>
 (function(){
@@ -168,8 +208,8 @@ let view='next', calMonth=null, selDay=null;
 
 function prep(d){
   DATA=d; SER={}; d.series.forEach(s=>SER[s.id]=s);
-  EVENTS=d.events.filter(e=>SER[e.s]).map(e=>{
-    const x=Object.assign({},e);
+  EVENTS=d.events.filter(e=>SER[e.s]).map((e,i)=>{
+    const x=Object.assign({},e); x.i=i;
     if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||({quali:1,sq:1,sprint:1}[e.type])||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
     else if(e.date){x.k1=e.date;x.k2=e.date}
     else {x.k1=e.from;x.k2=e.to||e.from}
@@ -202,7 +242,7 @@ function dm(k){const d=noonUTC(k);return d.getUTCDate()+'.'+(d.getUTCMonth()+1)+
 function evCard(e){
   const s=SER[e.s]; const d=noonUTC(e.k1);
   const place=[e.track,e.country].filter(Boolean).map(esc).join(' · ');
-  return `<div class="ev" style="--c:${s.color}">
+  return `<div class="ev" data-i="${e.i}" style="--c:${s.color}">
     <div class="bar"></div>
     <div class="when"><div class="w">${WD[d.getUTCDay()]}</div><div class="d">${d.getUTCDate()}.</div><div class="w">${MN[d.getUTCMonth()].slice(0,3)}</div></div>
     <div class="body">
@@ -235,7 +275,7 @@ function renderNext(){
   if(!up.length){el.innerHTML='<div class="empty">Keine kommenden Termine für die gewählten Serien.</div>';return}
   const nx=up[0]; const s=SER[nx.s];
   const target=nx.t?nx.t:noonUTC(nx.k1);
-  let h=`<div class="hero" style="--c:${s.color}">
+  let h=`<div class="hero" data-i="${nx.i}" style="--c:${s.color}">
     <div class="lbl">Als Nächstes · ${esc(s.name)}</div>
     <div class="ttl">${nx.hl?'<span class="star">★</span> ':''}${esc(nx.name)}${badge(nx)}</div>
     <div class="meta">${[nx.track,nx.country].filter(Boolean).map(esc).join(' · ')}</div>
@@ -299,15 +339,110 @@ function renderSeries(){
   });
 }
 
+
+// ---------- Links zu Sendern ----------
+const LINKS=[
+ [/^ORF/i,'https://on.orf.at','ORF ON'],
+ [/ServusTV/i,'https://www.servustv.com','ServusTV'],
+ [/SRF/i,'https://www.srf.ch/play/tv/live','SRF Play'],
+ [/Sportdigital/i,'https://www.sportdigital.de','sportdigital'],
+ [/DF1/i,'https://df1.de','DF1'],
+ [/ETRC/i,'https://www.youtube.com/@FIAETRC','YouTube'],
+ [/24h N[uü]rburgring/i,'https://www.youtube.com/@24hnbr','YouTube'],
+ [/GT World/i,'https://www.youtube.com/@GTWorld','YouTube'],
+ [/24H Series/i,'https://www.youtube.com/user/24HSeries','YouTube'],
+ [/Joyn|ProSieben/i,'https://www.joyn.de','Joyn'],
+ [/RTL|Nitro/i,'https://plus.rtl.de','RTL+'],
+ [/Disney/i,'https://www.disneyplus.com','Disney+'],
+ [/Eurosport|HBO/i,'https://www.hbomax.com','HBO Max'],
+ [/Sky|WOW/i,'https://www.sky.de','Sky'],
+ [/VideoPass/i,'https://www.worldsbk.com','WorldSBK']
+];
+function linkFor(t){ if(t.url) return t.url; const m=LINKS.find(l=>l[0].test(t.n)); return m?m[1]:null; }
+
+// ---------- Meisterschaft ----------
+let STAND={};
+fetch('data/standings.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}).then(d=>{STAND=d||{}}).catch(()=>{});
+function standHtml(sid){
+  const st=STAND[sid]; if(!st||!st.tables||!st.tables.length) return '<div class="note">Noch keine Tabelle hinterlegt – kommt mit dem nächsten Update.</div>';
+  let h=`<div class="note">${esc(st.title||'')}${st.asof?' · Stand: '+esc(st.asof):''}</div>`;
+  st.tables.forEach(t=>{
+    if(t.name) h+=`<div class="cls">${esc(t.name)}${t.top?' · Top '+t.top:''}</div>`;
+    h+='<table class="st">'+t.rows.map(r=>`<tr><td class="p">${esc(r[0])}</td><td>${esc(r[1])}${r[2]?`<div class="tm2">${esc(r[2])}</div>`:''}</td><td class="pt">${esc(r[3])}</td></tr>`).join('')+'</table>';
+  });
+  return h;
+}
+
+// ---------- Detailansicht ----------
+function openDetail(i){
+  const e=EVENTS.find(x=>x.i===i); if(!e) return; const s=SER[e.s];
+  const when=e.t?fLong.format(e.t)+', '+fTime.format(e.t)+' Uhr':(e.k1!==e.k2?dm(e.k1)+' – '+dm(e.k2)+noonUTC(e.k2).getUTCFullYear()+' · Uhrzeit folgt':fLong.format(noonUTC(e.k1))+' · Uhrzeit folgt');
+  const near=EVENTS.filter(x=>x.s===e.s&&Math.abs(noonUTC(x.k1)-noonUTC(e.k1))<=3*864e5).sort((a,b)=>a.sort-b.sort);
+  const tv=(e.tv||s.tv||[]).slice().sort((a,b)=>({mine:0,free:1,pay:2,open:3}[a.k])-({mine:0,free:1,pay:2,open:3}[b.k]));
+  let h=`<div class="sbar"><div class="grab"></div><button class="x" aria-label="Schließen">✕</button></div>
+   <div class="dh" style="--c:${s.color}"><div class="ser">${esc(s.name)}</div>
+   <div class="ttl">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}${badge(e)}</div>
+   <div class="meta">${[e.track,e.country].filter(Boolean).map(esc).join(' · ')}</div>
+   <div class="time">${when}</div>${e.note?`<div class="note">${esc(e.note)}</div>`:''}</div>`;
+  if(near.length>1){h+='<div class="sec">An diesem Wochenende</div><div class="tl">'+near.map(x=>tlRow(x,x.i===e.i)).join('')+'</div>';}
+  h+='<div class="sec">Live sehen</div>'+(tv.length?tv.map(t=>{const u=linkFor(t);
+    const inner=`<span class="tag ${esc(t.k)}">${esc(t.n)}</span><span class="sub">${esc(t.x||'')}</span>${u?'<span class="go">Öffnen ›</span>':''}`;
+    return u?`<a class="lnk" href="${esc(u)}" target="_blank" rel="noopener">${inner}</a>`:`<div class="lnk">${inner}</div>`}).join(''):'<div class="note">Keine Angabe.</div>');
+  h+='<div class="sec">Meisterschaft</div>'+standHtml(e.s);
+  const pn=document.getElementById('pn'); pn.innerHTML=h; pn.scrollTop=0;
+  document.getElementById('sheet').classList.add('open'); document.body.style.overflow='hidden';
+  pn.querySelector('.x').onclick=closeDetail;
+}
+function closeDetail(){document.getElementById('sheet').classList.remove('open');document.body.style.overflow=''}
+document.querySelector('#sheet .bg').onclick=closeDetail;
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')closeDetail()});
+document.addEventListener('click',ev=>{
+  const el=ev.target.closest('[data-i]'); if(!el||ev.target.closest('a')) return;
+  openDetail(Number(el.dataset.i));
+});
+
+// ---------- Heute / Wochenende ----------
+let wkMode=store.get('rk_wk','wk');
+function tlRow(e,cur,ovWith){
+  const s=SER[e.s]; const now=Date.now();
+  const past=e.end.getTime()<now, live=e.t&&e.t.getTime()<=now&&!past;
+  const tm=e.t?`${fTime.format(e.t)}<small>${live?'LIVE':'bis '+fTime.format(e.end)}</small>`:`–<small>${e.k1!==e.k2?'ganzes WE':'Zeit folgt'}</small>`;
+  return `<div class="tlr ${past?'past':''} ${live?'live':''}" data-i="${e.i}" style="--c:${s.color}${cur?';background:var(--bg)':''}">
+    <div class="tm">${tm}</div><div class="cb"></div><div class="bd">
+    <div class="ser">${esc(s.name)}</div><div class="name">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}${badge(e)}</div>
+    <div class="tv">${tvTags(e)}</div>${ovWith?`<div class="ov">Überschneidung: ${esc(ovWith)}</div>`:''}</div></div>`;
+}
+function renderWk(){
+  const el=document.getElementById('v-wk'); const today=keyOf(new Date());
+  const wd=noonUTC(today).getUTCDay(); let days=[];
+  if(wkMode==='today') days=[today];
+  else { const start=(wd===5||wd===6||wd===0)?today:addDays(today,(5-wd+7)%7); let k=start; do{days.push(k);k=addDays(k,1)}while(noonUTC(days[days.length-1]).getUTCDay()!==0); }
+  let h=`<div class="seg"><button data-m="today" class="${wkMode==='today'?'on':''}">Heute</button><button data-m="wk" class="${wkMode==='wk'?'on':''}">Wochenende</button></div>`;
+  const vis=visible(); let any=false;
+  days.forEach(k=>{
+    const evs=vis.filter(e=>e.k1<=k&&k<=e.k2);
+    const timed=evs.filter(e=>e.t).sort((a,b)=>a.t-b.t), rest=evs.filter(e=>!e.t);
+    h+=`<div class="month">${fLong.format(noonUTC(k))}</div>`;
+    if(!evs.length){h+='<div class="note" style="margin:0 2px 8px">Keine Termine.</div>';return}
+    any=true;
+    h+='<div class="tl">'+timed.map(e=>{
+      const o=timed.filter(x=>x!==e&&x.s!==e.s&&x.t<e.end&&e.t<x.end).map(x=>SER[x.s].name);
+      return tlRow(e,false,[...new Set(o)].join(', '));
+    }).join('')+rest.map(e=>tlRow(e)).join('')+'</div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{wkMode=b.dataset.m;store.set('rk_wk',wkMode);renderWk()});
+}
+
 function renderAll(){
   renderChips();
-  if(view==='next')renderNext(); if(view==='cal')renderCal(); if(view==='series')renderSeries();
+  if(view==='next')renderNext(); if(view==='cal')renderCal(); if(view==='wk')renderWk(); if(view==='series')renderSeries();
   const u=DATA.updated?noonUTC(DATA.updated):null;
   document.getElementById('foot').innerHTML=`Alle Zeiten in deutscher Zeit · Stand der Daten: ${u?u.getUTCDate()+'.'+(u.getUTCMonth()+1)+'.'+u.getUTCFullYear():'–'}<br>Angaben ohne Gewähr – Zeiten und Sender können sich kurzfristig ändern.`;
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
   view=b.dataset.v; document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
-  ['next','cal','series'].forEach(v=>document.getElementById('v-'+v).hidden=v!==view);
+  ['next','wk','cal','series'].forEach(v=>document.getElementById('v-'+v).hidden=v!==view);
   renderAll(); window.scrollTo(0,0);
 });
 

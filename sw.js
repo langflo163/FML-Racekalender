@@ -1,6 +1,6 @@
 // Offline-Cache: App-Hülle zuerst aus dem Cache, Termine zuerst aus dem Netz
-const CACHE = 'rk-v7';
-const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png', 'data/races.json'];
+const CACHE = 'rk-v8';
+const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png', 'data/races.json', 'data/standings.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

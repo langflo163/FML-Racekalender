@@ -24,3 +24,14 @@ Ein Termin hat genau eins von:
 
 Keine Logos oder fremden Bilder – nur Namen, Termine und eigene Farben.
 Angaben ohne Gewähr.
+
+## Meisterschaftsstand (`data/standings.json`)
+Pro Serien-ID ein Eintrag, angezeigt in der Detailansicht eines Termins:
+```json
+"f1": { "title": "Fahrer-WM 2026", "asof": "nach GP USA",
+        "tables": [ { "name": null, "rows": [[1, "Name", "Team", "325"]] } ] }
+```
+Normale Serien: komplette Tabelle. Multiclass-Serien (WEC, IMSA, ELMS, GTWC, NLS, 24H Series …):
+je Klasse eine Tabelle (`"name": "Hypercar", "top": 5`) – nur die Top 5 der vier höchsten Klassen.
+
+Sender-Links ergänzt die App automatisch anhand des Sendernamens; abweichend kann ein Sender `"url"` haben.
