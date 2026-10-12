@@ -44,6 +44,17 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - GoatCounter (cookielos, keine IPs), Account `fml-rennkalender` → Statistik unter https://fml-rennkalender.goatcounter.com (Login nur Flo).
   Zählt Seitenaufrufe + Tab-Wechsel als Events. Datenschutzhinweis per Link im Footer (`openInfo()` in `index.html`).
 
+## Instagram (Stand 12.10.2026: eingerichtet, noch nicht aktiv)
+
+- Ziel: Montag 9:00 Wochenübersicht (Mo–So), Freitag 12:00 Wochenende (Fr–So) als Karussell, voll automatisch.
+- Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
+  `enabled`) → `insta/make_post.py` (Bilder 1080×1350 JPEG + `caption.txt` aus `races.json`, Playwright) → Commit nach `posts/`
+  → `insta/post.py` (offizielle Instagram API mit Instagram Login, Bilder per raw.githubusercontent.com-URL).
+- Secrets im Repo: `IG_TOKEN`, `IG_USER_ID` (von Flo eingetragen; nie ausgeben/loggen). Optional `GH_PAT` für automatisches Speichern
+  eines erneuerten Tokens. Token-Verlängerung mittwochs per Workflow (60-Tage-Token).
+- Meta-App: Typ Business, Produkt Instagram, Standard Access (eigener Account, kein App Review). Instagram-Account ist Creator-Konto.
+- Manuell testen: Actions → „Instagram-Posts“ → Run workflow (mode week/weekend, publish false = nur Bilder).
+
 ## Automatische Updates (geplante Aufgaben in Claude, ohne Rückfragen, mit Push)
 
 | Aufgabe | Wann | Was |

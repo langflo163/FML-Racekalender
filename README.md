@@ -9,6 +9,7 @@ Intercontinental GT Challenge, 24H Series, IndyCar, NASCAR Cup, MotoGP, Moto2, M
 ## Aufbau
 - `index.html` – die komplette App (Serien lassen sich unter „Serien“ pro Gerät ausschalten)
 - `data/races.json` – alle Termine und Sender (nur diese Datei wird bei Updates geändert)
+- `insta/`, `.github/workflows/instagram.yml`, `posts/` – automatische Instagram-Posts (siehe CLAUDE.md)
 - `sw.js`, `manifest.json`, `icons/` – Offline-Betrieb und App-Symbol (eigenes Design)
 
 ## Datenformat (`data/races.json`)

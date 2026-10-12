@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "week":    { "weekday": 0, "hour": 9 },
+  "weekend": { "weekday": 4, "hour": 12 }
+}
