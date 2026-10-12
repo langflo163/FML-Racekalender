@@ -96,6 +96,11 @@ h1 em{font-style:normal;color:#d71920}
 .k.sp{border-color:#d71920;color:#ff5a52}
 .tv{font-size:24px;color:#7fd3a0;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .more{font-size:28px;color:#9aa2ad;margin-top:6px}
+body.st{height:1920px}
+.st .pg{height:1920px;padding-top:120px}
+.st h1{margin-top:90px;font-size:110px}
+.st .live{display:inline-block;background:#d71920;color:#fff;font-weight:900;font-size:40px;border-radius:12px;padding:6px 20px;margin-top:40px;letter-spacing:1px}
+.st .rows{margin-top:50px}
 """
 
 def head():
@@ -185,16 +190,48 @@ def build(mode, ref):
     caption = cap + "\n" + "\n".join(tail)
     return slides, caption
 
-def render(slides, out):
+def build_story(day):
+    data = load()
+    days = collect(data, day, day)
+    items = days.get(day, [])
+    if not items:
+        return None, None
+    rows = "".join(row(it) for it in items[:10])
+    more = '<div class="more">… weitere Termine in der App</div>' if len(items) > 10 else ""
+    slide = (f'<div class="pg">{head()}<div class="live">● HEUTE LIVE</div>'
+             f'<h1>{WD[day.weekday()]}</h1><div class="sub">{day.day}. {MON[day.month-1]} {day.year}</div>'
+             f'<div class="rows">{rows}</div>{more}'
+             f'<div class="foot"><span>Alle Zeiten deutsche Zeit · ohne Gewähr</span><span>Link in Bio</span></div>'
+             '<div class="redbar"></div><div class="flag"></div></div>')
+    return [slide], f"Heute live – {WD[day.weekday()]}, {dm(day)}"
+
+def make_reel(out, n, sec=3.5, fade=0.5):
+    """Baut aus 1.jpg … n.jpg ein 9:16-Video (reel.mp4) ohne Ton."""
+    import subprocess
+    inputs, filt = [], []
+    for i in range(1, n + 1):
+        inputs += ["-loop", "1", "-t", str(sec), "-i", os.path.join(out, f"{i}.jpg")]
+        filt.append(f"[{i-1}:v]scale=1080:1350,pad=1080:1920:0:285:color=#111418,setsar=1,fps=30,format=yuv420p[v{i}]")
+    last = "v1"
+    for i in range(2, n + 1):
+        off = (i - 1) * (sec - fade)
+        filt.append(f"[{last}][v{i}]xfade=transition=slideleft:duration={fade}:offset={off:.2f}[x{i}]")
+        last = f"x{i}"
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(filt), "-map", f"[{last}]",
+           "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+           os.path.join(out, "reel.mp4")]
+    subprocess.run(cmd, check=True)
+
+def render(slides, out, story=False):
     from playwright.sync_api import sync_playwright
     os.makedirs(out, exist_ok=True)
     with sync_playwright() as p:
         b = p.chromium.launch()
-        pg = b.new_page(viewport={"width": 1080, "height": 1350})
+        pg = b.new_page(viewport={"width": 1080, "height": 1920 if story else 1350})
         for i, s in enumerate(slides, start=1):
-            pg.set_content(f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{s}</body></html>")
+            pg.set_content(f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body class='{'st' if story else ''}'>{s}</body></html>")
             pg.wait_for_timeout(150)
-            pg.screenshot(path=os.path.join(out, f"{i}.jpg"), type="jpeg", quality=92)
+            pg.screenshot(path=os.path.join(out, "story.jpg" if story else f"{i}.jpg"), type="jpeg", quality=92)
         b.close()
 
 if __name__ == "__main__":
@@ -205,8 +242,16 @@ if __name__ == "__main__":
     mode = argv[0] if argv else "week"
     ref = date.fromisoformat(argv[1]) if len(argv) > 1 else datetime.now(BER).date()
     out = out or os.path.join(ROOT, "posts", f"{ref}-{mode}")
-    slides, caption = build(mode, ref)
-    render(slides, out)
+    if mode == "story":
+        slides, caption = build_story(ref)
+        if not slides:
+            print("Keine Termine heute – keine Story"); sys.exit(0)
+        render(slides, out, story=True)
+    else:
+        slides, caption = build(mode, ref)
+        render(slides, out)
+        if mode == "weekend":
+            make_reel(out, len(slides))
     with open(os.path.join(out, "caption.txt"), "w", encoding="utf-8") as f:
         f.write(caption)
     print(out, len(slides), "Bilder")

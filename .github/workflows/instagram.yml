@@ -5,12 +5,16 @@ on:
     # Montag 9:00 und Freitag 12:00 deutscher Zeit – je zwei UTC-Zeiten wegen Sommer-/Winterzeit
     - cron: "5 7,8 * * 1"
     - cron: "5 10,11 * * 5"
+    # Story „Heute live“ täglich 8:00 deutscher Zeit (nur an Renntagen)
+    - cron: "5 6,7 * * *"
     # Token-Verlängerung jeden Mittwoch
     - cron: "17 4 * * 3"
+  push:
+    paths: ["insta/test.json"]
   workflow_dispatch:
     inputs:
       mode:
-        description: "week oder weekend (leer = nach Zeitplan)"
+        description: "week, weekend oder story (leer = nach Zeitplan)"
         required: false
         default: ""
       publish:
@@ -35,29 +39,31 @@ jobs:
         id: gate
         env:
           FORCE_MODE: ${{ github.event.inputs.mode }}
+          FORCE_PUBLISH: ${{ github.event.inputs.publish }}
+          EVENT: ${{ github.event_name }}
         run: python3 insta/gate.py >> "$GITHUB_OUTPUT"
       - name: Werkzeuge installieren
         if: steps.gate.outputs.mode != 'none'
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter fonts-noto-color-emoji
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter fonts-noto-color-emoji ffmpeg
           pip install -q playwright && python3 -m playwright install --with-deps chromium
       - name: Bilder erzeugen
         if: steps.gate.outputs.mode != 'none'
-        run: python3 insta/make_post.py ${{ steps.gate.outputs.mode }} ${{ steps.gate.outputs.date }}
+        run: python3 insta/make_post.py ${{ steps.gate.outputs.mode }} ${{ steps.gate.outputs.date }} --out ${{ steps.gate.outputs.out }}
       - name: Bilder ins Repo (öffentliche URL für Instagram)
         if: steps.gate.outputs.mode != 'none'
         run: |
           git config user.name "Florian Lang"
           git config user.email "langflo163@users.noreply.github.com"
-          git add posts
-          git commit -m "Instagram-Post ${{ steps.gate.outputs.date }} ${{ steps.gate.outputs.mode }}" || true
+          git add -A posts 2>/dev/null || true
+          git commit -m "Instagram ${{ steps.gate.outputs.mode }} ${{ steps.gate.outputs.date }}" || true
           git pull --rebase -q && git push -q
       - name: Auf Instagram veröffentlichen
-        if: steps.gate.outputs.mode != 'none' && (github.event_name == 'schedule' || github.event.inputs.publish == 'true')
+        if: steps.gate.outputs.mode != 'none' && steps.gate.outputs.publish == 'true' && hashFiles(format('{0}/*', steps.gate.outputs.out)) != ''
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: python3 insta/post.py posts/${{ steps.gate.outputs.date }}-${{ steps.gate.outputs.mode }}
+        run: python3 insta/post.py ${{ steps.gate.outputs.out }}
 
   refresh-token:
     if: github.event.schedule == '17 4 * * 3'

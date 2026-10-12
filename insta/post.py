@@ -38,7 +38,7 @@ def wait_public(url, tries=30):
         time.sleep(10)
     sys.exit(f"Bild nicht öffentlich erreichbar: {url}")
 
-def wait_ready(cid, tries=30):
+def wait_ready(cid, tries=60):
     for _ in range(tries):
         st = call("GET", cid, fields="status_code").get("status_code")
         if st == "FINISHED": return
@@ -48,10 +48,23 @@ def wait_ready(cid, tries=30):
 
 def main(folder):
     uid = os.environ["IG_USER_ID"]
+    url_of = lambda p: BASE_URL + os.path.relpath(p).replace(os.sep, "/")
+    cap_file = os.path.join(folder, "caption.txt")
+    caption = open(cap_file, encoding="utf-8").read() if os.path.exists(cap_file) else ""
+    reel, story = os.path.join(folder, "reel.mp4"), os.path.join(folder, "story.jpg")
+    if os.path.exists(story):
+        u = url_of(story); wait_public(u)
+        cid = call("POST", f"{uid}/media", image_url=u, media_type="STORIES")["id"]
+        wait_ready(cid)
+        print("Story veröffentlicht, Media-ID:", call("POST", f"{uid}/media_publish", creation_id=cid).get("id")); return
+    if os.path.exists(reel):
+        u = url_of(reel); wait_public(u)
+        cid = call("POST", f"{uid}/media", video_url=u, media_type="REELS", caption=caption, share_to_feed="true")["id"]
+        wait_ready(cid)
+        print("Reel veröffentlicht, Media-ID:", call("POST", f"{uid}/media_publish", creation_id=cid).get("id")); return
     imgs = sorted(glob.glob(os.path.join(folder, "*.jpg")), key=lambda p: int(os.path.basename(p)[:-4]))[:10]
     if not imgs: sys.exit("Keine Bilder gefunden")
-    caption = open(os.path.join(folder, "caption.txt"), encoding="utf-8").read()
-    urls = [BASE_URL + os.path.relpath(p).replace(os.sep, "/") for p in imgs]
+    urls = [url_of(p) for p in imgs]
     for u in urls: wait_public(u)
 
     if len(urls) == 1:
