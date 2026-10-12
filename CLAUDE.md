@@ -51,11 +51,11 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   stehen schon in der Story des Vortags mit „Nacht auf …“ – Flo-Wunsch). Voll automatisch, Design von Flo freigegeben.
 - Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
 - Info-Post „So läuft's hier“ am 12.10. gepostet (`insta/info_post.py`, Ordner `posts/info-zeiten`). Fertigen Ordner posten: test.json {"mode": "existing", "folder": "posts/…", "publish": true}.
-- **Bonus-Storys an rennfreien Tagen** (`insta/free_story.py`, Schalter `bonus` in `insta/config.json`, Stand: **noch aus**, Entwürfe bei Flo):
+- **Bonus-Storys an rennfreien Tagen** (`insta/free_story.py`, Schalter `bonus` in `insta/config.json`, **aktiv seit 12.10.2026**, Entwürfe von Flo freigegeben):
   max. 1 Story/Tag (Renntag = nur „Heute live“), max. 2 Bonus-Storys/Woche. Priorität: Titel entschieden (nur am 1. Werktag Mo–Fr nach
   Entscheidung, sonst entfällt; zählt nicht zum Wochenlimit) → Neu im Kalender (neue Saison einer Serie erkannt, Warteschlange in
   `insta/state.json`) → Saisonfinale/-start, Zeitumstellung → Heimrennen (DE/AT), Doppel-Wochenende, neue Strecke (`"new": true` am Termin),
-  Winterpause (≥10 Serien 30 Tage ohne Rennen, max. alle 21 Tage) → Countdown zu Highlights (`insta/highlights.json`, 14/7 Tage vorher)
+  Winterpause (≥10 Serien 30 Tage ohne Rennen, max. alle 21 Tage) → Countdown zu Highlights (`insta/highlights.json`). Countdown/Saisonstart: **jede Veranstaltung max. 1× (Key `event:sid:datum`), höchstens 14 Tage vorher** (Flo-Wunsch, nicht übertreiben)
   → „Serie fehlt?“ (alle 14 Tage). Titel braucht `standings[sid].champion = {name, title, team?, date}` (pflegen die Claude-Updates).
 - Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,

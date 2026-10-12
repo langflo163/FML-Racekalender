@@ -223,7 +223,7 @@ def candidates(day, data, stand, evs, st):
         if dd <= 7 and (not after or (after[0]["a"] - nx["b"]).days > 60):
             c.append((2, f"finale:{s['id']}:{nx['a']}", lambda nx=nx: t_finale(data, stand, nx)))
         if 1 <= dd <= 7 and prev and (nx["a"] - prev[-1]["b"]).days > 40:  # nur mit bekannter Vorsaison
-            c.append((2, f"start:{s['id']}:{nx['a']}", lambda nx=nx, dd=dd: t_start(nx, dd)))
+            c.append((2, f"event:{s['id']}:{nx['a']}", lambda nx=nx, dd=dd: t_start(nx, dd)))  # je Veranstaltung nur 1x (Start ODER Countdown)
         if dd <= 7 and after and 5 <= (after[0]["a"] - nx["a"]).days <= 9 and nx["a"].weekday() >= 4:
             c.append((3, f"doppel:{s['id']}:{nx['a']}", lambda nx=nx, a=after[0]: t_doppel(nx, a)))
     # Zeitumstellung (Mo–Fr vor dem Umstellungs-Sonntag)
@@ -255,7 +255,7 @@ def candidates(day, data, stand, evs, st):
             cand = [x for x in cand if not [y for y in rs if y["s"]["id"] == h["s"] and 0 < (x["a"] - y["b"]).days <= 40]]
         if cand:
             x = cand[0]; dd = (x["a"] - day).days
-            c.append((4, f"countdown:{h['label']}:{x['a']}:{'2w' if dd > 7 else '1w'}", lambda x=x, dd=dd, h=h: t_countdown(x, h["label"], dd)))
+            c.append((4, f"event:{x['s']['id']}:{x['a']}", lambda x=x, dd=dd, h=h: t_countdown(x, h["label"], dd)))  # max. 1x, max. 14 Tage vorher
     # Serie fehlt? alle 14 Tage
     last_s = [h["date"] for h in st["history"] if h["key"].startswith("seriefehlt")]
     if not last_s or (day - date.fromisoformat(max(last_s))).days >= 14:
