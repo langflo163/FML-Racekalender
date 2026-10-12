@@ -1053,7 +1053,7 @@
  },
  "nas": {
   "title": "Cup Series 2026 – The Chase",
-  "asof": "nach Rennen 31, Las Vegas (04.10.2026) · Plätze 1–16 im Chase",
+  "asof": "nach Rennen 32, Charlotte (11.10.2026) · Sieger Chase Briscoe · nur Plätze 1–16 (Chase), übrige Plätze nicht aktuell gefunden",
   "tables": [
    {
     "name": null,
@@ -1062,211 +1062,97 @@
       1,
       "Kyle Larson",
       "Hendrick Motorsports",
-      "2318"
+      "2367"
      ],
      [
       2,
       "Denny Hamlin",
       "Joe Gibbs Racing",
-      "2278"
+      "2318"
      ],
      [
       3,
       "Christopher Bell",
       "Joe Gibbs Racing",
-      "2263"
+      "2316"
      ],
      [
       4,
-      "Joey Logano",
-      "Team Penske",
-      "2247"
+      "Chase Briscoe",
+      "Joe Gibbs Racing",
+      "2302"
      ],
      [
       5,
       "Ryan Blaney",
       "Team Penske",
-      "2238"
+      "2282"
      ],
      [
       6,
-      "Chase Briscoe",
-      "Joe Gibbs Racing",
-      "2234"
+      "Joey Logano",
+      "Team Penske",
+      "2275"
      ],
      [
       7,
       "Tyler Reddick",
       "23XI Racing",
-      "2212"
+      "2253"
      ],
      [
       8,
-      "Ty Gibbs",
-      "Joe Gibbs Racing",
-      "2208"
+      "Austin Cindric",
+      "Team Penske",
+      "2222"
      ],
      [
       9,
-      "Austin Cindric",
-      "Team Penske",
-      "2190"
+      "Ty Gibbs",
+      "Joe Gibbs Racing",
+      "2211"
      ],
      [
       10,
-      "Bubba Wallace",
-      "23XI Racing",
-      "2181"
+      "Carson Hocevar",
+      "Spire Motorsports",
+      "2187"
      ],
      [
       11,
-      "Carson Hocevar",
-      "Spire Motorsports",
-      "2160"
+      "Bubba Wallace",
+      "23XI Racing",
+      "2182"
      ],
      [
       12,
-      "William Byron",
+      "Chase Elliott",
       "Hendrick Motorsports",
-      "2158"
+      "2182"
      ],
      [
       13,
-      "Chase Elliott",
+      "William Byron",
       "Hendrick Motorsports",
-      "2155"
+      "2159"
      ],
      [
       14,
       "Daniel Suárez",
       "Spire Motorsports",
-      "2123"
+      "2152"
      ],
      [
       15,
       "Chris Buescher",
       "RFK Racing",
-      "2122"
+      "2151"
      ],
      [
       16,
       "Ryan Preece",
       "RFK Racing",
-      "2118"
-     ],
-     [
-      17,
-      "Shane van Gisbergen",
-      "",
-      "688"
-     ],
-     [
-      18,
-      "Brad Keselowski",
-      "",
-      "654"
-     ],
-     [
-      19,
-      "Ross Chastain",
-      "",
-      "621"
-     ],
-     [
-      20,
-      "Michael McDowell",
-      "",
-      "597"
-     ],
-     [
-      21,
-      "Erik Jones",
-      "",
-      "582"
-     ],
-     [
-      22,
-      "AJ Allmendinger",
-      "",
-      "551"
-     ],
-     [
-      23,
-      "Todd Gilliland",
-      "",
-      "542"
-     ],
-     [
-      24,
-      "Austin Dillon",
-      "",
-      "528"
-     ],
-     [
-      25,
-      "Josh Berry",
-      "",
-      "514"
-     ],
-     [
-      26,
-      "Alex Bowman",
-      "",
-      "503"
-     ],
-     [
-      27,
-      "John Hunter Nemechek",
-      "",
-      "497"
-     ],
-     [
-      28,
-      "Zane Smith",
-      "",
-      "484"
-     ],
-     [
-      29,
-      "Ricky Stenhouse Jr.",
-      "",
-      "460"
-     ],
-     [
-      30,
-      "Riley Herbst",
-      "",
-      "447"
-     ],
-     [
-      31,
-      "Noah Gragson",
-      "",
-      "394"
-     ],
-     [
-      32,
-      "Cole Custer",
-      "",
-      "387"
-     ],
-     [
-      33,
-      "Ty Dillon",
-      "",
-      "339"
-     ],
-     [
-      34,
-      "Connor Zilisch",
-      "",
-      "327"
-     ],
-     [
-      35,
-      "Cody Ware",
-      "",
-      "229"
+      "2140"
      ]
     ]
    }
