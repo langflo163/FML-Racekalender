@@ -47,7 +47,8 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 ## Instagram @fmlrennkalender (aktiv seit 12.10.2026)
 
 - Montag 9:00 Karussell Wochenübersicht (Mo–So), Freitag 12:00 **Reel** Wochenende (Fr–So, 9:16, ohne Ton),
-  täglich 8:00 **Story** „Heute live“ (nur an Renntagen). Voll automatisch, Design von Flo freigegeben.
+  täglich 8:00 **Story** „Heute live“ (nur an Renntagen; bereits beendete Sessions weg, Nachtrennen vor 8:00 des Folgetags
+  stehen schon in der Story des Vortags mit „Nacht auf …“ – Flo-Wunsch). Voll automatisch, Design von Flo freigegeben.
 - Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
 - Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,

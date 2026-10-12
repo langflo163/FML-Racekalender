@@ -116,7 +116,9 @@ def row(it):
     k = kind(e)
     kb = f'<span class="k{" sp" if e.get("type")=="sprint" else ""}">{k}</span>' if k else ""
     name = re.sub(r"\s+–\s+(Qualifying|Rennen\s*\d?|Superpole-Rennen)$", lambda m: "" if k else " – " + m.group(1), e["name"])
-    tm = f'<div class="tm">{t:%H:%M}</div>' if t else (
+    night = (f'<div style="font-size:20px;color:#9aa2ad;font-weight:600;margin-top:4px">Nacht auf {WDS[t.weekday()]}</div>'
+             if it.get("night") else "")
+    tm = f'<div class="tm">{t:%H:%M}{night}</div>' if t else (
         f'<div class="tm na">{dm(it["a"])}–{dm(it["b"])}<br>Zeit folgt</div>' if it["multi"] else '<div class="tm na">Zeit<br>folgt</div>')
     tv = " · ".join(tv_names(e, s))
     star = "★ " if e.get("hl") else ""
@@ -190,10 +192,16 @@ def build(mode, ref):
     caption = cap + "\n" + "\n".join(tail)
     return slides, caption
 
+STORY_HOUR = 8   # Uhrzeit der Story (deutsche Zeit)
+
 def build_story(day):
     data = load()
-    days = collect(data, day, day)
+    days = collect(data, day, day + timedelta(days=1))
     items = days.get(day, [])
+    # Nachtrennen des Folgetags (vor der nächsten Story) schon heute zeigen
+    for it in days.get(day + timedelta(days=1), []):
+        if it["t"] and it["t"].hour < STORY_HOUR:
+            items.append(dict(it, night=True))
     now = datetime.now(BER)
     if day == now.date():   # bereits beendete Sessions (z. B. Nachtrennen) weglassen
         items = [it for it in items if not it["t"] or it["t"] + timedelta(hours=2) > now]
@@ -201,7 +209,7 @@ def build_story(day):
         return None, None
     rows = "".join(row(it) for it in items[:10])
     more = '<div class="more">… weitere Termine in der App</div>' if len(items) > 10 else ""
-    slide = (f'<div class="pg">{head()}<div class="live">● HEUTE LIVE</div>'
+    slide = (f'<div class="pg">{head()}<div class="live">● {"HEUTE NACHT LIVE" if all(i.get("night") for i in items) else "HEUTE LIVE"}</div>'
              f'<h1>{WD[day.weekday()]}</h1><div class="sub">{day.day}. {MON[day.month-1]} {day.year}</div>'
              f'<div class="rows">{rows}</div>{more}'
              f'<div class="foot"><span>Alle Zeiten deutsche Zeit · ohne Gewähr</span><span>Link in Bio</span></div>'
