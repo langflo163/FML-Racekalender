@@ -220,7 +220,8 @@ def candidates(day, data, stand, evs, st):
         nx = fut[0]; dd = (nx["a"] - day).days
         prev = [x for x in sr if x["b"] < nx["a"]]
         after = [x for x in sr if x["a"] > nx["b"]]
-        if dd <= 7 and (not after or (after[0]["a"] - nx["b"]).days > 60):
+        gap = (after[0]["a"] - nx["b"]).days if after else 999
+        if dd <= 7 and gap > 60 and (gap > 120 or after[0]["a"].year != nx["a"].year):  # echte Saisonpause
             c.append((2, f"finale:{s['id']}:{nx['a']}", lambda nx=nx: t_finale(data, stand, nx)))
         if 1 <= dd <= 7 and prev and (nx["a"] - prev[-1]["b"]).days > 40:  # nur mit bekannter Vorsaison
             c.append((2, f"event:{s['id']}:{nx['a']}", lambda nx=nx, dd=dd: t_start(nx, dd)))  # je Veranstaltung nur 1x (Start ODER Countdown)
