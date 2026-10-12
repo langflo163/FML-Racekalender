@@ -1,0 +1,15 @@
+[
+ {"s": "imsa", "match": "Rolex 24",          "label": "Rolex 24 Daytona"},
+ {"s": "igtc", "match": "Bathurst",          "label": "Bathurst 12h"},
+ {"s": "nas",  "match": "Daytona 500",       "label": "Daytona 500"},
+ {"s": "f1",   "first": true,                "label": "F1-Saisonstart"},
+ {"s": "imsa", "match": "Sebring",           "label": "12h Sebring"},
+ {"s": "indy", "match": "Indianapolis 500",  "label": "Indy 500"},
+ {"s": "n24",  "match": "^24h Nürburgring$", "label": "24h Nürburgring"},
+ {"s": "wec",  "match": "Le Mans",           "label": "24h Le Mans"},
+ {"s": "gtwc", "match": "24h Spa",           "label": "24h Spa"},
+ {"s": "mgp",  "match": "Deutschland",       "label": "MotoGP Sachsenring"},
+ {"s": "dtm",  "match": "Hockenheim",        "label": "DTM-Finale Hockenheim"},
+ {"s": "imsa", "match": "Petit Le Mans",     "label": "Petit Le Mans"},
+ {"s": "f1",   "match": "Abu Dhabi",         "label": "F1-Finale Abu Dhabi"}
+]

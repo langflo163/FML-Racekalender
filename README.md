@@ -35,4 +35,7 @@ Pro Serien-ID ein Eintrag, angezeigt in der Detailansicht eines Termins:
 Normale Serien: komplette Tabelle. Multiclass-Serien (WEC, IMSA, ELMS, GTWC, NLS, 24H Series …):
 je Klasse eine Tabelle (`"name": "Hypercar", "top": 5`) – nur die Top 5 der vier höchsten Klassen.
 
+`champion` (optional): `{"name", "title", "team", "date": "YYYY-MM-DD"}` sobald der Titel entschieden ist (für Instagram-Story).
+Termine können `"new": true` haben (neue Strecke im Kalender).
+
 Sender-Links ergänzt die App automatisch anhand des Sendernamens; abweichend kann ein Sender `"url"` haben.

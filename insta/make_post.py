@@ -256,7 +256,16 @@ if __name__ == "__main__":
     if mode == "story":
         slides, caption = build_story(ref)
         if not slides:
-            print("Keine Termine heute – keine Story"); sys.exit(0)
+            cfg = json.load(open(os.path.join(ROOT, "insta", "config.json")))
+            if not cfg.get("bonus"):
+                print("Keine Termine heute – keine Story"); sys.exit(0)
+            import free_story
+            slide, key = free_story.pick(ref)
+            if not slide:
+                print("Keine Bonus-Story fällig"); sys.exit(0)
+            print("Bonus-Story:", key)
+            free_story.render_story(slide, out)
+            sys.exit(0)
         render(slides, out, story=True)
     else:
         slides, caption = build(mode, ref)

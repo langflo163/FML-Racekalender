@@ -625,7 +625,8 @@
    "name": "Austin E-Prix",
    "track": "Circuit of the Americas",
    "country": "USA",
-   "date": "2027-02-06"
+   "date": "2027-02-06",
+   "new": true
   },
   {
    "s": "fe",
@@ -669,7 +670,8 @@
    "country": "Großbritannien",
    "from": "2027-05-29",
    "to": "2027-05-30",
-   "note": "2 Läufe"
+   "note": "2 Läufe",
+   "new": true
   },
   {
    "s": "fe",
@@ -677,7 +679,8 @@
    "country": "Niederlande",
    "from": "2027-06-18",
    "to": "2027-06-19",
-   "note": "2 Läufe"
+   "note": "2 Läufe",
+   "new": true
   },
   {
    "s": "fe",
@@ -1786,7 +1789,8 @@
    "country": "Argentinien",
    "from": "2027-04-09",
    "to": "2027-04-11",
-   "note": "vorläufiger Kalender · Vertrag noch offen"
+   "note": "vorläufiger Kalender · Vertrag noch offen",
+   "new": true
   },
   {
    "s": "mgp",
@@ -1939,7 +1943,8 @@
    "country": "Australien",
    "from": "2027-11-12",
    "to": "2027-11-14",
-   "note": "vorläufiger Kalender · Vertrag noch offen"
+   "note": "vorläufiger Kalender · Vertrag noch offen",
+   "new": true
   },
   {
    "s": "mgp",
@@ -2670,7 +2675,8 @@
    "country": "China",
    "from": "2027-10-29",
    "to": "2027-10-31",
-   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig · Saisonfinale"
+   "note": "Rennen 1 + Superpole-Rennen + Rennen 2 · vorläufig · Saisonfinale",
+   "new": true
   },
   {
    "s": "mgp",
