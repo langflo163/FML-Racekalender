@@ -55,7 +55,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
   `enabled`) → `insta/make_post.py` (Bilder 1080×1350 JPEG + `caption.txt` aus `races.json`, Playwright) → Commit nach `posts/`
   → `insta/post.py` (offizielle Instagram API mit Instagram Login, Bilder per raw.githubusercontent.com-URL).
-- Secret im Repo: `IG_TOKEN` (von Flo eingetragen; nie ausgeben/loggen). Konto-ID holt `post.py` selbst über `/me` (`IG_USER_ID` war falsch, wird nicht genutzt). Optional `GH_PAT` für automatisches Speichern
+- Secret im Repo: `IG_TOKEN` (von Flo eingetragen; nie ausgeben/loggen). Konto-ID holt `post.py` selbst über `/me` (`IG_USER_ID` war falsch, wird nicht genutzt). `GH_PAT` (fine-grained, nur dieses Repo, Secrets read/write; von Flo am 12.10. eingetragen, läuft nach max. 1 Jahr ab → dann erneuern) für automatisches Speichern
   eines erneuerten Tokens. Token-Verlängerung mittwochs per Workflow (60-Tage-Token).
 - Meta-App: Typ Business, Produkt Instagram, Standard Access (eigener Account, kein App Review). Instagram-Account ist Creator-Konto.
 - Manuell testen: Actions → „Instagram-Posts“ → Run workflow (mode week/weekend, publish false = nur Bilder).
