@@ -52,8 +52,10 @@ def wait_ready(cid, tries=60):
     fail(f"Container {cid} nicht fertig")
 
 def main(folder):
-    uid = os.environ.get("IG_USER_ID", "").strip()
-    if not os.environ.get("IG_TOKEN") or not uid: fail("Secret IG_TOKEN oder IG_USER_ID fehlt")
+    if not os.environ.get("IG_TOKEN"): fail("Secret IG_TOKEN fehlt")
+    me = call("GET", "me", fields="user_id,username")
+    uid = str(me.get("user_id") or me.get("id"))
+    print(f"::notice::Poste als @{me.get('username')}")
     url_of = lambda p: BASE_URL + os.path.relpath(p).replace(os.sep, "/")
     cap_file = os.path.join(folder, "caption.txt")
     caption = open(cap_file, encoding="utf-8").read() if os.path.exists(cap_file) else ""
