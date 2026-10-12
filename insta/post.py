@@ -9,6 +9,11 @@ Aufruf: python3 insta/post.py posts/2026-10-12-week
 """
 import os, sys, time, json, glob, urllib.request, urllib.parse, urllib.error
 
+def fail(msg):
+    # als GitHub-Annotation sichtbar (ohne Token)
+    msg = msg.replace(os.environ.get("IG_TOKEN", "") or "\0", "***")
+    print(f"::error::{msg}"); sys.exit(1)
+
 API = "https://graph.instagram.com"
 BASE_URL = "https://raw.githubusercontent.com/langflo163/FML-Racekalender/main/"  # sofort nach Push verfügbar
 
@@ -26,7 +31,7 @@ def call(method, path, **params):
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")
         body = body.replace(os.environ["IG_TOKEN"], "***")
-        sys.exit(f"API-Fehler {e.code} bei {path}: {body}")
+        fail(f"API-Fehler {e.code} bei {path}: {body}")
 
 def wait_public(url, tries=30):
     for _ in range(tries):
@@ -36,18 +41,19 @@ def wait_public(url, tries=30):
         except Exception:
             pass
         time.sleep(10)
-    sys.exit(f"Bild nicht öffentlich erreichbar: {url}")
+    fail(f"Datei nicht öffentlich erreichbar: {url}")
 
 def wait_ready(cid, tries=60):
     for _ in range(tries):
         st = call("GET", cid, fields="status_code").get("status_code")
         if st == "FINISHED": return
-        if st in ("ERROR", "EXPIRED"): sys.exit(f"Container {cid}: {st}")
+        if st in ("ERROR", "EXPIRED"): fail(f"Container {cid}: {st} " + json.dumps(call("GET", cid, fields="status")))
         time.sleep(10)
-    sys.exit(f"Container {cid} nicht fertig")
+    fail(f"Container {cid} nicht fertig")
 
 def main(folder):
-    uid = os.environ["IG_USER_ID"]
+    uid = os.environ.get("IG_USER_ID", "").strip()
+    if not os.environ.get("IG_TOKEN") or not uid: fail("Secret IG_TOKEN oder IG_USER_ID fehlt")
     url_of = lambda p: BASE_URL + os.path.relpath(p).replace(os.sep, "/")
     cap_file = os.path.join(folder, "caption.txt")
     caption = open(cap_file, encoding="utf-8").read() if os.path.exists(cap_file) else ""
@@ -63,7 +69,7 @@ def main(folder):
         wait_ready(cid)
         print("Reel veröffentlicht, Media-ID:", call("POST", f"{uid}/media_publish", creation_id=cid).get("id")); return
     imgs = sorted(glob.glob(os.path.join(folder, "*.jpg")), key=lambda p: int(os.path.basename(p)[:-4]))[:10]
-    if not imgs: sys.exit("Keine Bilder gefunden")
+    if not imgs: fail("Keine Bilder gefunden")
     urls = [url_of(p) for p in imgs]
     for u in urls: wait_public(u)
 
