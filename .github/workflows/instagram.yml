@@ -43,12 +43,12 @@ jobs:
           EVENT: ${{ github.event_name }}
         run: python3 insta/gate.py >> "$GITHUB_OUTPUT"
       - name: Werkzeuge installieren
-        if: steps.gate.outputs.mode != 'none'
+        if: steps.gate.outputs.mode != 'none' && steps.gate.outputs.mode != 'existing'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-inter fonts-noto-color-emoji ffmpeg
           pip install -q playwright && python3 -m playwright install --with-deps chromium
       - name: Bilder erzeugen
-        if: steps.gate.outputs.mode != 'none'
+        if: steps.gate.outputs.mode != 'none' && steps.gate.outputs.mode != 'existing'
         run: python3 insta/make_post.py ${{ steps.gate.outputs.mode }} ${{ steps.gate.outputs.date }} --out ${{ steps.gate.outputs.out }}
       - name: Bilder ins Repo (öffentliche URL für Instagram)
         if: steps.gate.outputs.mode != 'none'

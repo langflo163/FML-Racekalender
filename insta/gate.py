@@ -13,9 +13,10 @@ ev = os.environ.get("EVENT", "")
 force = os.environ.get("FORCE_MODE", "")
 if ev == "push":
     t = json.load(open(os.path.join(root, "insta", "test.json")))
-    mode, d = t["mode"], date.fromisoformat(t["date"])
+    mode = t["mode"]
+    d = date.fromisoformat(t["date"]) if t.get("date") else now.date()
     publish = "true" if t.get("publish") else "false"
-    out = f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
+    out = t["folder"] if mode == "existing" else f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
 elif force in ("week", "weekend", "story"):
     mode = force
     publish = os.environ.get("FORCE_PUBLISH", "false")

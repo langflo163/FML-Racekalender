@@ -50,6 +50,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   täglich 8:00 **Story** „Heute live“ (nur an Renntagen; bereits beendete Sessions weg, Nachtrennen vor 8:00 des Folgetags
   stehen schon in der Story des Vortags mit „Nacht auf …“ – Flo-Wunsch). Voll automatisch, Design von Flo freigegeben.
 - Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
+- Info-Post „So läuft's hier“ am 12.10. gepostet (`insta/info_post.py`, Ordner `posts/info-zeiten`). Fertigen Ordner posten: test.json {"mode": "existing", "folder": "posts/…", "publish": true}.
 - Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
   `enabled`) → `insta/make_post.py` (Bilder 1080×1350 JPEG + `caption.txt` aus `races.json`, Playwright) → Commit nach `posts/`
