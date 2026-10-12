@@ -44,13 +44,16 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - GoatCounter (cookielos, keine IPs), Account `fml-rennkalender` → Statistik unter https://fml-rennkalender.goatcounter.com (Login nur Flo).
   Zählt Seitenaufrufe + Tab-Wechsel als Events. Datenschutzhinweis per Link im Footer (`openInfo()` in `index.html`).
 
-## Instagram (Stand 12.10.2026: eingerichtet, noch nicht aktiv)
+## Instagram @fmlrennkalender (aktiv seit 12.10.2026)
 
-- Ziel: Montag 9:00 Wochenübersicht (Mo–So), Freitag 12:00 Wochenende (Fr–So) als Karussell, voll automatisch.
+- Montag 9:00 Karussell Wochenübersicht (Mo–So), Freitag 12:00 **Reel** Wochenende (Fr–So, 9:16, ohne Ton),
+  täglich 8:00 **Story** „Heute live“ (nur an Renntagen). Voll automatisch, Design von Flo freigegeben.
+- Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
+- Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
   `enabled`) → `insta/make_post.py` (Bilder 1080×1350 JPEG + `caption.txt` aus `races.json`, Playwright) → Commit nach `posts/`
   → `insta/post.py` (offizielle Instagram API mit Instagram Login, Bilder per raw.githubusercontent.com-URL).
-- Secrets im Repo: `IG_TOKEN`, `IG_USER_ID` (von Flo eingetragen; nie ausgeben/loggen). Optional `GH_PAT` für automatisches Speichern
+- Secret im Repo: `IG_TOKEN` (von Flo eingetragen; nie ausgeben/loggen). Konto-ID holt `post.py` selbst über `/me` (`IG_USER_ID` war falsch, wird nicht genutzt). Optional `GH_PAT` für automatisches Speichern
   eines erneuerten Tokens. Token-Verlängerung mittwochs per Workflow (60-Tage-Token).
 - Meta-App: Typ Business, Produkt Instagram, Standard Access (eigener Account, kein App Review). Instagram-Account ist Creator-Konto.
 - Manuell testen: Actions → „Instagram-Posts“ → Run workflow (mode week/weekend, publish false = nur Bilder).

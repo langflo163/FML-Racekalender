@@ -194,6 +194,9 @@ def build_story(day):
     data = load()
     days = collect(data, day, day)
     items = days.get(day, [])
+    now = datetime.now(BER)
+    if day == now.date():   # bereits beendete Sessions (z. B. Nachtrennen) weglassen
+        items = [it for it in items if not it["t"] or it["t"] + timedelta(hours=2) > now]
     if not items:
         return None, None
     rows = "".join(row(it) for it in items[:10])
