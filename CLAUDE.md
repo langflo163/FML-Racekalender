@@ -51,7 +51,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   stehen schon in der Story des Vortags mit „Nacht auf …“ – Flo-Wunsch). Voll automatisch, Design von Flo freigegeben.
 - Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
 - Info-Post „So läuft's hier“ am 12.10. gepostet (`insta/info_post.py`, Ordner `posts/info-zeiten`). Fertigen Ordner posten: test.json {"mode": "existing", "folder": "posts/…", "publish": true}.
-- **Bonus-Storys an rennfreien Tagen** (`insta/free_story.py`, Schalter `bonus` in `insta/config.json`, **aktiv seit 12.10.2026**, Entwürfe von Flo freigegeben):
+- **Bonus-Storys an rennfreien Tagen um 11:40** (Flo-Wunsch 13.10.; eigener Modus `bonus`, Cron 9:40/10:40 UTC; nur wenn heute kein Renntag inkl. Nachtrennen; `story` läuft nur 8:00–11:40) (`insta/free_story.py`, Zeit/Schalter `bonus` in `insta/config.json`, **aktiv seit 12.10.2026**, Entwürfe von Flo freigegeben):
   max. 1 Story/Tag (Renntag = nur „Heute live“), max. 2 Bonus-Storys/Woche. Priorität: Titel entschieden (nur am 1. Werktag Mo–Fr nach
   Entscheidung, sonst entfällt; zählt nicht zum Wochenlimit) → Neu im Kalender (neue Saison einer Serie erkannt, Warteschlange in
   `insta/state.json`) → Saisonfinale/-start, Zeitumstellung → Heimrennen (DE/AT), Doppel-Wochenende, neue Strecke (`"new": true` am Termin),
@@ -77,6 +77,10 @@ Sparsam ausgelegt (Flo-Wunsch 11.10.): kein kompletter Neu-Abgleich aller Serien
 werden erst am nächsten Montag erkannt.
 
 Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/Regeln die Prompts beider Aufgaben mit anpassen.
+
+## Stand 13.10.2026
+
+- 13.10.: Story 8:00 scheiterte – `git add -A posts insta/state.json` brach ab, weil `state.json` fehlte → Bild nie im Repo. Workflow fixt das (getrennte `git add`). Story nachgepostet.
 
 ## Stand 11.10.2026
 

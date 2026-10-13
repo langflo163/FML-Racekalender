@@ -194,7 +194,7 @@ def build(mode, ref):
 
 STORY_HOUR = 8   # Uhrzeit der Story (deutsche Zeit)
 
-def build_story(day):
+def build_story(day, drop_ended=True):
     data = load()
     days = collect(data, day, day + timedelta(days=1))
     items = days.get(day, [])
@@ -203,7 +203,7 @@ def build_story(day):
         if it["t"] and it["t"].hour < STORY_HOUR:
             items.append(dict(it, night=True))
     now = datetime.now(BER)
-    if day == now.date():   # bereits beendete Sessions (z. B. Nachtrennen) weglassen
+    if drop_ended and day == now.date():   # bereits beendete Sessions (z. B. Nachtrennen) weglassen
         items = [it for it in items if not it["t"] or it["t"] + timedelta(hours=2) > now]
     if not items:
         return None, None
@@ -253,19 +253,20 @@ if __name__ == "__main__":
     mode = argv[0] if argv else "week"
     ref = date.fromisoformat(argv[1]) if len(argv) > 1 else datetime.now(BER).date()
     out = out or os.path.join(ROOT, "posts", f"{ref}-{mode}")
+    if mode == "bonus":   # Bonus-Story nur an rennfreien Tagen
+        if build_story(ref, drop_ended=False)[0]:
+            print("Renntag – keine Bonus-Story"); sys.exit(0)
+        import free_story
+        slide, key = free_story.pick(ref)
+        if not slide:
+            print("Keine Bonus-Story fällig"); sys.exit(0)
+        print("Bonus-Story:", key)
+        free_story.render_story(slide, out)
+        sys.exit(0)
     if mode == "story":
         slides, caption = build_story(ref)
         if not slides:
-            cfg = json.load(open(os.path.join(ROOT, "insta", "config.json")))
-            if not cfg.get("bonus"):
-                print("Keine Termine heute – keine Story"); sys.exit(0)
-            import free_story
-            slide, key = free_story.pick(ref)
-            if not slide:
-                print("Keine Bonus-Story fällig"); sys.exit(0)
-            print("Bonus-Story:", key)
-            free_story.render_story(slide, out)
-            sys.exit(0)
+            print("Keine Termine heute – keine Story"); sys.exit(0)
         render(slides, out, story=True)
     else:
         slides, caption = build(mode, ref)

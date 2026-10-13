@@ -10,7 +10,15 @@
   },
   "story": {
     "weekday": null,
-    "hour": 8
+    "hour": 8,
+    "until": [
+      11,
+      40
+    ]
   },
-  "bonus": true
+  "bonus": {
+    "weekday": null,
+    "hour": 11,
+    "minute": 40
+  }
 }

@@ -17,15 +17,24 @@ if ev == "push":
     d = date.fromisoformat(t["date"]) if t.get("date") else now.date()
     publish = "true" if t.get("publish") else "false"
     out = t["folder"] if mode == "existing" else f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
-elif force in ("week", "weekend", "story"):
+elif force in ("week", "weekend", "story", "bonus"):
     mode = force
     publish = os.environ.get("FORCE_PUBLISH", "false")
 elif cfg.get("enabled"):
-    for m in ("week", "weekend", "story"):
-        c = cfg[m]
-        if (c.get("weekday") is None or now.weekday() == c["weekday"]) and now.hour >= c["hour"]:
-            if not os.path.exists(os.path.join(root, "posts", f"{now.date()}-{m}")):
-                mode = m; break
+    hm = (now.hour, now.minute)
+    done = lambda m: os.path.exists(os.path.join(root, "posts", f"{now.date()}-{m}"))
+    for m in ("week", "weekend", "story", "bonus"):
+        c = cfg.get(m)
+        if not isinstance(c, dict):
+            continue
+        if c.get("weekday") is not None and now.weekday() != c["weekday"]:
+            continue
+        if hm < (c["hour"], c.get("minute", 0)) or ("until" in c and hm >= tuple(c["until"])):
+            continue
+        if m == "bonus" and done("story"):   # Renntag: schon „Heute live“ gepostet
+            continue
+        if not done(m):
+            mode = m; break
 out = out or f"posts/{d}-{mode}"
 print(f"mode={mode}")
 print(f"date={d}")
