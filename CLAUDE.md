@@ -15,7 +15,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Keine Logos/fremden Bilder** von Serien, Sendern oder Strecken (rechtlich). Nur Namen, Termine, eigene Farben.
   Eigenes FML-Branding ist erlaubt: rote F-M-L-Kacheln (aus FML-ScreenView) im Header, App-Icon = roter Kalender mit „FML“ + Zielflaggen-Streifen.
 - Optik: flach, Rot/Weiß/Schwarz (#d71920), Hell/Dunkel-Modus, keine Verläufe.
-- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v10`), sonst sehen Geräte die alte Version.
+- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v11`), sonst sehen Geräte die alte Version.
 - Vor dem Push lokal testen (Playwright/Chromium im Container, `python3 -m http.server`).
 
 ## Inhalt / Entscheidungen
