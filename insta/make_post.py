@@ -39,7 +39,8 @@ def kind(e):
 
 def tv_names(e, ser):
     order = {"mine": 0, "free": 1, "pay": 2, "open": 3}
-    tv = sorted(e.get("tv") or ser.get("tv") or [], key=lambda t: order.get(t.get("k"), 9))
+    rank = lambda t: 9 if re.search(r"Sky|WOW", t.get("n", ""), re.I) else order.get(t.get("k"), 5)   # Sky immer zuletzt
+    tv = sorted(e.get("tv") or ser.get("tv") or [], key=rank)
     return [t["n"] for t in tv if t.get("k") != "open"][:2]
 
 def collect(data, d0, d1):

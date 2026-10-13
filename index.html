@@ -221,10 +221,12 @@ function prep(d){
 const visible=()=>EVENTS.filter(e=>!off.has(e.s)&&!hidden.has(e.s)&&(showSess||!e.type));
 const upcoming=()=>{const now=Date.now();return visible().filter(e=>e.end.getTime()>now)};
 
+// Reihenfolge: eigene Sender, kostenlos, Abo, offen – Sky/WOW immer ganz zuletzt (Flo-Wunsch)
+const tvRank=t=>/Sky|WOW/i.test(t.n)?9:({mine:0,free:1,pay:2,open:3}[t.k]??5);
+const tvSort=l=>l.slice().sort((a,b)=>tvRank(a)-tvRank(b));
 function tvTags(e){
   const list=e.tv||SER[e.s].tv||[];
-  const order={mine:0,free:1,pay:2,open:3};
-  return list.slice().sort((a,b)=>order[a.k]-order[b.k]).map(t=>
+  return tvSort(list).map(t=>
     `<span class="tag ${esc(t.k)}" title="${esc(t.x||'')}">${esc(t.n)}</span>`).join('');
 }
 function whenText(e){
@@ -327,7 +329,7 @@ function renderSeries(){
   const el=document.getElementById('v-series'); const now=Date.now();
   let h=`<div class="note" style="margin:0 2px 10px">Serien, die dich nicht interessieren, hier ausschalten – sie verschwinden dann überall. Wird pro Gerät gespeichert.</div><div class="legend"><span class="tag mine">deine Sender</span><span class="tag free">kostenlos</span><span class="tag pay">Abo</span><span class="tag open">noch offen</span></div>`;
   DATA.series.forEach(s=>{const evs=EVENTS.filter(e=>e.s===s.id&&e.end.getTime()>now);
-    const tv=(s.tv||[]).map(t=>`<div class="note"><span class="tag ${esc(t.k)}">${esc(t.n)}</span> ${esc(t.x||'')}</div>`).join('');
+    const tv=tvSort(s.tv||[]).map(t=>`<div class="note"><span class="tag ${esc(t.k)}">${esc(t.n)}</span> ${esc(t.x||'')}</div>`).join('');
     const on=!off.has(s.id);
     h+=`<div class="sc ${on?'':'dis'}" style="--c:${s.color}"><div class="sh"><h3>${esc(s.name)}</h3>
       <label class="sw"><input type="checkbox" data-sid="${s.id}" ${on?'checked':''}><span></span></label></div>
@@ -378,7 +380,7 @@ function openDetail(i){
   const e=EVENTS.find(x=>x.i===i); if(!e) return; const s=SER[e.s];
   const when=e.t?fLong.format(e.t)+', '+fTime.format(e.t)+' Uhr':(e.k1!==e.k2?dm(e.k1)+' – '+dm(e.k2)+noonUTC(e.k2).getUTCFullYear()+' · Uhrzeit folgt':fLong.format(noonUTC(e.k1))+' · Uhrzeit folgt');
   const near=EVENTS.filter(x=>x.s===e.s&&Math.abs(noonUTC(x.k1)-noonUTC(e.k1))<=3*864e5).sort((a,b)=>a.sort-b.sort);
-  const tv=(e.tv||s.tv||[]).slice().sort((a,b)=>({mine:0,free:1,pay:2,open:3}[a.k])-({mine:0,free:1,pay:2,open:3}[b.k]));
+  const tv=tvSort(e.tv||s.tv||[]);
   let h=`<div class="sbar"><div class="grab"></div><button class="x" aria-label="Schließen">✕</button></div>
    <div class="dh" style="--c:${s.color}"><div class="ser">${esc(s.name)}</div>
    <div class="ttl">${e.hl?'<span class="star">★</span> ':''}${esc(e.name)}${badge(e)}</div>

@@ -15,7 +15,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Keine Logos/fremden Bilder** von Serien, Sendern oder Strecken (rechtlich). Nur Namen, Termine, eigene Farben.
   Eigenes FML-Branding ist erlaubt: rote F-M-L-Kacheln (aus FML-ScreenView) im Header, App-Icon = roter Kalender mit „FML“ + Zielflaggen-Streifen.
 - Optik: flach, Rot/Weiß/Schwarz (#d71920), Hell/Dunkel-Modus, keine Verläufe.
-- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v9`), sonst sehen Geräte die alte Version.
+- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v10`), sonst sehen Geräte die alte Version.
 - Vor dem Push lokal testen (Playwright/Chromium im Container, `python3 -m http.server`).
 
 ## Inhalt / Entscheidungen
@@ -30,7 +30,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   (auch bei Langstrecken-/24h-Rennen), **kein** Schalter dafür.
 - **Sender von Flo** (`k: "mine"`, grün): SRF (SRF zwei / SRF info), ORF, ServusTV/ServusTV On, Sportdigital1+, Motorvision TV/Motorvision+.
   Danach kostenlos inkl. YouTube mit dt. Kommentar und DF1 (`free`, blau), dann Abo (`pay`, grau).
-  **Sky nur ungern** – nur wenn es keine andere deutsche Quelle gibt. F1 schaut er bei SRF oder ORF/ServusTV.
+  **Sky immer als letzte Option** (Flo 13.10.): läuft eine Serie/Session bei Sky/WOW, wird Sky eingetragen; App (`tvRank` in `index.html`) und Instagram (`tv_names`) sortieren Sky automatisch ganz ans Ende. Laut sky.de 2026: F1, MotoGP/Moto2/Moto3, IndyCar, GTWC Europe (nur ausgewählte Rennen, u. a. 24h Spa). F1 schaut er bei SRF oder ORF/ServusTV.
 - **Ansichten:** Nächste (Countdown), Wochenende (Heute | Wochenende, Zeitstrahl, LIVE-Markierung, Überschneidungs-Hinweis),
   Kalender (Monat), Serien (Schalter zum Ausblenden je Serie, pro Gerät gespeichert).
 - **Detailansicht** beim Antippen eines Termins: alle Sessions des Wochenendes, Sender mit Direktlinks (`LINKS` in `index.html`),
