@@ -173,7 +173,10 @@ def build(mode, ref):
                       + ('<div class="more">… weitere Termine in der App</div>' if more else "") + f'{foot(i,total)}</div>')
 
     # Bildtext
-    lines = [("🏁 Die Rennwoche " if mode == "week" else "🏁 Das Rennwochenende ") + sub, ""]
+    sids = {it["s"]["id"] for it in allitems}
+    ask = "Welches Rennen schaust du diese Woche? Schreib's in die Kommentare 👇" if mode == "week" else \
+          "Welches Rennen schaust du am Wochenende? Schreib's in die Kommentare 👇"
+    lines = [("🏁 Die Rennwoche " if mode == "week" else "🏁 Das Rennwochenende ") + sub, ask, ""]
     for d, items in days.items():
         lines.append(f"📅 {WDS[d.weekday()]} {dm(d)}")
         for it in items:
@@ -184,7 +187,8 @@ def build(mode, ref):
             lines[-1] += f" {s['name']}: {nm}{' (' + k + ')' if k else ''}{' – ' + tv[0] if tv else ''}"
         lines.append("")
     tail = ["Alle Zeiten in deutscher Zeit, ohne Gewähr.", f"📲 Alle Termine & Sender: Link in der Bio ({APP_URL})", "",
-            hashtags({it["s"]["id"] for it in allitems})]
+            *([f"Mit dabei: {' · '.join(mentions(sids))}", ""] if mentions(sids) else []),
+            hashtags(sids)]
     cap = "\n".join(lines)
     while len(cap) + len("\n".join(tail)) > 2150 and len(lines) > 3:
         lines = lines[:-2] + ["…", ""]
@@ -203,6 +207,13 @@ TAG_SERIES = [("f1", "#f1"), ("mgp", "#motogp"), ("nas", "#nascar"), ("wec", "#w
               ("sbk", "#worldsbk"), ("dtm", "#dtm"), ("fe", "#formulae"), ("imsa", "#imsa"), ("gtwc", "#gtworldchallenge"),
               ("m2", "#moto2"), ("m3", "#moto3"), ("n24", "#nordschleife"), ("nls", "#nordschleife"), ("elms", "#elms"),
               ("igtc", "#igtc"), ("h24", "#24hseries"), ("etrc", "#truckracing"), ("enas", "#iracing")]
+# offizielle Accounts (geprüft 13.10.2026 über Links der offiziellen Websites) – max. 2 pro Post erwähnen
+HANDLES = {"f1": "@f1", "mgp": "@motogp", "nas": "@nascar", "wec": "@fiawec_official", "indy": "@indycar",
+           "fe": "@fiaformulae", "imsa": "@imsa_racing", "gtwc": "@gtworldcheu"}
+
+def mentions(sids, n=2):
+    return [HANDLES[sid] for sid, _ in TAG_SERIES if sid in sids and sid in HANDLES][:n]
+
 TAG_FILL = ["#racecar", "#motorsports", "#formula"]
 
 def hashtags(sids):
