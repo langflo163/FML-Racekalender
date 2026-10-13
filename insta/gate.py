@@ -17,13 +17,13 @@ if ev == "push":
     d = date.fromisoformat(t["date"]) if t.get("date") else now.date()
     publish = "true" if t.get("publish") else "false"
     out = t["folder"] if mode == "existing" else f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
-elif force in ("week", "weekend", "story", "bonus"):
+elif force in ("week", "weekreel", "weekend", "story", "bonus"):
     mode = force
     publish = os.environ.get("FORCE_PUBLISH", "false")
 elif cfg.get("enabled"):
     hm = (now.hour, now.minute)
     done = lambda m: os.path.exists(os.path.join(root, "posts", f"{now.date()}-{m}"))
-    for m in ("week", "weekend", "story", "bonus"):
+    for m in ("week", "weekreel", "weekend", "story", "bonus"):
         c = cfg.get(m)
         if not isinstance(c, dict):
             continue

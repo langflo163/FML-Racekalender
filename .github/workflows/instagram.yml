@@ -4,6 +4,8 @@ on:
   schedule:
     # Montag 9:00 und Freitag 12:00 deutscher Zeit – je zwei UTC-Zeiten wegen Sommer-/Winterzeit
     - cron: "5 7,8 * * 1"
+    # Montag 18:00 Wochen-Reel
+    - cron: "5 16,17 * * 1"
     - cron: "5 10,11 * * 5"
     # Story „Heute live“ täglich 8:00 deutscher Zeit (nur an Renntagen)
     - cron: "5 6,7 * * *"
@@ -16,7 +18,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "week, weekend, story oder bonus (leer = nach Zeitplan)"
+        description: "week, weekreel, weekend, story oder bonus (leer = nach Zeitplan)"
         required: false
         default: ""
       publish:

@@ -311,12 +311,13 @@ if __name__ == "__main__":
             print("Keine Termine heute – keine Story"); sys.exit(0)
         render(slides, out, story=True)
     else:
-        slides, caption = build(mode, ref)
+        reel = mode == "weekreel"   # Montag-Reel: Wochenübersicht als Video
+        slides, caption = build("week" if reel else mode, ref)
         render(slides, out)
         if LAST_ALT:
             with open(os.path.join(out, "alt.json"), "w", encoding="utf-8") as f:
                 json.dump(LAST_ALT, f, ensure_ascii=False, indent=1)
-        if mode == "weekend":
+        if mode in ("weekend", "weekreel"):
             make_reel(out, len(slides))
     with open(os.path.join(out, "caption.txt"), "w", encoding="utf-8") as f:
         f.write(caption)

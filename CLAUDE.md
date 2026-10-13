@@ -46,7 +46,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 
 ## Instagram @fmlrennkalender (aktiv seit 12.10.2026)
 
-- Montag 9:00 Karussell Wochenübersicht (Mo–So), Freitag 12:00 **Reel** Wochenende (Fr–So, 9:16, ohne Ton),
+- Montag 9:00 Karussell Wochenübersicht (Mo–So), Montag 18:00 dieselbe Übersicht als **Reel** (Modus `weekreel`, Flo-Wunsch 13.10.), Freitag 12:00 **Reel** Wochenende (Fr–So, 9:16, ohne Ton),
   täglich 8:00 **Story** „Heute live“ (nur an Renntagen; bereits beendete Sessions weg, Nachtrennen vor 8:00 des Folgetags
   stehen schon in der Story des Vortags mit „Nacht auf …“ – Flo-Wunsch). Voll automatisch, Design von Flo freigegeben.
 - Tests am 12.10.: Karussell, Reel, Story erfolgreich gepostet (Creator-Konto reicht auch für Storys).
@@ -58,6 +58,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   Winterpause (≥10 Serien 30 Tage ohne Rennen, max. alle 21 Tage) → Countdown zu Highlights (`insta/highlights.json`). Countdown/Saisonstart: **jede Veranstaltung max. 1× (Key `event:sid:datum`), höchstens 14 Tage vorher** (Flo-Wunsch, nicht übertreiben)
   → „Serie fehlt?“ (alle 14 Tage). Titel braucht `standings[sid].champion = {name, title, team?, date}` (pflegen die Claude-Updates).
 - **Hashtags** (13.10., Flo: max. Reichweite): Instagram erlaubt seit Dez. 2025 nur 5 → `#motorsport #racing` + 3 größte Serien im Post (`TAG_SERIES` in `make_post.py`, Reihenfolge = Größe), sonst Auffüller. Storys haben keine Hashtags (API kann keine Sticker).
+- **Bildunterschrift** (Karussell/Reels, von Flo freigegeben 13.10.): Frage unter dem Titel („Welches Rennen schaust du …? 👇“) + „Mit dabei:“ max. 2 offizielle Accounts (`HANDLES` in `make_post.py`, nur über offizielle Website belegt; DTM/WorldSBK nicht belegt → keine Erwähnung).
 - **Alt-Text** je Karussell-Bild (`alt.json`, `post.py` postet ohne, falls API ablehnt).
 - Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
