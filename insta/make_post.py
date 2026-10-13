@@ -184,15 +184,46 @@ def build(mode, ref):
             lines[-1] += f" {s['name']}: {nm}{' (' + k + ')' if k else ''}{' – ' + tv[0] if tv else ''}"
         lines.append("")
     tail = ["Alle Zeiten in deutscher Zeit, ohne Gewähr.", f"📲 Alle Termine & Sender: Link in der Bio ({APP_URL})", "",
-            "#motorsport #rennkalender #formel1 #f1 #motogp #dtm #wec #nascar #indycar #langstrecke #superbike #racing #motorsportdeutschland"]
+            hashtags({it["s"]["id"] for it in allitems})]
     cap = "\n".join(lines)
     while len(cap) + len("\n".join(tail)) > 2150 and len(lines) > 3:
         lines = lines[:-2] + ["…", ""]
         cap = "\n".join(lines)
     caption = cap + "\n" + "\n".join(tail)
+    global LAST_ALT
+    LAST_ALT = alt_texts([("cover", None, allitems)] + [("day", p[0], p[1]) for p in pages], re.sub(r"<[^>]+>|&shy;", "", title) + " " + sub)
     return slides, caption
 
+LAST_ALT = []
 STORY_HOUR = 8   # Uhrzeit der Story (deutsche Zeit)
+
+# Instagram erlaubt seit Dez. 2025 max. 5 Hashtags: 2 große allgemeine + die 3 größten Serien im Post
+TAG_BASE = ["#motorsport", "#racing"]
+TAG_SERIES = [("f1", "#f1"), ("mgp", "#motogp"), ("nas", "#nascar"), ("wec", "#wec"), ("indy", "#indycar"),
+              ("sbk", "#worldsbk"), ("dtm", "#dtm"), ("fe", "#formulae"), ("imsa", "#imsa"), ("gtwc", "#gtworldchallenge"),
+              ("m2", "#moto2"), ("m3", "#moto3"), ("n24", "#nordschleife"), ("nls", "#nordschleife"), ("elms", "#elms"),
+              ("igtc", "#igtc"), ("h24", "#24hseries"), ("etrc", "#truckracing"), ("enas", "#iracing")]
+TAG_FILL = ["#racecar", "#motorsports", "#formula"]
+
+def hashtags(sids):
+    tags = []
+    for sid, t in TAG_SERIES:
+        if sid in sids and t not in tags: tags.append(t)
+    tags = tags[:3]
+    tags += [t for t in TAG_FILL if t not in tags][:3 - len(tags)]
+    return " ".join(TAG_BASE + tags)
+
+def alt_texts(slides_items, title):
+    """Bildbeschreibung je Karussell-Bild (max. 1000 Zeichen)."""
+    out = []
+    for kind_, d, items in slides_items:
+        if kind_ == "cover":
+            txt = f"FML Rennkalender – {title}: " + ", ".join(dict.fromkeys(it["s"]["name"] for it in items))
+        else:
+            txt = f"Motorsport live am {WD[d.weekday()]}, {dm(d)} (deutsche Zeit): " + "; ".join(
+                f'{it["t"]:%H:%M} ' * bool(it["t"]) + f'{it["s"]["name"]} {it["e"]["name"]}' + (f' ({kind(it["e"])})' if kind(it["e"]) else "") for it in items)
+        out.append(txt[:1000])
+    return out
 
 def build_story(day, drop_ended=True):
     data = load()
@@ -271,6 +302,9 @@ if __name__ == "__main__":
     else:
         slides, caption = build(mode, ref)
         render(slides, out)
+        if LAST_ALT:
+            with open(os.path.join(out, "alt.json"), "w", encoding="utf-8") as f:
+                json.dump(LAST_ALT, f, ensure_ascii=False, indent=1)
         if mode == "weekend":
             make_reel(out, len(slides))
     with open(os.path.join(out, "caption.txt"), "w", encoding="utf-8") as f:

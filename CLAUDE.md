@@ -57,6 +57,8 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
   `insta/state.json`) → Saisonfinale/-start, Zeitumstellung → Heimrennen (DE/AT), Doppel-Wochenende, neue Strecke (`"new": true` am Termin),
   Winterpause (≥10 Serien 30 Tage ohne Rennen, max. alle 21 Tage) → Countdown zu Highlights (`insta/highlights.json`). Countdown/Saisonstart: **jede Veranstaltung max. 1× (Key `event:sid:datum`), höchstens 14 Tage vorher** (Flo-Wunsch, nicht übertreiben)
   → „Serie fehlt?“ (alle 14 Tage). Titel braucht `standings[sid].champion = {name, title, team?, date}` (pflegen die Claude-Updates).
+- **Hashtags** (13.10., Flo: max. Reichweite): Instagram erlaubt seit Dez. 2025 nur 5 → `#motorsport #racing` + 3 größte Serien im Post (`TAG_SERIES` in `make_post.py`, Reihenfolge = Größe), sonst Auffüller. Storys haben keine Hashtags (API kann keine Sticker).
+- **Alt-Text** je Karussell-Bild (`alt.json`, `post.py` postet ohne, falls API ablehnt).
 - Testpost auslösen: `insta/test.json` ändern und pushen ({"mode": week|weekend|story, "date", "publish": true}).
 - Umsetzung **ohne Claude-Läufe**: GitHub Action `.github/workflows/instagram.yml` → `insta/gate.py` (Zeitplan, `insta/config.json`,
   `enabled`) → `insta/make_post.py` (Bilder 1080×1350 JPEG + `caption.txt` aus `races.json`, Playwright) → Commit nach `posts/`

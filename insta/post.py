@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Postet einen Ordner aus posts/ (1.jpg … n.jpg + caption.txt) als Instagram-Karussell.
 
-Benötigt Umgebungsvariablen IG_TOKEN und IG_USER_ID (GitHub-Secrets).
+Benötigt IG_TOKEN (GitHub-Secret). Optional alt.json = Alt-Texte je Bild.
 Die Bilder müssen öffentlich erreichbar sein – sie werden vorher ins Repo gepusht
 und über raw.githubusercontent.com ausgeliefert (BASE_URL).
 
@@ -78,9 +78,17 @@ def main(folder):
     if len(urls) == 1:
         cid = call("POST", f"{uid}/media", image_url=urls[0], caption=caption)["id"]
     else:
+        alt_file = os.path.join(folder, "alt.json")
+        alts = json.load(open(alt_file, encoding="utf-8")) if os.path.exists(alt_file) else []
         kids = []
-        for u in urls:
-            kids.append(call("POST", f"{uid}/media", image_url=u, is_carousel_item="true")["id"])
+        for i, u in enumerate(urls):
+            p = dict(image_url=u, is_carousel_item="true")
+            if i < len(alts) and alts[i]:
+                try:   # Alt-Text; falls die API ihn ablehnt, ohne posten
+                    kids.append(call("POST", f"{uid}/media", alt_text=alts[i], **p)["id"]); continue
+                except SystemExit:
+                    print("::warning::Alt-Text abgelehnt, poste ohne")
+            kids.append(call("POST", f"{uid}/media", **p)["id"])
         for k in kids: wait_ready(k)
         cid = call("POST", f"{uid}/media", media_type="CAROUSEL", children=",".join(kids), caption=caption)["id"]
     wait_ready(cid)
