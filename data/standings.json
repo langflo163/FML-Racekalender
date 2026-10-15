@@ -1920,5 +1920,274 @@
     ]
    }
   ]
+ },
+ "enas": {
+  "title": "eNASCAR Coca-Cola iRacing Series 2026",
+  "asof": "Endstand nach dem Finale in Homestead-Miami (13./14.10.2026) · Quelle: iracing.com",
+  "tables": [
+   {
+    "name": null,
+    "rows": [
+     [
+      1,
+      "Steven Wilson",
+      "Spire Motorsports",
+      "3035"
+     ],
+     [
+      2,
+      "Connor Yeroschak",
+      "Letarte eSports",
+      "3033"
+     ],
+     [
+      3,
+      "Bobby Zalenski",
+      "ERA",
+      "3032"
+     ],
+     [
+      4,
+      "Wyatt Tinsley",
+      "Kansas City Pioneers",
+      "3029"
+     ],
+     [
+      5,
+      "Casey Kirwan",
+      "Kansas City Pioneers",
+      "2093"
+     ],
+     [
+      6,
+      "Tucker Minter",
+      "William Byron eSports",
+      "2084"
+     ],
+     [
+      7,
+      "Parker White",
+      "Williams eSports",
+      "2082"
+     ],
+     [
+      8,
+      "Garrett Lowe",
+      "BS+Competition",
+      "2075"
+     ],
+     [
+      9,
+      "Shawn M Conklin",
+      "RFK Racing",
+      "2062"
+     ],
+     [
+      10,
+      "Vicente Salas",
+      "Kanaan eSports",
+      "2048"
+     ],
+     [
+      11,
+      "Zack Novak",
+      "JR Motorsports",
+      "306"
+     ],
+     [
+      12,
+      "Quentin Warman",
+      "Hyak Motorsports",
+      "291"
+     ],
+     [
+      13,
+      "Seth DeMerchant",
+      "fgrAccel",
+      "276"
+     ],
+     [
+      14,
+      "Sebastian Marin",
+      "Kanaan eSports",
+      "275"
+     ],
+     [
+      15,
+      "Christopher M. Hill",
+      "William Byron eSports",
+      "268"
+     ],
+     [
+      16,
+      "Femi Olatunbosun",
+      "Spire Motorsports",
+      "252"
+     ],
+     [
+      17,
+      "Matthew L Morton",
+      "TC Esports",
+      "248"
+     ],
+     [
+      18,
+      "Donovan Strauss",
+      "Williams eSports",
+      "242"
+     ],
+     [
+      19,
+      "Daniel Faulkingham",
+      "Rick Ware Racing",
+      "239"
+     ],
+     [
+      20,
+      "Garrett Manes",
+      "Rick Ware Racing",
+      "217"
+     ],
+     [
+      21,
+      "Dylan Duval",
+      "Channel 199 Sim Racing",
+      "215"
+     ],
+     [
+      22,
+      "Blaze Crawford",
+      "Team Dillon eSports",
+      "212"
+     ],
+     [
+      23,
+      "Michael Cosey Jr",
+      "ERA",
+      "212"
+     ],
+     [
+      24,
+      "Jordy Lopez",
+      "BS+Competition",
+      "205"
+     ],
+     [
+      25,
+      "Thomas Lloyd",
+      "Letarte eSports",
+      "199"
+     ],
+     [
+      26,
+      "Jake Nichols",
+      "TC Esports",
+      "173"
+     ],
+     [
+      27,
+      "Blake Reynolds",
+      "Channel 199 Sim Racing",
+      "170"
+     ],
+     [
+      28,
+      "Cody Byus",
+      "Apex Racing Team",
+      "162"
+     ],
+     [
+      29,
+      "Kenny Brady",
+      "Team Dillon eSports",
+      "159"
+     ],
+     [
+      30,
+      "Dylan Basen",
+      "RFK Racing",
+      "159"
+     ],
+     [
+      31,
+      "Seth Noell",
+      "eRacr",
+      "155"
+     ],
+     [
+      32,
+      "Michael Guest",
+      "Vegas Inferno",
+      "154"
+     ],
+     [
+      33,
+      "Malik Ray",
+      "JR Motorsports",
+      "142"
+     ],
+     [
+      34,
+      "Nate S Stewart",
+      "Jim Beaver Esports",
+      "142"
+     ],
+     [
+      35,
+      "Dylan Ault",
+      "Hyak Motorsports",
+      "141"
+     ],
+     [
+      36,
+      "Tommy Gossett",
+      "Vegas Inferno",
+      "139"
+     ],
+     [
+      37,
+      "Ryan Luza",
+      "fgrAccel",
+      "117"
+     ],
+     [
+      38,
+      "Ryan Doucette",
+      "Apex Racing Team",
+      "116"
+     ],
+     [
+      39,
+      "Logan Helton",
+      "eRacr",
+      "108"
+     ],
+     [
+      40,
+      "Kollin Keister",
+      "Jim Beaver Esports",
+      "100"
+     ],
+     [
+      41,
+      "Michael P Frisch",
+      "Team Dillon eSports",
+      "9"
+     ],
+     [
+      42,
+      "Matthew Zwack",
+      "Jim Beaver Esports",
+      "1"
+     ]
+    ]
+   }
+  ],
+  "champion": {
+   "name": "Steven Wilson",
+   "title": "eNASCAR-Champion 2026",
+   "team": "Spire Motorsports",
+   "date": "2026-10-14"
+  }
  }
 }
