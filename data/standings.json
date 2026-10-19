@@ -424,7 +424,7 @@
  },
  "wec": {
   "title": "Fahrer-WM 2026",
-  "asof": "nach 6h Fuji (27.09.2026)",
+  "asof": "nach 6h Barcelona (18.10.2026) · Quelle: rnt-motorsports.com (inoffiziell) · Titelentscheidung beim Finale in Monza (08.11.)",
   "tables": [
    {
     "name": "Hypercar",
@@ -434,13 +434,19 @@
       1,
       "Sébastien Buemi / Brendon Hartley / Ryo Hirakawa",
       "Toyota #8",
-      "89"
+      "114"
      ],
      [
       2,
       "Mike Conway / Kamui Kobayashi / Nyck de Vries",
       "Toyota #7",
-      "79"
+      "97"
+     ],
+     [
+      3,
+      "Kevin Magnussen / Raffaele Marciello",
+      "BMW #15",
+      "75"
      ],
      [
       3,
@@ -449,16 +455,10 @@
       "75"
      ],
      [
-      4,
-      "Kevin Magnussen / Raffaele Marciello",
-      "BMW #15",
-      "69"
-     ],
-     [
       5,
-      "Sheldon van der Linde",
-      "BMW #20",
-      "65"
+      "Antonio Fuoco / Miguel Molina / Nicklas Nielsen",
+      "Ferrari #50",
+      "69"
      ]
     ]
    },
@@ -470,31 +470,25 @@
       1,
       "Jonny Edgar",
       "TF Sport #33",
-      "86"
+      "92"
      ],
      [
       2,
       "Nicky Catsburg",
       "TF Sport #33",
-      "82"
+      "88"
      ],
      [
       3,
-      "Ben Keating",
-      "TF Sport #33",
-      "64"
+      "Yasser Shahin / Riccardo Pera / Richard Lietz",
+      "Manthey #92",
+      "74"
      ],
      [
       4,
-      "Ian James / Mattia Drudi / Zacharie Robichon",
-      "Heart of Racing #27",
-      "62"
-     ],
-     [
-      5,
       "Charlie Eastwood / Peter Dempsey / Salih Yoluç",
       "Racing Team Turkey by TF #34",
-      "58"
+      "70"
      ]
     ]
    }
@@ -1053,7 +1047,7 @@
  },
  "nas": {
   "title": "Cup Series 2026 – The Chase",
-  "asof": "nach Rennen 32, Charlotte (11.10.2026) · Sieger Chase Briscoe · nur Plätze 1–16 (Chase), übrige Plätze nicht aktuell gefunden",
+  "asof": "nach Phoenix (18.10.2026), Chase-Rennen 7 von 10 · Sieger Tyler Reddick · nur Plätze 1–16 (Chase)",
   "tables": [
    {
     "name": null,
@@ -1062,97 +1056,97 @@
       1,
       "Kyle Larson",
       "Hendrick Motorsports",
-      "2367"
+      "2370"
      ],
      [
       2,
-      "Denny Hamlin",
+      "Christopher Bell",
       "Joe Gibbs Racing",
-      "2318"
+      "2365"
      ],
      [
       3,
-      "Christopher Bell",
+      "Chase Briscoe",
       "Joe Gibbs Racing",
-      "2316"
+      "2346"
      ],
      [
       4,
-      "Chase Briscoe",
+      "Denny Hamlin",
       "Joe Gibbs Racing",
-      "2302"
+      "2339"
      ],
      [
       5,
       "Ryan Blaney",
       "Team Penske",
-      "2282"
+      "2330"
      ],
      [
       6,
       "Joey Logano",
       "Team Penske",
-      "2275"
+      "2326"
      ],
      [
       7,
       "Tyler Reddick",
       "23XI Racing",
-      "2253"
+      "2314"
      ],
      [
       8,
       "Austin Cindric",
       "Team Penske",
-      "2222"
+      "2240"
      ],
      [
       9,
       "Ty Gibbs",
       "Joe Gibbs Racing",
-      "2211"
+      "2238"
      ],
      [
       10,
-      "Carson Hocevar",
-      "Spire Motorsports",
-      "2187"
+      "Chase Elliott",
+      "Hendrick Motorsports",
+      "2221"
      ],
      [
       11,
-      "Bubba Wallace",
-      "23XI Racing",
-      "2182"
+      "Carson Hocevar",
+      "Spire Motorsports",
+      "2212"
      ],
      [
       12,
-      "Chase Elliott",
-      "Hendrick Motorsports",
-      "2182"
+      "Bubba Wallace",
+      "23XI Racing",
+      "2208"
      ],
      [
       13,
-      "William Byron",
-      "Hendrick Motorsports",
-      "2159"
+      "Daniel Suárez",
+      "Spire Motorsports",
+      "2182"
      ],
      [
       14,
-      "Daniel Suárez",
-      "Spire Motorsports",
-      "2152"
+      "William Byron",
+      "Hendrick Motorsports",
+      "2180"
      ],
      [
       15,
       "Chris Buescher",
       "RFK Racing",
-      "2151"
+      "2166"
      ],
      [
       16,
       "Ryan Preece",
       "RFK Racing",
-      "2140"
+      "2159"
      ]
     ]
    }
@@ -1684,8 +1678,8 @@
   ]
  },
  "sbk": {
-  "title": "Superbike-WM 2026",
-  "asof": "nach Jerez Rennen 1 (17.10.2026) · Bulega Weltmeister",
+  "title": "Superbike-WM 2026 (Endstand)",
+  "asof": "nach Jerez Rennen 2 (18.10.2026) · Bulega Weltmeister",
   "tables": [
    {
     "name": null,
@@ -1694,67 +1688,67 @@
       1,
       "Nicolò Bulega",
       "Aruba.it Racing Ducati",
-      "689"
+      "726"
      ],
      [
       2,
       "Iker Lecuona",
       "Aruba.it Racing Ducati",
-      "534"
+      "563"
      ],
      [
       3,
       "Yari Montella",
       "Barni Spark Racing",
-      "301"
+      "318"
      ],
      [
       4,
-      "Alex Lowes",
-      "Bimota by Kawasaki Racing Team",
-      "245"
+      "Sam Lowes",
+      "Marc VDS Racing Team",
+      "268"
      ],
      [
       5,
-      "Sam Lowes",
-      "Marc VDS Racing Team",
-      "245"
+      "Alex Lowes",
+      "Bimota by Kawasaki Racing Team",
+      "259"
      ],
      [
       6,
       "Lorenzo Baldassarri",
       "Team Go Eleven",
-      "223"
+      "236"
      ],
      [
       7,
       "Axel Bassani",
       "Bimota by Kawasaki Racing Team",
-      "214"
+      "222"
      ],
      [
       8,
       "Alberto Surra",
       "Motocorsa Racing",
-      "189"
+      "198"
      ],
      [
       9,
-      "Garrett Gerloff",
-      "Kawasaki WorldSBK Team",
-      "162"
+      "Álvaro Bautista",
+      "Barni Spark Racing",
+      "167"
      ],
      [
       10,
-      "Álvaro Bautista",
-      "Barni Spark Racing",
-      "150"
+      "Garrett Gerloff",
+      "Kawasaki WorldSBK Team",
+      "165"
      ],
      [
       11,
       "Miguel Oliveira",
       "ROKiT BMW Motorrad",
-      "136"
+      "142"
      ],
      [
       12,
@@ -1766,19 +1760,19 @@
       13,
       "Xavi Vierge",
       "Pata Maxus Yamaha",
-      "108"
+      "113"
      ],
      [
       14,
-      "Tarran Mackenzie",
-      "MGM Optical Express Racing",
-      "81"
+      "Tommy Bridewell",
+      "Superbike Advocates Racing",
+      "83"
      ],
      [
       15,
-      "Tommy Bridewell",
-      "Superbike Advocates Racing",
-      "78"
+      "Tarran Mackenzie",
+      "MGM Optical Express Racing",
+      "81"
      ],
      [
       16,
@@ -1802,7 +1796,7 @@
       19,
       "Jake Dixon",
       "Honda HRC",
-      "40"
+      "41"
      ],
      [
       20,
@@ -1814,7 +1808,7 @@
       21,
       "Somkiat Chantra",
       "Honda HRC",
-      "21"
+      "23"
      ],
      [
       22,
