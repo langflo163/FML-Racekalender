@@ -41,7 +41,9 @@ jobs:
           user = r["access_token"]; secrets.append(user)
           print(f"Langer User-Token erhalten (ca. {int(r.get('expires_in', 0))//86400} Tage).")
           perms = [p["permission"] for p in get("me/permissions", access_token=user)["data"] if p["status"] == "granted"]
-          print("Rechte:", ", ".join(perms))
+          print("::notice::Erteilte Rechte: " + ", ".join(perms))
+          denied = [p["permission"] for p in get("me/permissions", access_token=user)["data"] if p["status"] != "granted"]
+          if denied: print("::notice::Nicht erteilt: " + ", ".join(denied))
           pages = get("me/accounts", fields="id,name,access_token,instagram_business_account{id,username}", access_token=user)["data"]
           page = next((p for p in pages if "Rennkalender" in p["name"]), None)
           if not page: sys.exit("::error::Seite 'FML Rennkalender' nicht gefunden. Gefunden: " + ", ".join(p["name"] for p in pages))
