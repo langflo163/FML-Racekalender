@@ -1,0 +1,56 @@
+name: Facebook-Token einrichten
+
+# Tauscht einen kurzlebigen Facebook-User-Token (Secret FB_SHORT_TOKEN, 1 h gültig, aus dem Graph API Explorer)
+# gegen einen 60-Tage-User-Token und einen nicht ablaufenden Seiten-Token und speichert beide als Secrets.
+# Auslösen: insta/fb_setup.json ändern und pushen (oder Actions → Run workflow).
+on:
+  push:
+    paths: ["insta/fb_setup.json"]
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Token tauschen und speichern
+        env:
+          SHORT: ${{ secrets.FB_SHORT_TOKEN }}
+          APP_ID: ${{ secrets.FB_APP_ID }}
+          APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse, subprocess, sys
+          E = os.environ
+          secrets = [E.get(k, "") for k in ("SHORT", "APP_SECRET")]
+          def clean(s):
+              for x in secrets:
+                  if x: s = s.replace(x, "***")
+              return s
+          def get(path, **p):
+              url = "https://graph.facebook.com/v21.0/" + path + "?" + urllib.parse.urlencode(p)
+              try:
+                  return json.load(urllib.request.urlopen(url, timeout=60))
+              except urllib.error.HTTPError as e:
+                  sys.exit("::error::" + clean(f"{path}: {e.code} {e.read().decode(errors='replace')}"))
+          for k in ("SHORT", "APP_ID", "APP_SECRET", "GH_PAT"):
+              if not E.get(k): sys.exit(f"::error::Secret fehlt: {k}")
+          r = get("oauth/access_token", grant_type="fb_exchange_token", client_id=E["APP_ID"],
+                  client_secret=E["APP_SECRET"], fb_exchange_token=E["SHORT"])
+          user = r["access_token"]; secrets.append(user)
+          print(f"Langer User-Token erhalten (ca. {int(r.get('expires_in', 0))//86400} Tage).")
+          perms = [p["permission"] for p in get("me/permissions", access_token=user)["data"] if p["status"] == "granted"]
+          print("Rechte:", ", ".join(perms))
+          pages = get("me/accounts", fields="id,name,access_token,instagram_business_account{id,username}", access_token=user)["data"]
+          page = next((p for p in pages if "Rennkalender" in p["name"]), None)
+          if not page: sys.exit("::error::Seite 'FML Rennkalender' nicht gefunden. Gefunden: " + ", ".join(p["name"] for p in pages))
+          secrets.append(page["access_token"])
+          ig = page.get("instagram_business_account") or {}
+          print(f"Seite: {page['name']} (ID {page['id']}), Instagram: @{ig.get('username')} (ID {ig.get('id')})")
+          env = {**E, "GH_TOKEN": E["GH_PAT"]}
+          for name, val in (("FB_USER_TOKEN", user), ("FB_PAGE_TOKEN", page["access_token"]),
+                            ("FB_PAGE_ID", page["id"]), ("FB_IG_ID", ig.get("id", ""))):
+              subprocess.run(["gh", "secret", "set", name, "--repo", E["GH_REPO"], "--body", val], check=True, env=env)
+          print("Gespeichert: FB_USER_TOKEN, FB_PAGE_TOKEN, FB_PAGE_ID, FB_IG_ID")
+          PY
