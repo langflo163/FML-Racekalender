@@ -76,6 +76,12 @@ jobs:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: python3 insta/fb_post.py ${{ steps.gate.outputs.out }}
+      - name: Reel für TikTok bereitlegen (posts/neu)
+        if: steps.gate.outputs.mode == 'weekend' || steps.gate.outputs.mode == 'weekreel'
+        continue-on-error: true
+        run: |
+          python3 insta/tiktok_page.py ${{ steps.gate.outputs.out }}
+          git add -A posts/neu && git commit -qm "TikTok: neues Reel bereit" && git pull --rebase -q && git push -q || true
 
   refresh-token:
     if: github.event.schedule == '17 4 * * 3'
