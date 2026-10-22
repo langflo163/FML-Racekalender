@@ -69,6 +69,18 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - Meta-App: Typ Business, Produkt Instagram, Standard Access (eigener Account, kein App Review). Instagram-Account ist Creator-Konto.
 - Manuell testen: Actions → „Instagram-Posts“ → Run workflow (mode week/weekend, publish false = nur Bilder).
 
+## Facebook-Seite „FML Rennkalender“ (seit 22.10.2026)
+
+- Seite angelegt und mit @fmlrennkalender verknüpft (liegt in einem Business-Portfolio → Token braucht `business_management`).
+- Meta-App „FML Rennkalender Poster“ hat zusätzlich „API-Einrichtung mit Facebook-Login“. Secrets: `FB_APP_ID`, `FB_APP_SECRET`,
+  `FB_USER_TOKEN` (60 Tage, Verlängerung noch bauen), `FB_PAGE_TOKEN` (läuft nicht ab), `FB_PAGE_ID`, `FB_IG_ID`.
+  Neu holen: Graph API Explorer → User Token mit pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic,
+  instagram_manage_insights, business_management → Secret `FB_SHORT_TOKEN` → `insta/fb_setup.json` ändern/pushen (`fb-setup.yml`).
+- `fb-check.yml` (nur lesend, `insta/fb_check.json`): Seiten-Token + Business Discovery am 22.10. erfolgreich getestet (@nascar, @fiawec_official).
+- Geplant (Flo 21./22.10.): Insta-Posts auch auf Facebook; Threads; täglicher Like-/Kommentar-Spickzettel (Business Discovery,
+  Kommentarvorschläge, nicht im öffentlichen Repo). TikTok/YouTube Shorts erst manuell testen (API ohne Audit nur privat).
+  Automatisches Liken abgelehnt (gegen Instagram-Regeln, Sperrrisiko).
+
 ## Automatische Updates (geplante Aufgaben in Claude, ohne Rückfragen, mit Push)
 
 | Aufgabe | Wann | Was |
