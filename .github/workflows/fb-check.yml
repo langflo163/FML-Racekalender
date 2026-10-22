@@ -1,0 +1,40 @@
+name: Facebook-Zugang prüfen
+
+# Nur lesend: prüft Seiten-Token und Business Discovery (Beiträge anderer Accounts). Auslösen: insta/fb_check.json pushen.
+on:
+  push:
+    paths: ["insta/fb_check.json"]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prüfen
+        env:
+          USER_TOKEN: ${{ secrets.FB_USER_TOKEN }}
+          PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_ID: ${{ secrets.FB_IG_ID }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse
+          E = os.environ
+          def get(path, tok, **p):
+              p["access_token"] = tok
+              try:
+                  return json.load(urllib.request.urlopen("https://graph.facebook.com/v21.0/" + path + "?" + urllib.parse.urlencode(p), timeout=60))
+              except urllib.error.HTTPError as e:
+                  return {"error": json.loads(e.read().decode(errors="replace")).get("error", {}).get("message")}
+          pg = get(E["PAGE_ID"], E["PAGE_TOKEN"], fields="name,link")
+          print(f"::notice::Seite: {pg.get('name')} {pg.get('link','')} {pg.get('error','')}")
+          ig = get(E["IG_ID"], E["USER_TOKEN"], fields="username")
+          print(f"::notice::Instagram: @{ig.get('username')} {ig.get('error','')}")
+          for u in ("nascar", "fiawec_official"):
+              r = get(E["IG_ID"], E["USER_TOKEN"], fields=f"business_discovery.username({u}){{username,media.limit(2){{caption,permalink,timestamp}}}}")
+              if "error" in r:
+                  print(f"::notice::Discovery @{u}: FEHLER {r['error']}")
+              else:
+                  m = r["business_discovery"]["media"]["data"]
+                  print(f"::notice::Discovery @{u}: OK, neuester Beitrag {m[0]['timestamp']} {m[0]['permalink']}")
+          PY
