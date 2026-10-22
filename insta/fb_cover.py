@@ -17,7 +17,7 @@ body{width:1640px;height:624px;background:#111418;color:#fff;font-family:Inter,'
 .flag{position:absolute;left:0;right:0;bottom:0;height:30px;background:repeating-conic-gradient(#fff 0 25%,#111418 0 50%) 0 0/30px 30px}
 </style></head><body><div class="c">
 <div class="top"><div class="fml"><span>F</span><span>M</span><span>L</span></div><div class="brand">Rennkalender</div></div>
-<div class="tag">Alle Rennen <em>·</em> deutsche Startzeit <em>·</em> wo's auf Deutsch läuft</div>
+<div class="tag">Alle Rennen <em>·</em> deutsche Startzeit <em>·</em> wer überträgt wo</div>
 <div class="ser">F1 · MotoGP · WEC · DTM · NASCAR · IndyCar · Formel E · WorldSBK · IMSA · GT World · NLS</div>
 </div><div class="redbar"></div><div class="flag"></div></body></html>"""
 with sync_playwright() as p:
