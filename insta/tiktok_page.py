@@ -16,7 +16,7 @@ def tiktok_caption(text):
     races = races[:6]
     extra = ["#motorsportdeutschland", "#rennkalender"]
     t = " ".join(dict.fromkeys(tags.split() + extra))
-    return "\n".join(head + [""] + races + ["", "Alle Zeiten deutsche Zeit · Sender in der App (Link im Profil)", "", t]).strip()
+    return "\n".join(head + [""] + races + ["", "Alle Zeiten deutsche Zeit · täglich „Heute live“ auf Instagram: @fmlrennkalender", "", t]).strip()
 
 def main(folder):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
