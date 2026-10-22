@@ -69,6 +69,13 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: python3 insta/post.py ${{ steps.gate.outputs.out }}
+      - name: Auch auf Facebook veröffentlichen
+        if: steps.gate.outputs.mode != 'none' && steps.gate.outputs.publish == 'true' && hashFiles(format('{0}/*', steps.gate.outputs.out)) != ''
+        continue-on-error: true   # Facebook-Fehler sollen Instagram nicht beeinflussen
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: python3 insta/fb_post.py ${{ steps.gate.outputs.out }}
 
   refresh-token:
     if: github.event.schedule == '17 4 * * 3'
