@@ -45,6 +45,11 @@ jobs:
           denied = [p["permission"] for p in get("me/permissions", access_token=user)["data"] if p["status"] != "granted"]
           if denied: print("::notice::Nicht erteilt: " + ", ".join(denied))
           pages = get("me/accounts", fields="id,name,access_token,instagram_business_account{id,username}", access_token=user)["data"]
+          if not pages:   # Seite gehört zu einem Business-Portfolio → über business_management suchen
+              for b in get("me/businesses", fields="id,name", access_token=user).get("data", []):
+                  for edge in ("owned_pages", "client_pages"):
+                      for pg in get(f"{b['id']}/{edge}", fields="id,name", access_token=user).get("data", []):
+                          pages.append(get(pg["id"], fields="id,name,access_token,instagram_business_account{id,username}", access_token=user))
           page = next((p for p in pages if "Rennkalender" in p["name"]), None)
           if not page: sys.exit("::error::Seite 'FML Rennkalender' nicht gefunden. Gefunden: " + ", ".join(p["name"] for p in pages))
           secrets.append(page["access_token"])
