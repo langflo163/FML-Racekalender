@@ -30,7 +30,12 @@ jobs:
           print(f"::notice::Seite: {pg.get('name')} {pg.get('link','')} {pg.get('error','')}")
           ig = get(E["IG_ID"], E["USER_TOKEN"], fields="username")
           print(f"::notice::Instagram: @{ig.get('username')} {ig.get('error','')}")
-          for u in ("nascar", "fiawec_official"):
+          for edge, f in (("feed", "created_time,message"), ("video_reels", "created_time,description"), ("stories", "creation_time,status")):
+              r = get(f"{E['PAGE_ID']}/{edge}", E["PAGE_TOKEN"], fields=f, limit=8)
+              if "error" in r: print(f"::notice::{edge}: FEHLER {r['error']}"); continue
+              items = [f"{x.get('created_time') or x.get('creation_time')} {(x.get('message') or x.get('description') or x.get('status') or '')[:40]!r}" for x in r.get("data", [])]
+              print(f"::notice::{edge} ({len(items)}): " + " | ".join(items))
+          for u in ():
               r = get(E["IG_ID"], E["USER_TOKEN"], fields=f"business_discovery.username({u}){{username,media.limit(2){{caption,permalink,timestamp}}}}")
               if "error" in r:
                   print(f"::notice::Discovery @{u}: FEHLER {r['error']}")
