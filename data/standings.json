@@ -1154,46 +1154,46 @@
  },
  "mgp": {
   "title": "MotoGP-WM 2026",
-  "asof": "nach GP Indonesien (11.10.2026)",
+  "asof": "nach Sprint GP Australien (24.10.2026)",
   "tables": [
    {
     "name": null,
     "rows": [
      [
       1,
+      "Marc Márquez",
+      "Ducati Lenovo",
+      "365"
+     ],
+     [
+      2,
       "Jorge Martín",
       "Aprilia Racing",
       "355"
      ],
      [
-      2,
-      "Marc Márquez",
-      "Ducati Lenovo",
-      "353"
-     ],
-     [
       3,
       "Marco Bezzecchi",
       "Aprilia Racing",
-      "309"
+      "315"
      ],
      [
       4,
+      "Pedro Acosta",
+      "Red Bull KTM",
+      "263"
+     ],
+     [
+      5,
       "Ai Ogura",
       "Trackhouse Aprilia",
       "259"
      ],
      [
-      5,
-      "Pedro Acosta",
-      "Red Bull KTM",
-      "258"
-     ],
-     [
       6,
       "Fabio Di Giannantonio",
       "VR46 Ducati",
-      "245"
+      "252"
      ],
      [
       7,
@@ -1205,7 +1205,7 @@
       8,
       "Álex Márquez",
       "Gresini Ducati",
-      "172"
+      "181"
      ],
      [
       9,
@@ -1235,18 +1235,18 @@
       13,
       "Brad Binder",
       "Red Bull KTM",
-      "104"
+      "108"
      ],
      [
       14,
-      "Fabio Quartararo",
-      "Yamaha",
-      "74"
+      "Diogo Moreira",
+      "LCR Honda",
+      "76"
      ],
      [
       15,
-      "Diogo Moreira",
-      "LCR Honda",
+      "Fabio Quartararo",
+      "Yamaha",
       "74"
      ],
      [
@@ -1271,7 +1271,7 @@
       19,
       "Jack Miller",
       "Pramac Yamaha",
-      "28"
+      "31"
      ],
      [
       20,
@@ -1295,7 +1295,7 @@
       23,
       "Iker Lecuona",
       "Gresini Ducati",
-      "9"
+      "10"
      ],
      [
       24,
