@@ -18,7 +18,7 @@ Ein Termin hat genau eins von:
 - `date` – nur Renntag bekannt, Uhrzeit folgt
 - `from` / `to` – nur Wochenende bekannt
 
-`dur` – Dauer in Stunden (optional, z. B. `24` für 24h-Rennen). Ohne Angabe: Qualifying/Sprint 1 h, Rennen 2,5 h. Danach verschwindet der Termin aus „Nächste“.
+`dur` – Dauer in Stunden (optional, z. B. `24` für 24h-Rennen). Ohne Angabe: Qualifying/Sprint 1 h, Rennen = Richtwert der Serie (`dur` an der Serie, z. B. NASCAR 3,5, MotoGP 0,75, NLS 4), sonst 2,5 h. Danach verschwindet der Termin aus „Nächste“; solange er läuft, steht er oben unter „Läuft gerade“.
 
 `tv` am Termin überschreibt die Sender der Serie. Sendertypen: `mine` (eigene Sender), `free`, `pay`, `open` (noch offen).
 `hl: true` markiert Highlights.

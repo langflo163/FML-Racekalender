@@ -52,6 +52,13 @@ main{max-width:1100px;margin:0 auto;padding:12px 16px calc(env(safe-area-inset-b
 .chip .dot{width:9px;height:9px;border-radius:50%}
 .chip.off{opacity:.38}
 .chip.all{font-weight:600}
+.livebox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin-bottom:12px}
+.livebox .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#d71920;font-weight:800;display:flex;align-items:center;gap:6px}
+.ldot{width:9px;height:9px;border-radius:50%;background:#d71920;animation:lp 1.4s infinite}
+@keyframes lp{50%{opacity:.25}}
+.lrow{border-left:5px solid var(--c);padding:8px 0 8px 10px;margin-top:8px;cursor:pointer}
+.lrow .lsub{font-size:13px;color:var(--muted);margin-top:2px}
+.lrow .tv{margin-top:6px}
 .hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
 .hero .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
@@ -210,7 +217,7 @@ function prep(d){
   DATA=d; SER={}; d.series.forEach(s=>SER[s.id]=s);
   EVENTS=d.events.filter(e=>SER[e.s]).map((e,i)=>{
     const x=Object.assign({},e); x.i=i;
-    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||({quali:1,sq:1,sprint:1}[e.type])||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
+    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||(e.type?({quali:1,sq:1,sprint:1}[e.type]||1):(SER[e.s]&&SER[e.s].dur))||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
     else if(e.date){x.k1=e.date;x.k2=e.date}
     else {x.k1=e.from;x.k2=e.to||e.from}
     if(!x.end){x.end=noonUTC(addDays(x.k2,1))}
@@ -275,9 +282,13 @@ let timer=null;
 function renderNext(){
   const el=document.getElementById('v-next'); const up=upcoming();
   if(!up.length){el.innerHTML='<div class="empty">Keine kommenden Termine für die gewählten Serien.</div>';return}
-  const nx=up[0]; const s=SER[nx.s];
+  const now=Date.now();
+  const live=up.filter(e=>e.t&&e.t.getTime()<=now);            // laufen gerade (Start vorbei, Ende noch nicht)
+  const nx=up.find(e=>!(e.t&&e.t.getTime()<=now))||up[0]; const s=SER[nx.s];
+  const liveBox=live.length?`<div class="livebox"><div class="lbl"><span class="ldot"></span>Läuft gerade</div>`+
+    live.map(e=>`<div class="lrow" data-i="${e.i}" style="--c:${SER[e.s].color}"><div><b>${esc(SER[e.s].name)}</b> · ${esc(e.name)}${badge(e)}<div class="lsub">seit ${fTime.format(e.t)} Uhr · bis ca. ${fTime.format(e.end)} Uhr</div></div><div class="tv">${tvTags(e)}</div></div>`).join('')+`</div>`:'';
   const target=nx.t?nx.t:noonUTC(nx.k1);
-  let h=`<div class="hero" data-i="${nx.i}" style="--c:${s.color}">
+  let h=liveBox+`<div class="hero" data-i="${nx.i}" style="--c:${s.color}">
     <div class="lbl">Als Nächstes · ${esc(s.name)}</div>
     <div class="ttl">${nx.hl?'<span class="star">★</span> ':''}${esc(nx.name)}${badge(nx)}</div>
     <div class="meta">${[nx.track,nx.country].filter(Boolean).map(esc).join(' · ')}</div>

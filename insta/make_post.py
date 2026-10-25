@@ -237,6 +237,10 @@ def alt_texts(slides_items, title):
         out.append(txt[:1000])
     return out
 
+def dur_h(e, ser):
+    """Dauer in Stunden wie in der App: dur am Termin → Quali/Sprint 1 h → Richtwert der Serie → 2,5 h."""
+    return e.get("dur") or (1 if e.get("type") else ser.get("dur")) or 2.5
+
 def build_story(day, drop_ended=True):
     data = load()
     days = collect(data, day, day + timedelta(days=1))
@@ -247,7 +251,7 @@ def build_story(day, drop_ended=True):
             items.append(dict(it, night=True))
     now = datetime.now(BER)
     if drop_ended and day == now.date():   # bereits beendete Sessions (z. B. Nachtrennen) weglassen
-        items = [it for it in items if not it["t"] or it["t"] + timedelta(hours=2) > now]
+        items = [it for it in items if not it["t"] or it["t"] + timedelta(hours=dur_h(it["e"], it["s"])) > now]
     if not items:
         return None, None
     rows = "".join(row(it) for it in items[:10])
