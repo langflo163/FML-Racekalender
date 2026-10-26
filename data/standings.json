@@ -1,7 +1,7 @@
 {
  "f1": {
   "title": "Fahrer-WM 2026",
-  "asof": "nach GP Singapur (11.10.2026)",
+  "asof": "nach GP USA (25.10.2026) · Quelle: racefans.net",
   "tables": [
    {
     "name": null,
@@ -10,61 +10,61 @@
       1,
       "Kimi Antonelli",
       "Mercedes",
-      "340"
+      "365"
      ],
      [
       2,
       "George Russell",
       "Mercedes",
-      "238"
+      "242"
      ],
      [
       3,
       "Lewis Hamilton",
       "Ferrari",
-      "229"
+      "241"
      ],
      [
       4,
       "Max Verstappen",
       "Red Bull Racing",
-      "221"
+      "236"
      ],
      [
       5,
       "Charles Leclerc",
       "Ferrari",
-      "215"
+      "233"
      ],
      [
       6,
       "Lando Norris",
       "McLaren",
-      "201"
+      "211"
      ],
      [
       7,
       "Oscar Piastri",
       "McLaren",
-      "138"
+      "144"
      ],
      [
       8,
       "Isack Hadjar",
       "Red Bull Racing",
-      "97"
+      "105"
      ],
      [
       9,
       "Liam Lawson",
       "Racing Bulls",
-      "75"
+      "77"
      ],
      [
       10,
       "Pierre Gasly",
       "Alpine",
-      "41"
+      "42"
      ],
      [
       11,
@@ -1047,7 +1047,7 @@
  },
  "nas": {
   "title": "Cup Series 2026 – The Chase",
-  "asof": "nach Phoenix (18.10.2026), Chase-Rennen 7 von 10 · Sieger Tyler Reddick · nur Plätze 1–16 (Chase)",
+  "asof": "nach Talladega (25.10.2026), Chase-Rennen 8 von 10 · Sieger Kyle Larson · nur Plätze 1–16 (Chase) · Quelle: Bleacher Report",
   "tables": [
    {
     "name": null,
@@ -1056,97 +1056,97 @@
       1,
       "Kyle Larson",
       "Hendrick Motorsports",
-      "2370"
+      "2441"
      ],
      [
       2,
-      "Christopher Bell",
+      "Denny Hamlin",
       "Joe Gibbs Racing",
-      "2365"
+      "2368"
      ],
      [
       3,
-      "Chase Briscoe",
+      "Christopher Bell",
       "Joe Gibbs Racing",
-      "2346"
+      "2367"
      ],
      [
       4,
-      "Denny Hamlin",
+      "Chase Briscoe",
       "Joe Gibbs Racing",
-      "2339"
+      "2362"
      ],
      [
       5,
-      "Ryan Blaney",
+      "Joey Logano",
       "Team Penske",
-      "2330"
+      "2341"
      ],
      [
       6,
-      "Joey Logano",
+      "Ryan Blaney",
       "Team Penske",
-      "2326"
+      "2334"
      ],
      [
       7,
       "Tyler Reddick",
       "23XI Racing",
-      "2314"
+      "2315"
      ],
      [
       8,
-      "Austin Cindric",
-      "Team Penske",
-      "2240"
+      "Ty Gibbs",
+      "Joe Gibbs Racing",
+      "2258"
      ],
      [
       9,
-      "Ty Gibbs",
-      "Joe Gibbs Racing",
-      "2238"
+      "Austin Cindric",
+      "Team Penske",
+      "2258"
      ],
      [
       10,
-      "Chase Elliott",
-      "Hendrick Motorsports",
-      "2221"
+      "Carson Hocevar",
+      "Spire Motorsports",
+      "2243"
      ],
      [
       11,
-      "Carson Hocevar",
-      "Spire Motorsports",
-      "2212"
+      "William Byron",
+      "Hendrick Motorsports",
+      "2227"
      ],
      [
       12,
-      "Bubba Wallace",
-      "23XI Racing",
-      "2208"
+      "Chase Elliott",
+      "Hendrick Motorsports",
+      "2223"
      ],
      [
       13,
-      "Daniel Suárez",
-      "Spire Motorsports",
-      "2182"
+      "Bubba Wallace",
+      "23XI Racing",
+      "2223"
      ],
      [
       14,
-      "William Byron",
-      "Hendrick Motorsports",
-      "2180"
+      "Daniel Suárez",
+      "Spire Motorsports",
+      "2201"
      ],
      [
       15,
-      "Chris Buescher",
+      "Ryan Preece",
       "RFK Racing",
-      "2166"
+      "2192"
      ],
      [
       16,
-      "Ryan Preece",
+      "Chris Buescher",
       "RFK Racing",
-      "2159"
+      "2186"
      ]
     ]
    }
@@ -1154,7 +1154,7 @@
  },
  "mgp": {
   "title": "MotoGP-WM 2026",
-  "asof": "nach Sprint GP Australien (24.10.2026)",
+  "asof": "nach Sprint GP Australien (24.10.2026) · Rennen am 25.10. wetterbedingt abgesagt",
   "tables": [
    {
     "name": null,
@@ -1327,7 +1327,7 @@
  },
  "m2": {
   "title": "Moto2-WM 2026",
-  "asof": "nach GP Indonesien (11.10.2026)",
+  "asof": "nach GP Indonesien (11.10.2026) · GP Australien (25.10.) wetterbedingt abgesagt",
   "tables": [
    {
     "name": null,
@@ -1500,7 +1500,7 @@
  },
  "m3": {
   "title": "Moto3-WM 2026",
-  "asof": "nach GP Indonesien (11.10.2026) · Quiles Weltmeister",
+  "asof": "nach GP Indonesien (11.10.2026) · Quiles Weltmeister · GP Australien (25.10.) wetterbedingt abgesagt",
   "tables": [
    {
     "name": null,

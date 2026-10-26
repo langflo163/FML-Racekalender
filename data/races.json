@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-26",
  "series": [
   {
    "id": "f1",
@@ -1783,7 +1783,8 @@
      "n": "Sky / WOW",
      "k": "pay"
     }
-   ]
+   ],
+   "note": "Rennen abgesagt (schlechte Sicht, Rettungshubschrauber konnte nicht fliegen) · keine Punkte"
   },
   {
    "s": "mgp",
@@ -1808,7 +1809,7 @@
    "name": "GP Katar",
    "track": "Lusail",
    "country": "Katar",
-   "note": "Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "note": "Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
    "start": "2026-11-08T20:00:00+03:00",
    "tv": [
     {
@@ -2074,7 +2075,7 @@
    "name": "GP Australien",
    "track": "Phillip Island",
    "country": "Australien",
-   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "note": "Rennen abgesagt (schlechte Sicht, Rettungshubschrauber konnte nicht fliegen) · keine Punkte",
    "start": "2026-10-25T12:15:00+11:00",
    "tv": [
     {
@@ -2119,7 +2120,7 @@
    "country": "Katar",
    "from": "2026-11-06",
    "to": "2026-11-08",
-   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
    "tv": [
     {
      "n": "ServusTV",
@@ -2383,7 +2384,7 @@
    "name": "GP Australien",
    "track": "Phillip Island",
    "country": "Australien",
-   "note": "Zeiten laut Drittquelle (sport-flash/motorsport-total), nicht offiziell bestätigt",
+   "note": "Rennen abgesagt (schlechte Sicht, Rettungshubschrauber konnte nicht fliegen) · keine Punkte",
    "start": "2026-10-25T11:00:00+11:00",
    "tv": [
     {
@@ -2428,7 +2429,7 @@
    "country": "Katar",
    "from": "2026-11-06",
    "to": "2026-11-08",
-   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Durchführung unsicher (Iran-Krieg), keine offizielle Absage",
+   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
    "tv": [
     {
      "n": "ServusTV",
@@ -2988,7 +2989,7 @@
      "k": "pay"
     }
    ],
-   "note": "Durchführung unsicher (Iran-Krieg), keine offizielle Absage"
+   "note": "Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich"
   },
   {
    "s": "mgp",
