@@ -94,6 +94,10 @@ werden erst am nächsten Montag erkannt.
 
 Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/Regeln die Prompts beider Aufgaben mit anpassen.
 
+## Stand 30.10.2026
+
+- 26.–30.10.: Karussell + Wochen-Reel (Mo) und Wochenend-Reel (Fr) fielen aus – `alt_texts` brach bei Terminen ohne Uhrzeit ab (TypeError). Behoben 30.10., Wochenend-Reel 19:04 nachgepostet (Ordner `posts/test-20261030-1904-weekend`). Montagsposts 26.10. nicht nachgeholt (Woche schon halb vorbei).
+
 ## Stand 13.10.2026
 
 - 13.10.: Story 8:00 scheiterte – `git add -A posts insta/state.json` brach ab, weil `state.json` fehlte → Bild nie im Repo. Workflow fixt das (getrennte `git add`). Story nachgepostet.
