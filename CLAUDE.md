@@ -81,6 +81,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - Geplant (Flo 21./22.10.): Insta-Posts auch auf Facebook; Threads; täglicher Like-/Kommentar-Spickzettel (Business Discovery,
   Kommentarvorschläge, nicht im öffentlichen Repo). TikTok/YouTube Shorts erst manuell testen (API ohne Audit nur privat).
   Automatisches Liken abgelehnt (gegen Instagram-Regeln, Sperrrisiko).
+- **TikTok pausiert** (Flo 30.10.): Schritt „Reel für TikTok bereitlegen“ in `instagram.yml` mit `if: false` aus; `insta/tiktok_page.py` + `posts/neu/` bleiben für später.
 
 ## Automatische Updates (geplante Aufgaben in Claude, ohne Rückfragen, mit Push)
 

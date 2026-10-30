@@ -80,7 +80,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: python3 insta/fb_post.py ${{ steps.gate.outputs.out }}
       - name: Reel für TikTok bereitlegen (posts/neu)
-        if: steps.gate.outputs.mode == 'weekend' || steps.gate.outputs.mode == 'weekreel'
+        if: false   # TikTok pausiert (Flo 30.10.) – zum Reaktivieren wieder: steps.gate.outputs.mode == 'weekend' || steps.gate.outputs.mode == 'weekreel'
         continue-on-error: true
         run: |
           python3 insta/tiktok_page.py ${{ steps.gate.outputs.out }}
