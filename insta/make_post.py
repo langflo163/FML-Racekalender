@@ -233,7 +233,7 @@ def alt_texts(slides_items, title):
             txt = f"FML Rennkalender – {title}: " + ", ".join(dict.fromkeys(it["s"]["name"] for it in items))
         else:
             txt = f"Motorsport live am {WD[d.weekday()]}, {dm(d)} (deutsche Zeit): " + "; ".join(
-                f'{it["t"]:%H:%M} ' * bool(it["t"]) + f'{it["s"]["name"]} {it["e"]["name"]}' + (f' ({kind(it["e"])})' if kind(it["e"]) else "") for it in items)
+                (f'{it["t"]:%H:%M} ' if it["t"] else "") + f'{it["s"]["name"]} {it["e"]["name"]}' + (f' ({kind(it["e"])})' if kind(it["e"]) else "") for it in items)
         out.append(txt[:1000])
     return out
 
