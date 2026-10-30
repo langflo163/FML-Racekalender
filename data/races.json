@@ -3310,6 +3310,246 @@
    "country": "Online",
    "start": "2026-10-13T20:00:00-04:00",
    "note": "Saisonfinale 2026 · Vorbericht 30 Min. vorher"
+  },
+  {
+   "s": "f1",
+   "name": "GP Mexiko",
+   "type": "fp",
+   "n": 1,
+   "track": "Mexiko-Stadt",
+   "country": "Mexiko",
+   "start": "2026-10-30T18:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Mexiko",
+   "type": "fp",
+   "n": 2,
+   "track": "Mexiko-Stadt",
+   "country": "Mexiko",
+   "start": "2026-10-30T22:00:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Mexiko",
+   "type": "fp",
+   "n": 3,
+   "track": "Mexiko-Stadt",
+   "country": "Mexiko",
+   "start": "2026-10-31T17:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Brasilien",
+   "type": "fp",
+   "n": 1,
+   "track": "Interlagos, São Paulo",
+   "country": "Brasilien",
+   "start": "2026-11-06T15:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Brasilien",
+   "type": "fp",
+   "n": 2,
+   "track": "Interlagos, São Paulo",
+   "country": "Brasilien",
+   "start": "2026-11-06T19:00:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Brasilien",
+   "type": "fp",
+   "n": 3,
+   "track": "Interlagos, São Paulo",
+   "country": "Brasilien",
+   "start": "2026-11-07T14:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Las Vegas",
+   "type": "fp",
+   "n": 1,
+   "track": "Las Vegas",
+   "country": "USA",
+   "start": "2026-11-20T00:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Las Vegas",
+   "type": "fp",
+   "n": 2,
+   "track": "Las Vegas",
+   "country": "USA",
+   "start": "2026-11-20T04:00:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Las Vegas",
+   "type": "fp",
+   "n": 3,
+   "track": "Las Vegas",
+   "country": "USA",
+   "start": "2026-11-21T00:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Katar",
+   "type": "fp",
+   "n": 1,
+   "track": "Lusail",
+   "country": "Katar",
+   "start": "2026-11-27T13:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Katar",
+   "type": "fp",
+   "n": 2,
+   "track": "Lusail",
+   "country": "Katar",
+   "start": "2026-11-27T17:00:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Katar",
+   "type": "fp",
+   "n": 3,
+   "track": "Lusail",
+   "country": "Katar",
+   "start": "2026-11-28T14:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Abu Dhabi",
+   "type": "fp",
+   "n": 1,
+   "track": "Yas Marina",
+   "country": "VAE",
+   "start": "2026-12-04T09:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Abu Dhabi",
+   "type": "fp",
+   "n": 2,
+   "track": "Yas Marina",
+   "country": "VAE",
+   "start": "2026-12-04T13:00:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "f1",
+   "name": "GP Abu Dhabi",
+   "type": "fp",
+   "n": 3,
+   "track": "Yas Marina",
+   "country": "VAE",
+   "start": "2026-12-05T10:30:00+00:00",
+   "tv": [
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
   }
  ]
 }

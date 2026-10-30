@@ -47,6 +47,7 @@ def collect(data, d0, d1):
     ser = {s["id"]: s for s in data["series"]}
     days = {}
     for e in data["events"]:
+        if e.get("type") == "fp": continue   # Freie Trainings nur in der App, nicht auf Instagram (Flo 30.10.)
         s = ser.get(e["s"])
         if not s: continue
         a, b, t = span(e)

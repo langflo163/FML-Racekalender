@@ -87,6 +87,7 @@ main{max-width:1100px;margin:0 auto;padding:12px 16px calc(env(safe-area-inset-b
 .tag.pay{background:var(--pay-bg);color:var(--pay);font-weight:500}
 .tag.open{border:1px dashed var(--open);color:var(--open);font-weight:500}
 .kind{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:0 5px;margin-left:4px;vertical-align:2px}
+.kind.fp{opacity:.75}
 .kind.sp{border-color:var(--accent);color:var(--accent)}
 .note{font-size:12px;color:var(--muted);margin-top:4px}
 .empty{color:var(--muted);text-align:center;padding:30px 0}
@@ -217,7 +218,7 @@ function prep(d){
   DATA=d; SER={}; d.series.forEach(s=>SER[s.id]=s);
   EVENTS=d.events.filter(e=>SER[e.s]).map((e,i)=>{
     const x=Object.assign({},e); x.i=i;
-    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||(e.type?({quali:1,sq:1,sprint:1}[e.type]||1):(SER[e.s]&&SER[e.s].dur))||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
+    if(e.start){x.t=new Date(e.start);x.k1=keyOf(x.t);x.k2=x.k1;const h=e.dur||(e.type?({quali:1,sq:1,sprint:1,fp:1}[e.type]||1):(SER[e.s]&&SER[e.s].dur))||2.5;x.end=new Date(x.t.getTime()+h*3600e3)}
     else if(e.date){x.k1=e.date;x.k2=e.date}
     else {x.k1=e.from;x.k2=e.to||e.from}
     if(!x.end){x.end=noonUTC(addDays(x.k2,1))}
@@ -245,6 +246,7 @@ function badge(e){
   if(e.type==='quali')return ' <span class="kind">Qualifying</span>';
   if(e.type==='sprint')return ' <span class="kind sp">Sprint</span>';
   if(e.type==='sq')return ' <span class="kind">Sprint-Quali</span>';
+  if(e.type==='fp')return ` <span class="kind fp">${e.n?e.n+'. ':''}Training</span>`;
   return '';
 }
 function dm(k){const d=noonUTC(k);return d.getUTCDate()+'.'+(d.getUTCMonth()+1)+'.'}

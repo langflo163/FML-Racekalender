@@ -15,7 +15,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Keine Logos/fremden Bilder** von Serien, Sendern oder Strecken (rechtlich). Nur Namen, Termine, eigene Farben.
   Eigenes FML-Branding ist erlaubt: rote F-M-L-Kacheln (aus FML-ScreenView) im Header, App-Icon = roter Kalender mit „FML“ + Zielflaggen-Streifen.
 - Optik: flach, Rot/Weiß/Schwarz (#d71920), Hell/Dunkel-Modus, keine Verläufe.
-- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v12`), sonst sehen Geräte die alte Version.
+- Nach Änderungen an `index.html`/Icons: `CACHE`-Version in `sw.js` hochzählen (aktuell `rk-v13`), sonst sehen Geräte die alte Version.
 - Vor dem Push lokal testen (Playwright/Chromium im Container, `python3 -m http.server`).
 
 ## Inhalt / Entscheidungen
@@ -36,6 +36,7 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 - **Detailansicht** beim Antippen eines Termins: alle Sessions des Wochenendes, Sender mit Direktlinks (`LINKS` in `index.html`),
   Meisterschaftsstand aus `data/standings.json`. Normale Serien komplette Tabelle; Multiclass nur Top 5 der vier höchsten Klassen.
 - **Dauer** eines Termins mit Uhrzeit (25.10.): `dur` am Termin → Quali/Sprint 1 h → Richtwert `dur` der Serie (F1 2, FE 1, DTM 1, NLS 4, IMSA 2,75, WEC 6, ELMS 4, GTWC 3/Sprint 1, IGTC 6, 24H Series 12, IndyCar 2, NASCAR 3,5, MotoGP/Moto2/Moto3/WorldSBK/Truck 0,75, eNASCAR 2) → 2,5 h. Langstrecken mit eigener Länge (24h, 12h, 10h, Indy 500, Coca-Cola 600 …) haben `dur` am Termin. Gleiche Logik in `make_post.py` (`dur_h`).
+- **F1-Trainings** (Flo 30.10.): `"type": "fp"`, `"n"`: 1–3, Dauer 1 h. Nur in der App; `collect()` in `make_post.py` überspringt `fp` → nicht auf Instagram/Facebook. 2026 ab Mexiko eingetragen (Quelle f1calendar.com), Sender nur Sky / WOW (Free-TV der Trainings nicht geprüft). Montags-Update pflegt Trainings für die nächsten 4 Wochen.
 - **„Läuft gerade“** (25.10.): oben in „Nächste“ alle laufenden Termine (mit „bis ca.“), darunter Countdown zum nächsten noch nicht gestarteten Termin.
 - Von Flo **abgelehnt** (nicht bauen): Kalender-Abo .ics (vorerst), Termine merken/Stern, Ergebnisse vergangener Rennen,
   Sender-Filter, Suche, Streckeninfo, Push direkt aus der App.

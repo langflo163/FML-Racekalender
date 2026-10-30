@@ -22,6 +22,7 @@ Ein Termin hat genau eins von:
 
 `tv` am Termin überschreibt die Sender der Serie. Sendertypen: `mine` (eigene Sender), `free`, `pay`, `open` (noch offen).
 `hl: true` markiert Highlights.
+`type`: `quali`, `sq` (Sprint-Quali), `sprint`, `fp` (Freies Training, mit `n` = 1/2/3; nur in der App, nicht auf Instagram).
 
 Keine Logos oder fremden Bilder – nur Namen, Termine und eigene Farben.
 Angaben ohne Gewähr.
