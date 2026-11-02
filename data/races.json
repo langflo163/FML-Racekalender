@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-11-02",
  "series": [
   {
    "id": "f1",
@@ -1311,15 +1311,13 @@
    "s": "indy",
    "name": "World Wide Technology Raceway",
    "country": "USA",
-   "date": "2027-06-13",
-   "note": "laut Strecke, von IndyCar noch nicht bestätigt"
+   "date": "2027-06-13"
   },
   {
    "s": "indy",
    "name": "Road America",
    "country": "USA",
-   "date": "2027-06-27",
-   "note": "laut Strecke, von IndyCar noch nicht bestätigt"
+   "date": "2027-06-27"
   },
   {
    "s": "nas",
@@ -1355,7 +1353,7 @@
    "track": "Homestead-Miami",
    "country": "USA",
    "start": "2026-11-08T15:00:00-05:00",
-   "note": "Titelentscheidung · Rennname laut Wikipedia „Straight Talk Wireless 400“"
+   "note": "Titelentscheidung · Rennname laut Beyond the Flag „Straight Talk Wireless 400“ · 15:00 ET = NBC-Sendebeginn, Start kann etwas später sein"
   },
   {
    "s": "nas",
@@ -1809,8 +1807,8 @@
    "name": "GP Katar",
    "track": "Lusail",
    "country": "Katar",
-   "note": "Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
-   "start": "2026-11-08T20:00:00+03:00",
+   "note": "Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später · Yamaha und Pramac fehlen (Boykott wegen Reisebeschränkung) · MotoGP hält am Termin fest, Absage bei Sicherheitslage weiter möglich",
+   "start": "2026-11-08T19:00:00+03:00",
    "tv": [
     {
      "n": "ServusTV",
@@ -2118,9 +2116,7 @@
    "name": "GP Katar",
    "track": "Lusail",
    "country": "Katar",
-   "from": "2026-11-06",
-   "to": "2026-11-08",
-   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
+   "note": "Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später · MotoGP hält am Termin fest, Absage bei Sicherheitslage weiter möglich",
    "tv": [
     {
      "n": "ServusTV",
@@ -2131,7 +2127,8 @@
      "n": "Sky",
      "k": "pay"
     }
-   ]
+   ],
+   "start": "2026-11-08T17:15:00+03:00"
   },
   {
    "s": "m2",
@@ -2427,9 +2424,7 @@
    "name": "GP Katar",
    "track": "Lusail",
    "country": "Katar",
-   "from": "2026-11-06",
-   "to": "2026-11-08",
-   "note": "Rennen So · Zeitplan noch nicht verlässlich belegt · Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich",
+   "note": "Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später · MotoGP hält am Termin fest, Absage bei Sicherheitslage weiter möglich",
    "tv": [
     {
      "n": "ServusTV",
@@ -2440,7 +2435,8 @@
      "n": "Sky",
      "k": "pay"
     }
-   ]
+   ],
+   "start": "2026-11-08T16:00:00+03:00"
   },
   {
    "s": "m3",
@@ -2977,7 +2973,7 @@
    "track": "Lusail",
    "country": "Katar",
    "type": "sprint",
-   "start": "2026-11-07T20:00:00+03:00",
+   "start": "2026-11-07T19:00:00+03:00",
    "tv": [
     {
      "n": "ServusTV",
@@ -2989,7 +2985,7 @@
      "k": "pay"
     }
    ],
-   "note": "Laut IRTA-Info an die Teams (22.10.) findet das Rennen statt – nicht endgültig, Absage bei Sicherheitslage weiter möglich"
+   "note": "Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später · Yamaha und Pramac fehlen (Boykott wegen Reisebeschränkung) · MotoGP hält am Termin fest, Absage bei Sicherheitslage weiter möglich"
   },
   {
    "s": "mgp",
@@ -3550,6 +3546,141 @@
     }
    ],
    "note": "Übertragung der Trainings bei ORF/ServusTV/SRF nicht geprüft"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "type": "quali",
+   "start": "2026-11-07T14:40:00+03:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1, Q2 ca. 25 Min. später · Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später · Yamaha und Pramac fehlen (Boykott wegen Reisebeschränkung)"
+  },
+  {
+   "s": "m3",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "type": "quali",
+   "start": "2026-11-07T16:50:00+03:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später"
+  },
+  {
+   "s": "m2",
+   "name": "GP Katar",
+   "track": "Lusail",
+   "country": "Katar",
+   "type": "quali",
+   "start": "2026-11-07T17:45:00+03:00",
+   "tv": [
+    {
+     "n": "ServusTV",
+     "k": "mine",
+     "x": "live in Österreich; ServusTV On in DE nicht genannt"
+    },
+    {
+     "n": "Sky",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1 · Zeiten laut Strecke (lcsc.qa) und paddocknews24, andere Seiten nennen bis zu 1 h später"
+  },
+  {
+   "s": "mgp",
+   "name": "GP Portugal",
+   "track": "Portimão",
+   "country": "Portugal",
+   "type": "quali",
+   "start": "2026-11-21T10:50:00+00:00",
+   "tv": [
+    {
+     "n": "ServusTV / ServusTV On",
+     "k": "mine",
+     "x": "live"
+    },
+    {
+     "n": "DF1 (Free-TV)",
+     "k": "free",
+     "x": "laut DF1-Pressemeldung Jan. 2026"
+    },
+    {
+     "n": "Sky / WOW",
+     "k": "pay"
+    }
+   ],
+   "note": "Q1, Q2 ca. 25 Min. später · Zeit laut motorsport-magazin"
+  },
+  {
+   "s": "indy",
+   "name": "Mid-Ohio",
+   "country": "USA",
+   "from": "2027-07-02",
+   "to": "2027-07-04"
+  },
+  {
+   "s": "indy",
+   "name": "GP Barcelona",
+   "country": "Spanien",
+   "from": "2027-07-16",
+   "to": "2027-07-18",
+   "new": true
+  },
+  {
+   "s": "indy",
+   "name": "Portland",
+   "country": "USA",
+   "from": "2027-07-30",
+   "to": "2027-08-01"
+  },
+  {
+   "s": "indy",
+   "name": "Markham",
+   "country": "Kanada",
+   "from": "2027-08-13",
+   "to": "2027-08-15"
+  },
+  {
+   "s": "indy",
+   "name": "Milwaukee – Rennen 1",
+   "country": "USA",
+   "from": "2027-08-27",
+   "to": "2027-08-28"
+  },
+  {
+   "s": "indy",
+   "name": "Milwaukee – Rennen 2",
+   "country": "USA",
+   "date": "2027-08-29"
+  },
+  {
+   "s": "indy",
+   "name": "Laguna Seca",
+   "country": "USA",
+   "from": "2027-09-03",
+   "to": "2027-09-05",
+   "note": "Saisonfinale"
   }
  ]
 }
