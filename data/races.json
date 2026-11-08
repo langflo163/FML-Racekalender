@@ -211,7 +211,10 @@
      "x": "alle Rennen live, dt. Kommentar, Rechte bis 2027"
     }
    ],
-   "dur": 3.5
+   "dur": 3.5,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "mgp",

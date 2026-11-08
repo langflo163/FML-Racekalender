@@ -11,6 +11,8 @@ on:
     - cron: "5 6,7 * * *"
     # Bonus-Story 11:40 deutscher Zeit (nur an rennfreien Tagen)
     - cron: "40 9,10 * * *"
+    # Sonntag 20:00 kompletter Saisonkalender einer Serie
+    - cron: "5 18,19 * * 0"
     # Token-Verlängerung jeden Mittwoch
     - cron: "17 4 * * 3"
   push:
@@ -18,7 +20,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "week, weekreel, weekend, story oder bonus (leer = nach Zeitplan)"
+        description: "week, weekreel, weekend, story, season oder bonus (leer = nach Zeitplan)"
         required: false
         default: ""
       publish:

@@ -23,6 +23,14 @@
   "bonus": {
     "weekday": null,
     "hour": 11,
-    "minute": 40
+    "minute": 40,
+    "until": [
+      12,
+      40
+    ]
+  },
+  "season": {
+    "weekday": 6,
+    "hour": 20
   }
 }

@@ -301,6 +301,15 @@ if __name__ == "__main__":
     mode = argv[0] if argv else "week"
     ref = date.fromisoformat(argv[1]) if len(argv) > 1 else datetime.now(BER).date()
     out = out or os.path.join(ROOT, "posts", f"{ref}-{mode}")
+    if mode == "season":   # Sonntag 20:00: kompletter Saisonkalender einer Serie (Flo 08.11.)
+        import season_post
+        p = season_post.pick(ref)
+        if not p:
+            print("Kein neuer kompletter Saisonkalender – kein Post"); sys.exit(0)
+        sid, year, key = p
+        season_post.main(sid, year, out)
+        season_post.mark(key)
+        print("Saisonkalender:", key); sys.exit(0)
     if mode == "bonus":   # Bonus-Story nur an rennfreien Tagen
         if build_story(ref, drop_ended=False)[0]:
             print("Renntag – keine Bonus-Story"); sys.exit(0)
