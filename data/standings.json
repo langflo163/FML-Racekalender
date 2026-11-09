@@ -1,7 +1,7 @@
 {
  "f1": {
   "title": "Fahrer-WM 2026",
-  "asof": "nach GP Mexiko (01.11.2026) · Sieger Max Verstappen · Antonelli Weltmeister · Quelle: racefans.net",
+  "asof": "nach GP Brasilien (08.11.2026) · Sieger Lando Norris · Antonelli Weltmeister · Quelle: si.com, formulaonehistory.com (Vorstand bei einigen Fahrern korrigiert)",
   "tables": [
    {
     "name": null,
@@ -10,61 +10,61 @@
       1,
       "Kimi Antonelli",
       "Mercedes",
-      "380"
+      "390"
      ],
      [
       2,
       "Max Verstappen",
       "Red Bull Racing",
-      "261"
+      "279"
      ],
      [
       3,
-      "Lewis Hamilton",
-      "Ferrari",
-      "259"
+      "George Russell",
+      "Mercedes",
+      "262"
      ],
      [
       4,
-      "George Russell",
-      "Mercedes",
-      "250"
+      "Lewis Hamilton",
+      "Ferrari",
+      "261"
      ],
      [
       5,
       "Charles Leclerc",
       "Ferrari",
-      "245"
+      "251"
      ],
      [
       6,
       "Lando Norris",
       "McLaren",
-      "221"
+      "246"
      ],
      [
       7,
       "Oscar Piastri",
       "McLaren",
-      "150"
+      "152"
      ],
      [
       8,
       "Isack Hadjar",
       "Red Bull Racing",
-      "105"
+      "122"
      ],
      [
       9,
       "Liam Lawson",
       "Racing Bulls",
-      "79"
+      "87"
      ],
      [
       10,
       "Pierre Gasly",
       "Alpine",
-      "43"
+      "42"
      ],
      [
       11,
@@ -76,7 +76,7 @@
       12,
       "Franco Colapinto",
       "Alpine",
-      "31"
+      "27"
      ],
      [
       13,
@@ -86,15 +86,15 @@
      ],
      [
       14,
-      "Nico Hülkenberg",
-      "Audi",
-      "13"
-     ],
-     [
-      15,
       "Gabriel Bortoleto",
       "Audi",
-      "10"
+      "14"
+     ],
+     [
+      14,
+      "Nico Hülkenberg",
+      "Audi",
+      "14"
      ],
      [
       16,
@@ -103,13 +103,13 @@
       "7"
      ],
      [
-      17,
+      16,
       "Fernando Alonso",
       "Aston Martin",
       "7"
      ],
      [
-      18,
+      16,
       "Carlos Sainz",
       "Williams",
       "7"
@@ -123,11 +123,17 @@
      [
       20,
       "Yuki Tsunoda",
-      "Racing Bulls (laut formula1.com, als Ersatzfahrer)",
+      "Racing Bulls",
       "1"
      ],
      [
-      21,
+      20,
+      "Ryo Hirakawa",
+      "Haas F1 Team",
+      "1"
+     ],
+     [
+      22,
       "Lance Stroll",
       "Aston Martin",
       "0"
@@ -139,15 +145,15 @@
       "0"
      ],
      [
-      23,
-      "Ryo Hirakawa",
-      "Haas F1 Team",
+      22,
+      "Sergio Pérez",
+      "Cadillac",
       "0"
      ],
      [
-      24,
-      "Sergio Pérez",
-      "Cadillac",
+      22,
+      "Rafael Câmara",
+      "Haas F1 Team",
       "0"
      ]
     ]
@@ -435,8 +441,8 @@
   ]
  },
  "wec": {
-  "title": "Fahrer-WM 2026",
-  "asof": "nach 6h Barcelona (18.10.2026) · Quelle: rnt-motorsports.com (inoffiziell) · Titelentscheidung beim Finale in Monza (08.11.)",
+  "title": "Fahrer-WM 2026 (Endstand)",
+  "asof": "Endstand nach 6h Monza (08.11.2026) · Sieger Hypercar: Cadillac JOTA #38, LMGT3: Manthey #92 · Weltmeister Hypercar: Buemi/Hartley/Hirakawa (Toyota #8), LMGT3: Jonny Edgar (TF Sport #33) · Quelle: rnt-motorsports.com, oneracingapp.com (inoffiziell) · Hypercar Plätze 3–5 vorbehaltlich Strafe gegen Aston Martin #007",
   "tables": [
    {
     "name": "Hypercar",
@@ -458,19 +464,31 @@
       3,
       "Kevin Magnussen / Raffaele Marciello",
       "BMW #15",
-      "75"
+      "83"
      ],
      [
-      3,
-      "Robin Frijns / René Rast",
-      "BMW #20",
-      "75"
+      4,
+      "Earl Bamber / Sébastien Bourdais",
+      "Cadillac JOTA #38",
+      "81"
      ],
      [
       5,
-      "Antonio Fuoco / Miguel Molina / Nicklas Nielsen",
-      "Ferrari #50",
-      "69"
+      "Dries Vanthoor",
+      "BMW #15",
+      "77"
+     ],
+     [
+      5,
+      "Jack Aitken",
+      "Cadillac JOTA #38",
+      "77"
+     ],
+     [
+      5,
+      "Robin Frijns / René Rast",
+      "BMW #20",
+      "77"
      ]
     ]
    },
@@ -482,29 +500,41 @@
       1,
       "Jonny Edgar",
       "TF Sport #33",
-      "92"
+      "107"
      ],
      [
       2,
       "Nicky Catsburg",
       "TF Sport #33",
-      "88"
+      "103"
      ],
      [
       3,
       "Yasser Shahin / Riccardo Pera / Richard Lietz",
       "Manthey #92",
-      "74"
+      "99"
      ],
      [
       4,
-      "Charlie Eastwood / Peter Dempsey / Salih Yoluç",
-      "Racing Team Turkey by TF #34",
-      "70"
+      "Ben Keating",
+      "TF Sport #33",
+      "85"
+     ],
+     [
+      5,
+      "McIntosh / Harper / Thompson",
+      "WRT #69",
+      "78"
      ]
     ]
    }
-  ]
+  ],
+  "champion": {
+   "name": "Sébastien Buemi / Brendon Hartley / Ryo Hirakawa",
+   "title": "Hypercar-Weltmeister 2026",
+   "team": "Toyota #8",
+   "date": "2026-11-08"
+  }
  },
  "elms": {
   "title": "ELMS 2026 (Endstand)",
@@ -1058,8 +1088,8 @@
   ]
  },
  "nas": {
-  "title": "Cup Series 2026 – The Chase",
-  "asof": "nach Martinsville (01.11.2026), Chase-Rennen 9 von 10 · Sieger William Byron · nur Plätze 1–16 (Chase) · Quellen: Heavy, racingnews.co",
+  "title": "Cup Series 2026 – Endstand",
+  "asof": "nach Championship Race Homestead-Miami (08.11.2026) · Sieger Ryan Blaney · Kyle Larson Champion · nur Plätze 1–16 (Chase) · Quellen: racingnews.co, The Tennessean",
   "tables": [
    {
     "name": null,
@@ -1068,105 +1098,111 @@
       1,
       "Kyle Larson",
       "Hendrick Motorsports",
-      "2469"
+      "2501"
      ],
      [
       2,
       "Christopher Bell",
       "Joe Gibbs Racing",
-      "2402"
+      "2452"
      ],
      [
       3,
       "Denny Hamlin",
       "Joe Gibbs Racing",
-      "2399"
+      "2445"
      ],
      [
       4,
-      "Chase Briscoe",
-      "Joe Gibbs Racing",
-      "2385"
+      "Ryan Blaney",
+      "Team Penske",
+      "2407"
      ],
      [
       5,
-      "Joey Logano",
-      "Team Penske",
-      "2366"
+      "Tyler Reddick",
+      "23XI Racing",
+      "2397"
      ],
      [
       6,
-      "Tyler Reddick",
-      "23XI Racing",
-      "2344"
+      "Chase Briscoe",
+      "Joe Gibbs Racing",
+      "2386"
      ],
      [
       7,
-      "Ryan Blaney",
+      "Joey Logano",
       "Team Penske",
-      "2336"
+      "2386"
      ],
      [
       8,
-      "Ty Gibbs",
-      "Joe Gibbs Racing",
-      "2309"
+      "William Byron",
+      "Hendrick Motorsports",
+      "2344"
      ],
      [
       9,
-      "William Byron",
-      "Hendrick Motorsports",
-      "2303"
+      "Ty Gibbs",
+      "Joe Gibbs Racing",
+      "2335"
      ],
      [
       10,
-      "Chase Elliott",
-      "Hendrick Motorsports",
-      "2268"
+      "Austin Cindric",
+      "Team Penske",
+      "2306"
      ],
      [
       11,
-      "Austin Cindric",
-      "Team Penske",
-      "2263"
+      "Bubba Wallace",
+      "23XI Racing",
+      "2293"
      ],
      [
       12,
-      "Carson Hocevar",
-      "Spire Motorsports",
-      "2259"
+      "Chase Elliott",
+      "Hendrick Motorsports",
+      "2287"
      ],
      [
       13,
-      "Bubba Wallace",
-      "23XI Racing",
-      "2257"
+      "Daniel Suárez",
+      "Spire Motorsports",
+      "2243"
      ],
      [
       14,
-      "Ryan Preece",
-      "RFK Racing",
-      "2214"
+      "Carson Hocevar",
+      "Spire Motorsports",
+      "2234"
      ],
      [
       15,
-      "Daniel Suárez",
-      "Spire Motorsports",
-      "2210"
+      "Ryan Preece",
+      "RFK Racing",
+      "2226"
      ],
      [
       16,
       "Chris Buescher",
       "RFK Racing",
-      "2199"
+      "2212"
      ]
     ]
    }
-  ]
+  ],
+  "champion": {
+   "name": "Kyle Larson",
+   "title": "NASCAR-Cup-Champion 2026",
+   "team": "Hendrick Motorsports",
+   "date": "2026-11-08"
+  }
  },
  "mgp": {
   "title": "MotoGP-WM 2026",
-  "asof": "nach Sprint GP Katar (07.11.2026) · Sprint-Sieger Marc Márquez · Quelle: crash.net",
+  "asof": "nach GP Katar (08.11.2026) · Sieger Marco Bezzecchi · Titel noch offen (Márquez 60 Punkte vor Martín, 2 Rennen übrig) · Quelle: crash.net",
   "tables": [
    {
     "name": null,
@@ -1175,43 +1211,43 @@
       1,
       "Marc Márquez",
       "Ducati Lenovo",
-      "411"
+      "431"
      ],
      [
       2,
       "Jorge Martín",
       "Aprilia Racing",
-      "362"
+      "371"
      ],
      [
       3,
       "Marco Bezzecchi",
       "Aprilia Racing",
-      "332"
+      "357"
      ],
      [
       4,
       "Pedro Acosta",
       "Red Bull KTM",
-      "299"
+      "309"
      ],
      [
       5,
       "Ai Ogura",
       "Trackhouse Aprilia",
-      "281"
+      "294"
      ],
      [
       6,
       "Fabio Di Giannantonio",
       "VR46 Ducati",
-      "274"
+      "282"
      ],
      [
       7,
       "Raúl Fernández",
       "Trackhouse Aprilia",
-      "242"
+      "258"
      ],
      [
       8,
@@ -1229,13 +1265,13 @@
       10,
       "Enea Bastianini",
       "KTM Tech3",
-      "136"
+      "147"
      ],
      [
       11,
       "Fermín Aldeguer",
       "Gresini Ducati",
-      "125"
+      "129"
      ],
      [
       12,
@@ -1265,13 +1301,13 @@
       16,
       "Franco Morbidelli",
       "VR46 Ducati",
-      "65"
+      "70"
      ],
      [
       17,
       "Johann Zarco",
       "LCR Honda",
-      "56"
+      "63"
      ],
      [
       18,
@@ -1293,21 +1329,21 @@
      ],
      [
       21,
+      "Iker Lecuona",
+      "Gresini Ducati",
+      "18"
+     ],
+     [
+      22,
       "Toprak Razgatlıoğlu",
       "Pramac Yamaha",
       "18"
      ],
      [
-      22,
+      23,
       "Maverick Viñales",
       "KTM Tech3",
-      "14"
-     ],
-     [
-      23,
-      "Iker Lecuona",
-      "Gresini Ducati",
-      "12"
+      "17"
      ],
      [
       24,
@@ -1328,10 +1364,16 @@
       "3"
      ],
      [
-      27,
+      26,
       "Takaaki Nakagami",
       "Honda HRC",
       "3"
+     ],
+     [
+      28,
+      "Jake Dixon",
+      "Honda HRC",
+      "2"
      ]
     ]
    }
@@ -1339,7 +1381,7 @@
  },
  "m2": {
   "title": "Moto2-WM 2026",
-  "asof": "nach GP Malaysia (01.11.2026) · Sieger David Alonso · GP Australien (25.10.) wetterbedingt abgesagt · Quelle: mcnews.com.au",
+  "asof": "nach GP Katar (08.11.2026) · Sieger Daniel Holgado · Titel noch offen (González 13,5 Punkte vor Guevara) · Quelle: mcnews.com.au",
   "tables": [
    {
     "name": null,
@@ -1348,7 +1390,7 @@
       1,
       "Manuel González",
       "Intact GP",
-      "276,5"
+      "286,5"
      ],
      [
       2,
@@ -1360,85 +1402,85 @@
       3,
       "Iván Ortolá",
       "QJMOTOR",
-      "199,5"
+      "219,5"
      ],
      [
       4,
-      "David Alonso",
+      "Daniel Holgado",
       "CFMOTO Aspar",
-      "191"
+      "215"
      ],
      [
       5,
-      "Daniel Holgado",
+      "David Alonso",
       "CFMOTO Aspar",
-      "190"
+      "204"
      ],
      [
       6,
       "Senna Agius",
       "Intact GP",
-      "166"
+      "175"
      ],
      [
       7,
       "Filip Salač",
       "American Racing",
-      "155"
+      "162"
      ],
      [
       8,
       "Celestino Vietti",
       "SpeedRS",
-      "140"
+      "146"
      ],
      [
       9,
       "Alonso López",
       "Italjet Gresini",
-      "129,5"
+      "134,5"
      ],
      [
       10,
+      "Daniel Muñoz",
+      "Italtrans",
+      "97"
+     ],
+     [
+      11,
       "Collin Veijer",
       "KTM Ajo",
       "89,5"
      ],
      [
-      11,
-      "Daniel Muñoz",
-      "Italtrans",
-      "86"
+      12,
+      "Álex Escrig",
+      "KLINT",
+      "85"
      ],
      [
-      12,
+      13,
       "Tony Arbolino",
       "Fantic",
       "82,5"
      ],
      [
-      13,
-      "Álex Escrig",
-      "KLINT",
-      "69"
-     ],
-     [
       14,
       "Barry Baltus",
       "Fantic",
-      "60"
+      "61"
      ],
      [
       15,
       "Adrián Huertas",
       "Italtrans",
-      "52"
+      "56"
      ],
      [
-      16,
+      15,
       "José Antonio Rueda",
       "KTM Ajo",
-      "48"
+      "56"
      ],
      [
       17,
@@ -1450,7 +1492,7 @@
       18,
       "Joe Roberts",
       "American Racing",
-      "44"
+      "47"
      ],
      [
       19,
@@ -1462,7 +1504,7 @@
       20,
       "Ayumu Sasaki",
       "RW Racing",
-      "24"
+      "26"
      ],
      [
       21,
@@ -1477,7 +1519,7 @@
       "17,5"
      ],
      [
-      23,
+      22,
       "Arón Canet",
       "Marc VDS",
       "17,5"
@@ -1512,7 +1554,7 @@
  },
  "m3": {
   "title": "Moto3-WM 2026",
-  "asof": "nach GP Malaysia (01.11.2026) · Sieger Quiles · Quiles Weltmeister · GP Australien (25.10.) wetterbedingt abgesagt · Tabelle neu abgeglichen · Quelle: motorsport-magazin.com, mcnews.com.au",
+  "asof": "nach GP Katar (08.11.2026) · Sieger David Almansa · Quiles Weltmeister · Quelle: mcnews.com.au",
   "tables": [
    {
     "name": null,
@@ -1521,55 +1563,55 @@
       1,
       "Máximo Quiles",
       "CFMOTO Aspar",
-      "376"
+      "392"
      ],
      [
       2,
       "David Almansa",
       "Intact GP",
-      "228"
+      "253"
      ],
      [
       3,
-      "Brian Uriarte",
+      "Álvaro Carpe",
       "KTM Ajo",
-      "205"
+      "216"
      ],
      [
       4,
-      "Álvaro Carpe",
+      "Brian Uriarte",
       "KTM Ajo",
-      "205"
+      "207"
      ],
      [
       5,
       "Adrián Fernández",
       "Leopard",
-      "157"
+      "177"
      ],
      [
       6,
-      "Marco Morelli",
-      "CFMOTO Aspar",
-      "140"
+      "Veda Pratama",
+      "Honda Team Asia",
+      "144"
      ],
      [
       7,
-      "Veda Pratama",
-      "Honda Team Asia",
-      "131"
+      "Marco Morelli",
+      "CFMOTO Aspar",
+      "141"
      ],
      [
       8,
-      "Valentín Perrone",
-      "KTM Tech3",
-      "121"
+      "Hakim Danish",
+      "MT Helmets-MSI",
+      "125"
      ],
      [
       9,
-      "Hakim Danish",
-      "MT Helmets-MSI",
-      "116"
+      "Valentín Perrone",
+      "KTM Tech3",
+      "121"
      ],
      [
       10,
@@ -1581,13 +1623,13 @@
       11,
       "Rico Salmela",
       "KTM Tech3",
-      "89"
+      "93"
      ],
      [
       12,
       "Guido Pini",
       "Leopard",
-      "81"
+      "86"
      ],
      [
       13,
@@ -1603,45 +1645,45 @@
      ],
      [
       15,
+      "Joel Kelso",
+      "GRYD",
+      "74"
+     ],
+     [
+      16,
+      "David Muñoz",
+      "Intact GP",
+      "72"
+     ],
+     [
+      17,
       "Eddie O'Shea",
       "GRYD",
       "66"
      ],
      [
-      16,
+      17,
       "Casey O'Gorman",
       "SIC58",
       "66"
      ],
      [
-      17,
-      "David Muñoz",
-      "Intact GP",
-      "64"
-     ],
-     [
-      18,
-      "Joel Kelso",
-      "GRYD",
-      "64"
-     ],
-     [
       19,
+      "Ryusei Yamanaka",
+      "MT Helmets-MSI",
+      "53"
+     ],
+     [
+      20,
       "Jesús Ríos",
       "Snipers",
       "48"
      ],
      [
-      20,
-      "Ryusei Yamanaka",
-      "MT Helmets-MSI",
-      "46"
-     ],
-     [
       21,
       "Scott Ogden",
       "CIP Green Power",
-      "33"
+      "39"
      ],
      [
       22,
@@ -1651,6 +1693,12 @@
      ],
      [
       23,
+      "Zen Mitani",
+      "Honda Team Asia",
+      "6"
+     ],
+     [
+      24,
       "Marcos Uriarte",
       "BOE Motorsports",
       "5"
@@ -1660,12 +1708,6 @@
       "Cormac Buchanan",
       "BOE Motorsports",
       "5"
-     ],
-     [
-      25,
-      "Zen Mitani",
-      "Honda Team Asia",
-      "3"
      ],
      [
       26,
