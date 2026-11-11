@@ -99,7 +99,7 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
 
 ## Stand 11.11.2026
 
-- GitHub startete geplante Läufe stark verspätet/gar nicht → Story 08.11. (großer Renntag) und Posts 05./10.11. fielen aus.
+- GitHub startete geplante Läufe stark verspätet/gar nicht → Story 08.11. (großer Renntag) fiel aus, am 05./10.11. evtl. Bonus-Storys (nicht geprüft).
   Behoben (Flo 11.11.): Cron jetzt alle 20 Min im jeweiligen Fenster (`5,25,45`), Story-Nachholen stündlich bis 21:00
   (`fallback_until` in `insta/config.json`, nur wenn heute noch Sessions anstehen – `story_left()` in `gate.py`, ohne Playwright).
   Story-Läufe an rennfreien Tagen enden jetzt schon im Gate (kein Tool-Install).
