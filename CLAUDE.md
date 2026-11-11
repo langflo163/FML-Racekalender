@@ -97,6 +97,13 @@ werden erst am nächsten Montag erkannt.
 
 Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/Regeln die Prompts beider Aufgaben mit anpassen.
 
+## Stand 11.11.2026
+
+- GitHub startete geplante Läufe stark verspätet/gar nicht → Story 08.11. (großer Renntag) und Posts 05./10.11. fielen aus.
+  Behoben (Flo 11.11.): Cron jetzt alle 20 Min im jeweiligen Fenster (`5,25,45`), Story-Nachholen stündlich bis 21:00
+  (`fallback_until` in `insta/config.json`, nur wenn heute noch Sessions anstehen – `story_left()` in `gate.py`, ohne Playwright).
+  Story-Läufe an rennfreien Tagen enden jetzt schon im Gate (kein Tool-Install).
+
 ## Stand 30.10.2026
 
 - 26.–30.10.: Karussell + Wochen-Reel (Mo) und Wochenend-Reel (Fr) fielen aus – `alt_texts` brach bei Terminen ohne Uhrzeit ab (TypeError). Behoben 30.10., Wochenend-Reel 19:04 nachgepostet (Ordner `posts/test-20261030-1904-weekend`). Montagsposts 26.10. nicht nachgeholt (Woche schon halb vorbei).

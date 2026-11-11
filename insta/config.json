@@ -18,6 +18,10 @@
     "until": [
       11,
       40
+    ],
+    "fallback_until": [
+      21,
+      0
     ]
   },
   "bonus": {
