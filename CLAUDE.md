@@ -99,7 +99,7 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
 
 ## Stand 14.11.2026 – Heimserver als Taktgeber
 
-- **Heimserver startet die Posts zur exakten Uhrzeit** (Flo 14.11.): systemd-Timer `rennkalender-start.timer` auf dem Heimserver
+- **Heimserver startet die Posts zur exakten Uhrzeit** (Flo 14.11., läuft seit 14.11. 21:04, Testlauf ok): systemd-Timer `rennkalender-start.timer` auf dem Heimserver
   ruft `rennkalender-takt.py starten` → `workflow_dispatch` von `instagram.yml` mit `mode` leer + `quelle=Heimserver`
   (= wie ein geplanter Lauf, gate.py entscheidet). Termine = config.json, je +15 min zweiter Versuch. Bilder/Posten bleiben bei GitHub,
   **GitHub-Crons bleiben als Reserve**. Skript + Einrichtung im privaten Repo `FML-Github/FML-Heimserver/skripte/` (Skript 18).
