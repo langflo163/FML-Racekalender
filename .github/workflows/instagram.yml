@@ -1,4 +1,5 @@
 name: Instagram-Posts
+run-name: ${{ github.event_name == 'workflow_dispatch' && inputs.quelle != '' && format('Instagram-Posts ({0})', inputs.quelle) || 'Instagram-Posts' }}
 
 on:
   schedule:
@@ -30,6 +31,10 @@ on:
         description: "Wirklich auf Instagram posten? (false = nur Bilder erzeugen)"
         required: false
         default: "false"
+      quelle:
+        description: "Wer startet den Lauf (z. B. heimserver) – nur zur Anzeige"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -41,7 +46,10 @@ jobs:
     if: github.event.schedule != '17 4 * * 3'
     runs-on: ubuntu-latest
     steps:
+      # immer den neuesten Stand von main: ein wartender Lauf sieht so die Posts des vorherigen
+      # (concurrency „instagram“ lässt nur einen Lauf gleichzeitig zu) → keine Doppel-Posts
       - uses: actions/checkout@v4
+        with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Zeitplan prüfen

@@ -97,6 +97,19 @@ werden erst am nächsten Montag erkannt.
 
 Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/Regeln die Prompts beider Aufgaben mit anpassen.
 
+## Stand 14.11.2026 – Heimserver als Taktgeber
+
+- **Heimserver startet die Posts zur exakten Uhrzeit** (Flo 14.11.): systemd-Timer `rennkalender-start.timer` auf dem Heimserver
+  ruft `rennkalender-takt.py starten` → `workflow_dispatch` von `instagram.yml` mit `mode` leer + `quelle=Heimserver`
+  (= wie ein geplanter Lauf, gate.py entscheidet). Termine = config.json, je +15 min zweiter Versuch. Bilder/Posten bleiben bei GitHub,
+  **GitHub-Crons bleiben als Reserve**. Skript + Einrichtung im privaten Repo `FML-Github/FML-Heimserver/skripte/` (Skript 18).
+  Token: fine-grained PAT nur dieses Repo, **Actions: Read and write** (+ Metadata read), liegt nur auf dem Server (`/etc/rennkalender/github-token`).
+- **Doppel-Posts ausgeschlossen:** concurrency `instagram` (nur ein Lauf gleichzeitig) + Checkout jetzt `ref: main` (wartender Lauf sieht
+  den Commit des vorherigen) + Merkliste `posts/<datum>-<modus>` in gate.py.
+- Fix: manueller Lauf mit `publish=false` schreibt jetzt nach `posts/test-…` (blockierte vorher den echten Post des Tages).
+- Status für spätere Dashboard-Kachel: `/srv/heimserver/rennkalender/status.json` (letzter Post, nächster Termin, letzter Start), alle 10 min.
+- Offen: öffentliche App abschalten oder nur nicht mehr bewerben (Flo entscheidet).
+
 ## Stand 11.11.2026
 
 - GitHub startete geplante Läufe stark verspätet/gar nicht → Story 08.11. (großer Renntag) fiel aus, am 05./10.11. evtl. Bonus-Storys (nicht geprüft).

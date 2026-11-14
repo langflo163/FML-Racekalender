@@ -33,6 +33,8 @@ if ev == "push":
 elif force in ("week", "weekreel", "weekend", "story", "season", "bonus"):
     mode = force
     publish = os.environ.get("FORCE_PUBLISH", "false")
+    if publish != "true":   # Probelauf: eigener Ordner, sonst blockiert er den echten Post des Tages
+        out = f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
 elif cfg.get("enabled"):
     hm = (now.hour, now.minute)
     done = lambda m: os.path.exists(os.path.join(root, "posts", f"{now.date()}-{m}"))
