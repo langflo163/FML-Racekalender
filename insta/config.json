@@ -36,5 +36,13 @@
   "season": {
     "weekday": 6,
     "hour": 20
-  }
+  },
+  "once": [
+    {
+      "folder": "posts/info-zeiten-2",
+      "at": "2026-11-15T08:00",
+      "at_raceday": "2026-11-15T11:30",
+      "note": "neuer Info-Post (Flo 14.11.)"
+    }
+  ]
 }

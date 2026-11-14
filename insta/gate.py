@@ -22,6 +22,35 @@ def story_left():
         import sys
         print(f"story_left: {e}", file=sys.stderr)
         return True
+def raceday():
+    """Sind heute Sessions (auch schon beendete)?"""
+    try:
+        import sys
+        sys.path.insert(0, os.path.join(root, "insta"))
+        import make_post
+        return bool(make_post.build_story(now.date(), drop_ended=False)[0])
+    except Exception:
+        return True
+
+def once_due():
+    """Einmalige Posts: config.json "once": [{"folder", "at", "at_raceday"?}] – fertiger Ordner wird zur Zeit gepostet.
+    at_raceday = abweichende Uhrzeit, falls an dem Tag Rennen sind. Erledigte stehen in state.json "once_done"."""
+    sp = os.path.join(root, "insta", "state.json")
+    st = json.load(open(sp, encoding="utf-8")) if os.path.exists(sp) else {}
+    for o in cfg.get("once", []):
+        if o["folder"] in st.get("once_done", []) or not os.path.isdir(os.path.join(root, o["folder"])):
+            continue
+        at = datetime.fromisoformat(o["at"]).replace(tzinfo=now.tzinfo)
+        if at.date() != now.date():
+            continue
+        if o.get("at_raceday") and raceday():
+            at = datetime.fromisoformat(o["at_raceday"]).replace(tzinfo=now.tzinfo)
+        if at <= now:
+            st.setdefault("once_done", []).append(o["folder"])   # wird im Schritt „Bilder ins Repo“ mit committet
+            json.dump(st, open(sp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            return o["folder"]
+    return None
+
 ev = os.environ.get("EVENT", "")
 force = os.environ.get("FORCE_MODE", "")
 if ev == "push":
@@ -35,6 +64,8 @@ elif force in ("week", "weekreel", "weekend", "story", "season", "bonus"):
     publish = os.environ.get("FORCE_PUBLISH", "false")
     if publish != "true":   # Probelauf: eigener Ordner, sonst blockiert er den echten Post des Tages
         out = f"posts/test-{now:%Y%m%d-%H%M}-{mode}"
+elif cfg.get("enabled") and (once := once_due()):
+    mode, out = "existing", once
 elif cfg.get("enabled"):
     hm = (now.hour, now.minute)
     done = lambda m: os.path.exists(os.path.join(root, "posts", f"{now.date()}-{m}"))
