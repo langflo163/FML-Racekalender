@@ -165,14 +165,14 @@ def build(mode, ref):
         for it in hls[:8])
     slides = [f'<div class="pg">{head()}<h1>{title}</h1><div class="sub">{sub}</div>'
               f'<div class="hl">{cover_list or "<div>Keine Rennen in diesem Zeitraum.</div>"}</div>'
-              f'<div class="cnt">{len(races)} Rennen · {len(allitems)-len(races)} Quali/Sprints · {len(days)} Tage · Details in der App</div>'
+              f'<div class="cnt">{len(races)} Rennen · {len(allitems)-len(races)} Quali/Sprints · {len(days)} Tage</div>'
               f'{foot(1,total)}</div>']
     for i, p in enumerate(pages, start=2):
         d, ch, cont = p[0], p[1], p[2]
         more = len(p) > 3
         slides.append(f'<div class="pg">{head()}<div class="day"><b>{WD[d.weekday()]}</b><span>{d.day}. {MON[d.month-1]}{" (Forts.)" if cont else ""}</span></div>'
                       f'<div class="rows">{"".join(row(it) for it in ch)}</div>'
-                      + ('<div class="more">… weitere Termine in der App</div>' if more else "") + f'{foot(i,total)}</div>')
+                      + ('<div class="more">… und weitere Termine</div>' if more else "") + f'{foot(i,total)}</div>')
 
     # Bildtext
     sids = {it["s"]["id"] for it in allitems}
@@ -188,7 +188,7 @@ def build(mode, ref):
             lines.append(f"{t:%H:%M}" if t else "–:–" )
             lines[-1] += f" {s['name']}: {nm}{' (' + k + ')' if k else ''}{' – ' + tv[0] if tv else ''}"
         lines.append("")
-    tail = ["Alle Zeiten in deutscher Zeit, ohne Gewähr.", f"📲 Alle Termine & Sender: Link in der Bio ({APP_URL})", "",
+    tail = ["Alle Zeiten in deutscher Zeit, ohne Gewähr.", "",   # App wird nicht mehr beworben (Flo 14.11.)
             *([f"Mit dabei: {' · '.join(mentions(sids))}", ""] if mentions(sids) else []),
             hashtags(sids)]
     cap = "\n".join(lines)
@@ -256,7 +256,7 @@ def build_story(day, drop_ended=True):
     if not items:
         return None, None
     rows = "".join(row(it) for it in items[:10])
-    more = '<div class="more">… weitere Termine in der App</div>' if len(items) > 10 else ""
+    more = '<div class="more">… und weitere Termine</div>' if len(items) > 10 else ""
     slide = (f'<div class="pg">{head()}<div class="live">● {"HEUTE NACHT LIVE" if all(i.get("night") for i in items) else "HEUTE LIVE"}</div>'
              f'<h1>{WD[day.weekday()]}</h1><div class="sub">{day.day}. {MON[day.month-1]} {day.year}</div>'
              f'<div class="rows">{rows}</div>{more}'

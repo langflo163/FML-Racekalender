@@ -62,7 +62,7 @@ def main(sid, year, out):
 <div class="big">''' + "".join(
         f'<div><b>{("Titelentscheidung" if "Championship" in e["name"] else e["name"])}</b><span>{WD[evdate(e).weekday()]}, {evdate(e):%d.%m.%Y} · {e.get("track") or ""}</span></div>'
         for e in (hls or [evs[0], evs[-1]])) + f'''</div>
-<div class="hint">👉 Wischen für alle Termine · Startzeiten &amp; Sender in deutscher Zeit kurz vorher in der App &amp; Story</div>
+<div class="hint">👉 Wischen für alle Termine · Startzeiten &amp; Sender in deutscher Zeit kurz vorher hier in Beitrag &amp; Story</div>
 {foot}</div>'''
     per = 10
     chunks = [evs[i:i + per] for i in range(0, len(evs), per)]
@@ -79,7 +79,7 @@ Speichern 🔖 und jederzeit nachschauen! Auf welches Rennen freust du dich am m
 
 {len(pts)} Rennen von {first:%d.%m.} bis {last:%d.%m.%Y}""" + ((" – Highlights:\n" + "\n".join(f"• {evdate(e):%d.%m.} {('Titelentscheidung ' + (e.get('track') or '')) if 'Championship' in e['name'] else e['name']}" for e in hls)) if hls else "") + f"""
 
-Startzeiten in deutscher Zeit und Sender mit deutschem Kommentar gibt's kurz vor jedem Rennen hier und in der App (Link in der Bio). Ohne Gewähr.
+Startzeiten in deutscher Zeit und Sender mit deutschem Kommentar gibt's kurz vor jedem Rennen hier im Wochenpost und in der Story. Ohne Gewähr.
 """ + (f"\nMit dabei: {' · '.join(ment)}\n" if ment else "") + "\n" + hashtags(sids)
     open(os.path.join(out, "caption.txt"), "w", encoding="utf-8").write(cap)
     print(out, len(slides), "Bilder")

@@ -108,7 +108,7 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
   den Commit des vorherigen) + Merkliste `posts/<datum>-<modus>` in gate.py.
 - Fix: manueller Lauf mit `publish=false` schreibt jetzt nach `posts/test-…` (blockierte vorher den echten Post des Tages).
 - Status für spätere Dashboard-Kachel: `/srv/heimserver/rennkalender/status.json` (letzter Post, nächster Termin, letzter Start), alle 10 min.
-- Offen: öffentliche App abschalten oder nur nicht mehr bewerben (Flo entscheidet).
+- **App wird nicht mehr beworben** (Flo 14.11.): bleibt online (GitHub Pages), aber kein App-Link/-Hinweis mehr in Bildunterschriften, Bildern, Storys, Saisonkalender und Facebook. Profile (Insta-Bio, FB-Website, TikTok) passt Flo selbst an. Alter Info-Post (12.10., angepinnt) erwähnt die App noch.
 
 ## Stand 11.11.2026
 

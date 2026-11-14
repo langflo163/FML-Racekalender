@@ -2,7 +2,7 @@
 """Postet einen Ordner aus posts/ zusätzlich auf die Facebook-Seite „FML Rennkalender“.
 
 story.jpg → Seiten-Story · reel.mp4 → Facebook-Reel · sonst 1.jpg … n.jpg → Beitrag mit mehreren Bildern.
-Die Bildunterschrift wird für Facebook angepasst (Link anklickbar statt „Link in der Bio“, keine @-Erwähnungen,
+Die Bildunterschrift wird für Facebook angepasst (ohne App-Link, keine @-Erwähnungen,
 nur 2 Hashtags). Benötigt FB_PAGE_TOKEN und FB_PAGE_ID (GitHub-Secrets).
 
 Aufruf: python3 insta/fb_post.py posts/2026-10-19-weekreel
@@ -35,8 +35,8 @@ def fb_caption(text):
     for line in text.splitlines():
         if line.startswith("Mit dabei:"):
             continue
-        if "Link in der Bio" in line:
-            line = "📲 Alle Termine & Sender: " + APP
+        if "Link in der Bio" in line:   # App wird nicht mehr beworben (Flo 14.11.)
+            continue
         if line.startswith("#"):
             line = " ".join(line.split()[:2])
         out.append(line)

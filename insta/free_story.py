@@ -135,7 +135,7 @@ def t_kalender(data, evs, sid, year):
     rows = "".join(f'<div><b>{dm(x["b"])}</b>{html.escape(x["e"].get("track") or x["e"]["name"])}'
                    + ('<span class="nw">NEU</span>' if x["e"].get("new") else "") + '</div>' for x in rs[:40])
     return page(f'<div class="tag2">📅 NEU IM KALENDER</div>{sertag(s)}'
-                f'<div class="mid">Saison {year}</div><div class="txt" style="margin-top:16px;font-size:34px">{len(rs)} Rennen · alle Termine in der App</div>'
+                f'<div class="mid">Saison {year}</div><div class="txt" style="margin-top:16px;font-size:34px">{len(rs)} Rennen</div>'
                 f'<div class="cols">{rows}</div>')
 
 def podium(stand, sid, n=3):
