@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-16",
  "series": [
   {
    "id": "f1",
@@ -42,7 +42,10 @@
      "x": "Saison 2025/26; Verlängerung noch offen"
     }
    ],
-   "dur": 1
+   "dur": 1,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "dtm",
@@ -58,7 +61,10 @@
      "k": "free"
     }
    ],
-   "dur": 1
+   "dur": 1,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "nls",
@@ -109,7 +115,10 @@
      "k": "pay"
     }
    ],
-   "dur": 6
+   "dur": 6,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "elms",
@@ -140,7 +149,10 @@
      "x": "alle Rennen live, dt. Kommentar (Stand 2026)"
     }
    ],
-   "dur": 2.75
+   "dur": 2.75,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "gtwc",
@@ -201,7 +213,10 @@
      "k": "pay"
     }
    ],
-   "dur": 2
+   "dur": 2,
+   "complete": [
+    2027
+   ]
   },
   {
    "id": "nas",
@@ -662,20 +677,23 @@
    "name": "Jeddah E-Prix (Lauf 1)",
    "track": "Jeddah Corniche Circuit",
    "country": "Saudi-Arabien",
-   "date": "2026-12-18"
+   "date": "2027-04-16",
+   "note": "verschoben vom 18./19.12.2026 (Mitteilung Formel E 12.11.2026)"
   },
   {
    "s": "fe",
    "name": "Jeddah E-Prix (Lauf 2)",
    "track": "Jeddah Corniche Circuit",
    "country": "Saudi-Arabien",
-   "date": "2026-12-19"
+   "date": "2027-04-17",
+   "note": "verschoben vom 18./19.12.2026 (Mitteilung Formel E 12.11.2026)"
   },
   {
    "s": "fe",
    "name": "Mexico City E-Prix",
    "country": "Mexiko",
-   "date": "2027-01-16"
+   "date": "2027-01-16",
+   "note": "Saisonauftakt"
   },
   {
    "s": "fe",
@@ -701,7 +719,8 @@
    "s": "fe",
    "name": "Sanya E-Prix",
    "country": "China",
-   "date": "2027-04-17"
+   "date": "2027-04-03",
+   "note": "vorverlegt vom 17.04. (Mitteilung Formel E 12.11.2026)"
   },
   {
    "s": "fe",
@@ -3641,37 +3660,32 @@
    "s": "indy",
    "name": "Mid-Ohio",
    "country": "USA",
-   "from": "2027-07-02",
-   "to": "2027-07-04"
+   "date": "2027-07-04"
   },
   {
    "s": "indy",
    "name": "GP Barcelona",
    "country": "Spanien",
-   "from": "2027-07-16",
-   "to": "2027-07-18",
-   "new": true
+   "new": true,
+   "date": "2027-07-18"
   },
   {
    "s": "indy",
    "name": "Portland",
    "country": "USA",
-   "from": "2027-07-30",
-   "to": "2027-08-01"
+   "date": "2027-08-01"
   },
   {
    "s": "indy",
    "name": "Markham",
    "country": "Kanada",
-   "from": "2027-08-13",
-   "to": "2027-08-15"
+   "date": "2027-08-15"
   },
   {
    "s": "indy",
    "name": "Milwaukee – Rennen 1",
    "country": "USA",
-   "from": "2027-08-27",
-   "to": "2027-08-28"
+   "date": "2027-08-28"
   },
   {
    "s": "indy",
@@ -3683,9 +3697,8 @@
    "s": "indy",
    "name": "Laguna Seca",
    "country": "USA",
-   "from": "2027-09-03",
-   "to": "2027-09-05",
-   "note": "Saisonfinale"
+   "note": "Saisonfinale",
+   "date": "2027-09-05"
   }
  ]
 }
