@@ -108,7 +108,7 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
   den Commit des vorherigen) + Merkliste `posts/<datum>-<modus>` in gate.py.
 - Fix: manueller Lauf mit `publish=false` schreibt jetzt nach `posts/test-…` (blockierte vorher den echten Post des Tages).
 - Status für spätere Dashboard-Kachel: `/srv/heimserver/rennkalender/status.json` (letzter Post, nächster Termin, letzter Start), alle 10 min.
-- **App wird nicht mehr beworben** (Flo 14.11.): bleibt online (GitHub Pages), aber kein App-Link/-Hinweis mehr in Bildunterschriften, Bildern, Storys, Saisonkalender und Facebook. Profile (Insta-Bio, FB-Website, TikTok) passt Flo selbst an. Alter Info-Post (12.10., angepinnt) erwähnt die App noch → **neuer Info-Post** `posts/info-zeiten-2` (von Flo freigegeben) geht **So 15.11. 8:00** raus (bei Renntag 11:30) über `once` in `insta/config.json` (gate.py `once_due()`, erledigt → state.json `once_done`). Flo pinnt ihn an und löst den alten.
+- **App wird nicht mehr beworben** (Flo 14.11.): bleibt online (GitHub Pages), aber kein App-Link/-Hinweis mehr in Bildunterschriften, Bildern, Storys, Saisonkalender und Facebook. Profile (Insta-Bio, FB-Website, TikTok) passt Flo selbst an. Alter Info-Post (12.10., angepinnt) erwähnt die App noch → **neuer Info-Post** `posts/info-zeiten-2` (von Flo freigegeben) geht **So 15.11. 8:00** raus (bei Renntag 11:30) über `once` in `insta/config.json` (gate.py `once_due()`, erledigt → state.json `once_done`). Am 15.11. 8:00 gepostet; Flo hat ihn angepinnt und den alten gelöst (17.11.).
 
 ## Stand 11.11.2026
 
