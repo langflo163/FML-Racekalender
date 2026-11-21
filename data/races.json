@@ -356,6 +356,23 @@
     }
    ],
    "dur": 2
+  },
+  {
+   "id": "macau",
+   "name": "FIA GT World Cup (Macau)",
+   "color": "#00897b",
+   "tv": [
+    {
+     "n": "ORF Sport+",
+     "k": "mine"
+    },
+    {
+     "n": "Macau-GP Livestream (YouTube)",
+     "k": "free",
+     "x": "laut motorsport-total.com auch auf Deutsch"
+    }
+   ],
+   "dur": 1.25
   }
  ],
  "events": [
@@ -3699,6 +3716,14 @@
    "country": "USA",
    "note": "Saisonfinale",
    "date": "2027-09-05"
+  },
+  {
+   "s": "macau",
+   "name": "Macau GT Cup – Hauptrennen",
+   "track": "Guia Circuit",
+   "country": "Macau",
+   "start": "2026-11-22T12:35:00+08:00",
+   "note": "16 Runden; ORF Sport+ ab 5:30 Uhr (dt. Kommentar). Qualifikationsrennen war Sa 7:35"
   }
  ]
 }

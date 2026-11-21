@@ -22,7 +22,8 @@ Am Ende jeder Arbeitssitzung diese Datei aktualisieren (Stand, Entscheidungen, o
 
 - **Serien:** F1, Formel E, DTM, NLS, 24h Nürburgring (ab 2027 „ADAC 24h Nürburgring Serie“), WEC, ELMS, IMSA,
   GT World Challenge Europe, Intercontinental GT, 24H Series, IndyCar, NASCAR Cup (nur Cup), MotoGP, Moto2, Moto3,
-  Superbike-WM, Truck-EM (ETRC), eNASCAR (Coca-Cola iRacing Series – Sim-Rennen, Di-Nacht; dt. Kommentar auf YouTube @BSCOMPETITION, Hinweis von Flo).
+  Superbike-WM, Truck-EM (ETRC), eNASCAR (Coca-Cola iRacing Series – Sim-Rennen, Di-Nacht; dt. Kommentar auf YouTube @BSCOMPETITION, Hinweis von Flo),
+  FIA GT World Cup Macau (`macau`, seit 21.11.2026 – Einzelevent im November, live auf ORF Sport+ mit dt. Kommentar laut tv.ORF.at).
 - **Aufnahmekriterium:** nur Serien/Sessions, die **live mit deutschem Kommentar** laufen.
   Bewusst nicht aufgenommen: Supercars (kein dt. Kommentar gefunden), IDM (nicht belegt).
   Bei ELMS, IGTC, 24H Series ist dt. Kommentar nicht belegt (eher Englisch) – Flo kann sie in der App ausschalten.
