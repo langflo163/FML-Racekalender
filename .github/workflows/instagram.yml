@@ -18,8 +18,6 @@ on:
     # Sonntag 20:00 kompletter Saisonkalender einer Serie
     - cron: "5,25,45 18,19 * * 0"
     # Token-Verlängerung jeden Mittwoch
-    # einmalig: Nachtrag Macau 21.11. 19:45 (deutsche Zeit) – danach entfernen
-    - cron: "45,55 18 21 11 *"
     - cron: "17 4 * * 3"
   push:
     paths: ["insta/test.json"]

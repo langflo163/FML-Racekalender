@@ -115,7 +115,7 @@ Beide ändern nur `data/races.json` und `data/standings.json`. Bei neuen Serien/
 
 - **FIA GT World Cup Macau** neu als Serie `macau` (Einzelevent, Flo: nur das GT3-Rennen, nicht der Formel-GP). Sender ORF Sport+ (mine) + Motorsport Television Deutschland (YouTube, Hinweis Flo).
 - **Nachtrag-Post Macau** (`insta/macau_post.py`, `posts/nachtrag-macau-2026`, von Flo freigegeben) über `once` am 21.11. 19:45;
-  dafür einmaliger Cron `45,55 18 21 11 *` in `instagram.yml` → **nach dem 21.11. wieder entfernen**.
+  GitHub startete die Zeitpläne 19:45/19:55 nicht → um ca. 20:00 per test.json von Hand ausgelöst; Einmal-Cron wieder entfernt. Lehre: Einmal-Posts zu Zeiten ohne Heimserver-Termin besser über den Heimserver starten.
 
 ## Stand 11.11.2026
 
